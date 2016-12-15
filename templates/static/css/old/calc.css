@@ -1,0 +1,154 @@
+@font-face {
+    font-family: 'digital-7regular';
+    src: url('../fonts/digital-7-webfont.eot') ,
+        url('../fonts/digital-7-webfont.woff') format('woff'),
+        url('../fonts/digital-7-webfont.ttf') format('truetype'),
+        url('../fonts/digital-7-webfont.svg#digital-7regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.calc-div{
+    display: block;
+    width: 450px;
+    height: 500px;
+    margin:20px auto;
+    background: #91a8b0; 
+    border: solid 2px #111; 
+    border-radius: 7px 7px 15px 15px;
+    overflow: hidden;
+    box-shadow: #000 2px 2px 10px,inset 0 -15px  15px #7b8e95;
+}
+
+.calc-div p{
+    margin: 0;
+    padding: 0;
+    display: block;
+    clear: both;
+}
+.calc-div a.red{
+    background:#d2626e;
+}
+
+.calc-div a.green{
+    background:#3a8;
+}
+
+.calc-div a.space{
+    margin-left: 20px;
+}
+.calc-div a.light {
+    background:#596a7a;
+    font-size: 20pt;
+}
+.calc-div a:hover{
+}
+.calc-div a:active{
+    box-shadow: 0px 1px 2px #131716 , inset 0px -2px 3px #000;
+}
+.calc-div a:focus{
+    border:none;
+}
+.calc-div a.tall{
+    position: relative;
+    height: 60px;
+    padding: 38px 0 6px 0;
+}
+.calc-div a.wide{
+    width: 130px;
+}
+.calc-div a{
+    vertical-align: middle;
+    display: block;
+    float: right;
+    cursor: pointer;
+    color: white;
+    border:none;
+    width: 60px; 
+    height: 30px;
+    margin:10px 7px 0 0;
+    padding: 10px  0 7px 0;
+    font-size: 20pt;
+    vertical-align: middle;
+    border-radius: 4px;
+
+
+    -moz-transition-duration:.1s;
+    -webkit-transition-duration:.1s;
+    transition-duration:.1s;
+
+    background-color: #131716;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#131716), to(#212526));
+    background-image: -webkit-linear-gradient(top, #131716, #212526); 
+    background-image: -moz-linear-gradient(top, #131716, #212526); 
+    background-image: -ms-linear-gradient(top, #131716, #212526); 
+    background-image: -o-linear-gradient(top, #131716, #212526);
+    box-shadow: 0px 2px 3px #131716 , inset 0px -2px 3px #000;
+
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+
+}
+  
+.calc-text{
+    font-size: 38pt;
+    font-family: 'digital-7regular' !important;
+    font-weight: normal !important;
+    direction: ltr;
+    text-align: right;
+    background:#cee1e5 ;/* #4f7671*/
+    color: #242829;
+    display: block;
+    border:none;
+    width: 360px;
+    border-radius: 3px;
+    padding: 0 5px;
+    box-shadow: inset #777 0 0 4px;
+    
+}
+
+.calc-header{
+    background: #0d0e09;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(#0d0e09), to(#111));
+      background-image: -webkit-linear-gradient(top, #0d0e09, #111); 
+      background-image: -moz-linear-gradient(top, #0d0e09, #111); 
+      background-image: -ms-linear-gradient(top, #0d0e09, #111); 
+      background-image: -o-linear-gradient(top, #0d0e09, #111);
+       
+
+    display: block;
+    padding:30px 30px 10px;
+    height: 120px;
+    text-alignn: center;
+    border-radius: 0 0 20px 20px;
+}
+.calc-white-content{
+    display: block;
+    background: #7d8789;
+    height: 80px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.calc-numpad,.calc-numpad p{
+    display: block;
+    text-align: center;
+}
+
+.calc-numpad{
+    height:400px;
+    margin: 20px auto;
+    width: 380px;
+}
+
+.calc-white-content small{
+    padding: 5px;
+    font-family: courier !important;
+    text-shadow:1px 1px 0 #888;
+    font-weight: bold;
+    font-size: 14pt;
+    color: #444;
+    display: block;
+}

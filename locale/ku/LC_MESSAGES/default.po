@@ -1,0 +1,792 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AccountingServer\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-16 19:52+0330\n"
+"PO-Revision-Date: 2015-01-28 00:20+0330\n"
+"Last-Translator: \n"
+"Language-Team: Samal <info@samalstudios.com>\n"
+"Language: ku\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: /Users/syamandmaroufi/Code/\n"
+"X-Generator: Poedit 1.7.4\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Language: fa_IR\n"
+"X-Source-Language: C\n"
+"X-Poedit-SearchPath-0: AccountingServer/locale\n"
+
+#: AccountingServer/locale/temp.py:6 AccountingServer/locale/temp2.py:78
+#: AccountingServer/locale/temp2.py:80
+msgid "Login Page"
+msgstr "‎چوونه‌ ژوور"
+
+#: AccountingServer/locale/temp.py:7 AccountingServer/locale/temp2.py:79
+msgid "Login Failed"
+msgstr "‎كێشه‌ له‌ چوونه‌ ژوور"
+
+#: AccountingServer/locale/temp.py:8 AccountingServer/locale/temp2.py:83
+msgid "Sign in"
+msgstr "‎چوونه‌ ژوور"
+
+#: AccountingServer/locale/temp.py:9 AccountingServer/locale/temp2.py:84
+msgid "Close Window"
+msgstr "‎لابردن"
+
+#: AccountingServer/locale/temp.py:10 AccountingServer/locale/temp2.py:32
+msgid "Change"
+msgstr "‎گۆڕین"
+
+#: AccountingServer/locale/temp.py:11
+msgid "Old Password"
+msgstr "‎ پاسوۆردی ئێستا"
+
+#: AccountingServer/locale/temp.py:12
+msgid "New Password"
+msgstr "‎پاسوۆردی نوێ"
+
+#: AccountingServer/locale/temp.py:13
+msgid "Dear User"
+msgstr "‎به‌ڕێز"
+
+#: AccountingServer/locale/temp.py:14
+msgid "Change Password"
+msgstr "‎گۆڕینی پاسوۆردی"
+
+#: AccountingServer/locale/temp.py:15
+msgid "Repeat Password"
+msgstr "‎دووپاته‌ی پاسوۆردی نوێ"
+
+#: AccountingServer/locale/temp.py:16
+msgid "New password at least should be 6 char"
+msgstr "‎ پاسوۆردی نوێ ده‌بێ لانی كه‌م ٦ پیت بێ"
+
+#: AccountingServer/locale/temp.py:17
+msgid "Repeat of new password is wrong"
+msgstr "‎دووپاته‌ی پاسوۆردی نوێ هه‌ڵه‌یه‌"
+
+#: AccountingServer/locale/temp.py:18
+msgid "Curent password is wrong"
+msgstr "‎ پاسوۆردی ئێستا هه‌ڵه‌یه‌"
+
+#: AccountingServer/locale/temp.py:19
+msgid "For changing password contact administrator"
+msgstr "‎بۆ گۆڕینی پاسوۆرد په‌یوه‌ندی به‌ به‌ڕێوبه‌ر بكه‌ن"
+
+#: AccountingServer/locale/temp.py:20
+msgid "Password changed successfully"
+msgstr "‎ پاسوۆرده‌كه‌تان گۆردرا"
+
+#: AccountingServer/locale/temp.py:21
+msgid "Add new user"
+msgstr "‎به‌كارهێنه‌ری نوێ"
+
+#: AccountingServer/locale/temp.py:22
+msgid "Manage users"
+msgstr "‎به‌ڕێوبه‌ری به‌كارهێنه‌ران"
+
+#: AccountingServer/locale/temp.py:23 AccountingServer/locale/temp2.py:81
+msgid "UserName"
+msgstr "‎نازناو"
+
+#: AccountingServer/locale/temp.py:24 AccountingServer/locale/temp2.py:82
+msgid "Password"
+msgstr "‎پاسوۆرد"
+
+#: AccountingServer/locale/temp.py:25
+msgid "Job"
+msgstr "‎پیشه‌"
+
+#: AccountingServer/locale/temp.py:26 AccountingServer/locale/temp2.py:145
+#: AccountingServer/locale/temp2.py:158
+msgid "Email"
+msgstr "پست الکترونیک"
+
+#: AccountingServer/locale/temp.py:28 AccountingServer/locale/temp2.py:154
+msgid "Person Info"
+msgstr "اطلاعات شخص حقیقی"
+
+#: AccountingServer/locale/temp.py:29 AccountingServer/locale/temp2.py:289
+msgid "Person Id"
+msgstr "کد"
+
+#: AccountingServer/locale/temp.py:30 AccountingServer/locale/temp2.py:291
+msgid "First Name"
+msgstr "‎نێو"
+
+#: AccountingServer/locale/temp.py:31 AccountingServer/locale/temp2.py:292
+msgid "Last Name"
+msgstr "‎نازنێو"
+
+#: AccountingServer/locale/temp.py:32 AccountingServer/locale/temp2.py:293
+msgid "Parent Name"
+msgstr "نام پدر"
+
+#: AccountingServer/locale/temp.py:33
+msgid "Gender"
+msgstr "جنسیت"
+
+#: AccountingServer/locale/temp.py:34
+msgid "Male"
+msgstr "مرد"
+
+#: AccountingServer/locale/temp.py:35
+msgid "Female"
+msgstr "زن"
+
+#: AccountingServer/locale/temp.py:36 AccountingServer/locale/temp2.py:290
+msgid "National Id"
+msgstr "کد ملی"
+
+#: AccountingServer/locale/temp.py:37 AccountingServer/locale/temp2.py:294
+msgid "Birth Date"
+msgstr "تاریخ تولد"
+
+#: AccountingServer/locale/temp.py:38 AccountingServer/locale/temp2.py:295
+msgid "Home Tel"
+msgstr "تلفن منزل"
+
+#: AccountingServer/locale/temp.py:39
+msgid "Cell Number"
+msgstr "شماره همراه"
+
+#: AccountingServer/locale/temp.py:40 AccountingServer/locale/temp.py:41
+#: AccountingServer/locale/temp2.py:296
+msgid "Work Tel"
+msgstr "تلفن محل کار"
+
+#: AccountingServer/locale/temp.py:42
+msgid "Postal Code"
+msgstr "کد پستی"
+
+#: AccountingServer/locale/temp.py:43
+msgid "Work Address"
+msgstr "‎شوێن"
+
+#: AccountingServer/locale/temp.py:44
+msgid "Home Address"
+msgstr "آدرس منزل "
+
+#: AccountingServer/locale/temp.py:46 AccountingServer/locale/temp2.py:297
+msgid "Manage Persons"
+msgstr "مدیریت اشخاص"
+
+#: AccountingServer/locale/temp.py:47 AccountingServer/locale/temp2.py:141
+#: AccountingServer/locale/temp2.py:160 AccountingServer/locale/temp2.py:298
+msgid "Save Person"
+msgstr "ثبت اطلاعات شخص"
+
+#: AccountingServer/locale/temp2.py:3 AccountingServer/locale/temp2.py:104
+msgid "Dashboard"
+msgstr "‎داشبۆرد"
+
+#: AccountingServer/locale/temp2.py:4
+msgid "System"
+msgstr "‎سیسته‌م"
+
+#: AccountingServer/locale/temp2.py:5
+msgid "Users"
+msgstr "‎بەکارهێنەران"
+
+#: AccountingServer/locale/temp2.py:6
+msgid "Backup/Restore"
+msgstr "‎پشتیوانی\\گه‌ڕاندنه‌وه‌"
+
+#: AccountingServer/locale/temp2.py:7
+msgid "Settings"
+msgstr "‎ڕێکخستنەکان"
+
+#: AccountingServer/locale/temp2.py:8
+msgid "Exit"
+msgstr "‎چوونه‌ ده‌ر"
+
+#: AccountingServer/locale/temp2.py:9
+msgid "Confrim"
+msgstr "‎سه‌لماندن"
+
+#: AccountingServer/locale/temp2.py:10
+msgid "Basic Info"
+msgstr "‎زانیاری سه‌ره‌كی"
+
+#: AccountingServer/locale/temp2.py:11
+msgid "Customers"
+msgstr "‎كڕیاره‌كان"
+
+#: AccountingServer/locale/temp2.py:12
+msgid "Supliers"
+msgstr "‎فرۆشیاره‌كان"
+
+#: AccountingServer/locale/temp2.py:13
+msgid "Storage/Vendoers"
+msgstr "‎گه‌ڵاڵه‌"
+
+#: AccountingServer/locale/temp2.py:14
+msgid "Groups"
+msgstr "‎گرۆپه‌كان"
+
+#: AccountingServer/locale/temp2.py:15 AccountingServer/locale/temp2.py:26
+#: AccountingServer/locale/temp2.py:249 AccountingServer/locale/temp2.py:304
+msgid "Purchase"
+msgstr "‎كڕین"
+
+#: AccountingServer/locale/temp2.py:16
+msgid "New Purchase"
+msgstr "‎كڕینی نوێ"
+
+#: AccountingServer/locale/temp2.py:17
+msgid "Manage Purchase"
+msgstr "‎بەڕێوەبردنی كڕین"
+
+#: AccountingServer/locale/temp2.py:18
+msgid "Waste"
+msgstr "‎خه‌ساره‌"
+
+#: AccountingServer/locale/temp2.py:19 AccountingServer/locale/temp2.py:251
+msgid "Sale"
+msgstr "‎فرۆش"
+
+#: AccountingServer/locale/temp2.py:20
+msgid "New Sale"
+msgstr "‎فرۆشی نوێ"
+
+#: AccountingServer/locale/temp2.py:21 AccountingServer/locale/temp2.py:200
+msgid "Manage Sale"
+msgstr "‎بەڕێوەبردن فرۆش"
+
+#: AccountingServer/locale/temp2.py:22
+msgid "Return Back"
+msgstr "‎گه‌ڕانه‌وه‌"
+
+#: AccountingServer/locale/temp2.py:23 AccountingServer/locale/temp2.py:27
+msgid "Costs"
+msgstr "‎خه‌رجه‌كان"
+
+#: AccountingServer/locale/temp2.py:24
+msgid "Report"
+msgstr "‎راپۆرت"
+
+#: AccountingServer/locale/temp2.py:25 AccountingServer/locale/temp2.py:59
+#: AccountingServer/locale/temp2.py:178 AccountingServer/locale/temp2.py:223
+msgid "Storage"
+msgstr "‎بارخانه‌"
+
+#: AccountingServer/locale/temp2.py:28
+msgid "Trial Balance"
+msgstr "‎ته‌راز تاقیكاری"
+
+#: AccountingServer/locale/temp2.py:29
+msgid "Profit & Cost"
+msgstr "‎قازانج وو زه‌ره‌ر"
+
+#: AccountingServer/locale/temp2.py:30
+msgid "Confirm Purchase"
+msgstr "‎پشتراستكردنه‌وه‌ی كڕین"
+
+#: AccountingServer/locale/temp2.py:31 AccountingServer/locale/temp2.py:67
+msgid "Confirm Sale"
+msgstr "‎پشتراستكرنه‌وه‌ی فرۆش"
+
+#: AccountingServer/locale/temp2.py:33 AccountingServer/locale/temp2.py:53
+#: AccountingServer/locale/temp2.py:101 AccountingServer/locale/temp2.py:103
+#: AccountingServer/locale/temp2.py:120 AccountingServer/locale/temp2.py:123
+#: AccountingServer/locale/temp2.py:134 AccountingServer/locale/temp2.py:136
+#: AccountingServer/locale/temp2.py:139 AccountingServer/locale/temp2.py:150
+#: AccountingServer/locale/temp2.py:153 AccountingServer/locale/temp2.py:170
+#: AccountingServer/locale/temp2.py:172 AccountingServer/locale/temp2.py:175
+#: AccountingServer/locale/temp2.py:186 AccountingServer/locale/temp2.py:187
+#: AccountingServer/locale/temp2.py:209 AccountingServer/locale/temp2.py:211
+#: AccountingServer/locale/temp2.py:214 AccountingServer/locale/temp2.py:229
+#: AccountingServer/locale/temp2.py:230 AccountingServer/locale/temp2.py:262
+#: AccountingServer/locale/temp2.py:265 AccountingServer/locale/temp2.py:273
+#: AccountingServer/locale/temp2.py:284 AccountingServer/locale/temp2.py:287
+msgid "Delete"
+msgstr "‎سڕینه‌وه‌"
+
+#: AccountingServer/locale/temp2.py:34
+msgid "Purchase Details"
+msgstr "‎ورده‌كاری كرین"
+
+#: AccountingServer/locale/temp2.py:35 AccountingServer/locale/temp2.py:180
+msgid "Product Group"
+msgstr "‎گرووپی كاڵا"
+
+#: AccountingServer/locale/temp2.py:36 AccountingServer/locale/temp2.py:107
+#: AccountingServer/locale/temp2.py:181 AccountingServer/locale/temp2.py:247
+#: AccountingServer/locale/temp2.py:302
+msgid "Product Name"
+msgstr "‎كاڵا"
+
+#: AccountingServer/locale/temp2.py:37 AccountingServer/locale/temp2.py:182
+msgid "Purchase Price"
+msgstr "‎نرخی كڕین"
+
+#: AccountingServer/locale/temp2.py:38 AccountingServer/locale/temp2.py:62
+#: AccountingServer/locale/temp2.py:183 AccountingServer/locale/temp2.py:226
+msgid "Sale Price"
+msgstr "‎نرخی فرۆش"
+
+#: AccountingServer/locale/temp2.py:39 AccountingServer/locale/temp2.py:63
+#: AccountingServer/locale/temp2.py:184 AccountingServer/locale/temp2.py:227
+#: AccountingServer/locale/temp2.py:248 AccountingServer/locale/temp2.py:303
+msgid "Quantity"
+msgstr "‎بڕ"
+
+#: AccountingServer/locale/temp2.py:40 AccountingServer/locale/temp2.py:64
+#: AccountingServer/locale/temp2.py:185 AccountingServer/locale/temp2.py:228
+msgid "Full Purchase Price"
+msgstr "‎كۆی نرخی كرین"
+
+#: AccountingServer/locale/temp2.py:41 AccountingServer/locale/temp2.py:147
+#: AccountingServer/locale/temp2.py:190 AccountingServer/locale/temp2.py:281
+#: AccountingServer/locale/temp2.py:301
+msgid "Total Purchase"
+msgstr "‎سه‌رجه‌می نرخی كرین"
+
+#: AccountingServer/locale/temp2.py:42 AccountingServer/locale/temp2.py:66
+msgid "Close"
+msgstr "‎داخستن"
+
+#: AccountingServer/locale/temp2.py:43
+msgid "Confirm Purchases"
+msgstr "‎پشتراستكردنه‌وه‌ی كڕین"
+
+#: AccountingServer/locale/temp2.py:44 AccountingServer/locale/temp2.py:164
+msgid "Purchase No"
+msgstr "‎ژماره‌ی كڕین"
+
+#: AccountingServer/locale/temp2.py:45 AccountingServer/locale/temp2.py:165
+msgid "Purchase Date"
+msgstr "‎كاتی كڕین"
+
+#: AccountingServer/locale/temp2.py:46 AccountingServer/locale/temp2.py:166
+#: AccountingServer/locale/temp2.py:245 AccountingServer/locale/temp2.py:256
+#: AccountingServer/locale/temp2.py:267
+msgid "Storage Name"
+msgstr "‎بارخانه‌"
+
+#: AccountingServer/locale/temp2.py:47 AccountingServer/locale/temp2.py:167
+#: AccountingServer/locale/temp2.py:277 AccountingServer/locale/temp2.py:300
+#: AccountingServer/locale/temp2.py:307
+msgid "Supplier Name"
+msgstr "‎فرۆشیار"
+
+#: AccountingServer/locale/temp2.py:48 AccountingServer/locale/temp2.py:168
+msgid "Purchase Amount"
+msgstr "‎كۆی كڕین"
+
+#: AccountingServer/locale/temp2.py:49 AccountingServer/locale/temp2.py:51
+#: AccountingServer/locale/temp2.py:74 AccountingServer/locale/temp2.py:76
+msgid "Details"
+msgstr "‎ورده‌كاری"
+
+#: AccountingServer/locale/temp2.py:50 AccountingServer/locale/temp2.py:52
+#: AccountingServer/locale/temp2.py:75 AccountingServer/locale/temp2.py:77
+msgid "Confirm"
+msgstr "‎پشتراستكرنه‌وه‌"
+
+#: AccountingServer/locale/temp2.py:54 AccountingServer/locale/temp2.py:216
+msgid "Sale Info"
+msgstr "‎زانیاری فرۆش"
+
+#: AccountingServer/locale/temp2.py:55 AccountingServer/locale/temp2.py:217
+msgid "Sale Id"
+msgstr "‎ژماره‌ی فرۆش"
+
+#: AccountingServer/locale/temp2.py:56 AccountingServer/locale/temp2.py:218
+msgid "Customer"
+msgstr "‎كڕیار"
+
+#: AccountingServer/locale/temp2.py:57 AccountingServer/locale/temp2.py:221
+#: AccountingServer/locale/temp2.py:236
+msgid "Installments"
+msgstr "‎قیسته‌كان"
+
+#: AccountingServer/locale/temp2.py:58 AccountingServer/locale/temp2.py:222
+msgid "Row Id"
+msgstr "‎ڕیز"
+
+#: AccountingServer/locale/temp2.py:60 AccountingServer/locale/temp2.py:224
+msgid "Product"
+msgstr "‎كاڵا"
+
+#: AccountingServer/locale/temp2.py:61 AccountingServer/locale/temp2.py:225
+msgid "Store In Stock"
+msgstr "‎نێو بارخانه‌"
+
+#: AccountingServer/locale/temp2.py:65 AccountingServer/locale/temp2.py:233
+msgid "Sum"
+msgstr "‎سه‌رجه‌م"
+
+#: AccountingServer/locale/temp2.py:68 AccountingServer/locale/temp2.py:127
+#: AccountingServer/locale/temp2.py:202
+msgid "Sale No"
+msgstr "‎ژماره‌ی فرۆش"
+
+#: AccountingServer/locale/temp2.py:69 AccountingServer/locale/temp2.py:128
+#: AccountingServer/locale/temp2.py:203
+msgid "Sale Date"
+msgstr "‎ڕێكه‌وت"
+
+#: AccountingServer/locale/temp2.py:70 AccountingServer/locale/temp2.py:125
+#: AccountingServer/locale/temp2.py:129 AccountingServer/locale/temp2.py:204
+msgid "Customer Name"
+msgstr "‎كڕیار"
+
+#: AccountingServer/locale/temp2.py:71 AccountingServer/locale/temp2.py:130
+#: AccountingServer/locale/temp2.py:205
+msgid "Sale Amount"
+msgstr "‎كۆی فرۆش"
+
+#: AccountingServer/locale/temp2.py:72 AccountingServer/locale/temp2.py:131
+#: AccountingServer/locale/temp2.py:206
+msgid "Remind Amount"
+msgstr "‎ماوه‌"
+
+#: AccountingServer/locale/temp2.py:73 AccountingServer/locale/temp2.py:132
+#: AccountingServer/locale/temp2.py:207
+msgid "Sale Installments"
+msgstr "‎قیسته‌كان"
+
+#: AccountingServer/locale/temp2.py:85
+msgid "Saved"
+msgstr "‎پاشەکەوتکراو"
+
+#: AccountingServer/locale/temp2.py:86
+msgid "Cost Information"
+msgstr "‎زانیاری خه‌رج"
+
+#: AccountingServer/locale/temp2.py:87 AccountingServer/locale/temp2.py:96
+msgid "Cost Title"
+msgstr "‎سەردێڕ خه‌رج"
+
+#: AccountingServer/locale/temp2.py:88 AccountingServer/locale/temp2.py:97
+msgid "Invoice No"
+msgstr "‎ژماره‌ فاكتۆر"
+
+#: AccountingServer/locale/temp2.py:89 AccountingServer/locale/temp2.py:196
+msgid "Date"
+msgstr "‎ڕێكه‌وت"
+
+#: AccountingServer/locale/temp2.py:90
+msgid "Time"
+msgstr "‎كات"
+
+#: AccountingServer/locale/temp2.py:91 AccountingServer/locale/temp2.py:99
+#: AccountingServer/locale/temp2.py:197
+msgid "Amount"
+msgstr "‎نرخ"
+
+#: AccountingServer/locale/temp2.py:92
+msgid "Save Cost"
+msgstr "‎پاشه‌كه‌وتی خه‌رج"
+
+#: AccountingServer/locale/temp2.py:93 AccountingServer/locale/temp2.py:113
+#: AccountingServer/locale/temp2.py:161 AccountingServer/locale/temp2.py:199
+#: AccountingServer/locale/temp2.py:271 AccountingServer/locale/temp2.py:312
+msgid "Cancel"
+msgstr "‎وازهێنان"
+
+#: AccountingServer/locale/temp2.py:94
+msgid "Manage Costs"
+msgstr "‎بەڕێوەبردن خه‌رج"
+
+#: AccountingServer/locale/temp2.py:95
+msgid "Add New Cost"
+msgstr "‎خه‌رجی نوێ"
+
+#: AccountingServer/locale/temp2.py:98
+msgid "Register Date"
+msgstr "‎ڕێكه‌وتی تۆمار"
+
+#: AccountingServer/locale/temp2.py:100 AccountingServer/locale/temp2.py:102
+#: AccountingServer/locale/temp2.py:119 AccountingServer/locale/temp2.py:122
+#: AccountingServer/locale/temp2.py:133 AccountingServer/locale/temp2.py:135
+#: AccountingServer/locale/temp2.py:138 AccountingServer/locale/temp2.py:149
+#: AccountingServer/locale/temp2.py:152 AccountingServer/locale/temp2.py:169
+#: AccountingServer/locale/temp2.py:171 AccountingServer/locale/temp2.py:208
+#: AccountingServer/locale/temp2.py:210 AccountingServer/locale/temp2.py:261
+#: AccountingServer/locale/temp2.py:264 AccountingServer/locale/temp2.py:272
+#: AccountingServer/locale/temp2.py:283 AccountingServer/locale/temp2.py:286
+msgid "Edit"
+msgstr "‎گۆرین"
+
+#: AccountingServer/locale/temp2.py:105 AccountingServer/locale/temp2.py:244
+#: AccountingServer/locale/temp2.py:299
+msgid "Good List"
+msgstr "‎كاڵاكان"
+
+#: AccountingServer/locale/temp2.py:106 AccountingServer/locale/temp2.py:110
+#: AccountingServer/locale/temp2.py:116
+msgid "Group Name"
+msgstr "‎گرووپ"
+
+#: AccountingServer/locale/temp2.py:108 AccountingServer/locale/temp2.py:137
+#: AccountingServer/locale/temp2.py:253 AccountingServer/locale/temp2.py:305
+msgid "Return"
+msgstr "‎گه‌رانه‌وه‌"
+
+#: AccountingServer/locale/temp2.py:109
+msgid "Group"
+msgstr "‎گرووپ"
+
+#: AccountingServer/locale/temp2.py:111
+msgid "Group Unit"
+msgstr "‎یه‌كه‌"
+
+#: AccountingServer/locale/temp2.py:112
+msgid "Save Group"
+msgstr "‎پاشه‌كه‌وتی گرووپ"
+
+#: AccountingServer/locale/temp2.py:114
+msgid "Manage Group"
+msgstr "‎بەڕێوەبردن گرووپ"
+
+#: AccountingServer/locale/temp2.py:115
+msgid "Add New Group"
+msgstr "‎گرووپی نوێ"
+
+#: AccountingServer/locale/temp2.py:117
+msgid "Group unit"
+msgstr "‎یه‌كه‌"
+
+#: AccountingServer/locale/temp2.py:118
+msgid "Goods List"
+msgstr "‎كاڵاكان"
+
+#: AccountingServer/locale/temp2.py:121
+msgid "Goods"
+msgstr "‎كاڵاكان"
+
+#: AccountingServer/locale/temp2.py:124
+msgid "History"
+msgstr "‎مێژوو"
+
+#: AccountingServer/locale/temp2.py:126
+msgid "Purchase List"
+msgstr "‎گەڵاڵەی كڕین"
+
+#: AccountingServer/locale/temp2.py:140
+msgid "Persons"
+msgstr "‎كه‌سه‌كان"
+
+#: AccountingServer/locale/temp2.py:142 AccountingServer/locale/temp2.py:155
+msgid "Person Name"
+msgstr "‎نێو"
+
+#: AccountingServer/locale/temp2.py:143 AccountingServer/locale/temp2.py:156
+msgid "City"
+msgstr "‎شار"
+
+#: AccountingServer/locale/temp2.py:144 AccountingServer/locale/temp2.py:157
+msgid "Phone"
+msgstr "‎تەلەفۆن"
+
+#: AccountingServer/locale/temp2.py:146 AccountingServer/locale/temp2.py:159
+#: AccountingServer/locale/temp2.py:269
+msgid "Address"
+msgstr "‎شوێنی پیشه‌"
+
+#: AccountingServer/locale/temp2.py:148 AccountingServer/locale/temp2.py:282
+msgid "Purchases"
+msgstr "‎كڕین"
+
+#: AccountingServer/locale/temp2.py:151 AccountingServer/locale/temp2.py:263
+#: AccountingServer/locale/temp2.py:285
+msgid "List"
+msgstr "‎گه‌ڵاڵه‌"
+
+#: AccountingServer/locale/temp2.py:162
+msgid "Manage Purchases"
+msgstr "‎بەڕێوەبردن كڕین"
+
+#: AccountingServer/locale/temp2.py:163
+msgid "Add New Purchase"
+msgstr "‎كڕینی نوێ"
+
+#: AccountingServer/locale/temp2.py:173 AccountingServer/locale/temp2.py:212
+msgid "View"
+msgstr "‎دیمەن"
+
+#: AccountingServer/locale/temp2.py:174 AccountingServer/locale/temp2.py:213
+msgid "Print"
+msgstr "‎چاپ"
+
+#: AccountingServer/locale/temp2.py:176
+msgid "Order Info"
+msgstr "‎زانیاری داخوازی"
+
+#: AccountingServer/locale/temp2.py:177
+msgid "Order Id"
+msgstr "‎ژماره‌ی داخوازی"
+
+#: AccountingServer/locale/temp2.py:179
+msgid "Supplier"
+msgstr "‎فرۆشیار"
+
+#: AccountingServer/locale/temp2.py:188 AccountingServer/locale/temp2.py:231
+msgid "New Row"
+msgstr "‎ڕیزی نوێ"
+
+#: AccountingServer/locale/temp2.py:189 AccountingServer/locale/temp2.py:232
+msgid "Delete All"
+msgstr "‎سڕینه‌وه‌ گشتی"
+
+#: AccountingServer/locale/temp2.py:191
+msgid "Save Order"
+msgstr "‎پاشه‌كه‌وتی داخوازی"
+
+#: AccountingServer/locale/temp2.py:192 AccountingServer/locale/temp2.py:193
+msgid "Print Order"
+msgstr "‎چاپی داخوازی"
+
+#: AccountingServer/locale/temp2.py:194
+msgid "Sale Installmets"
+msgstr "‎قیستی فرۆش"
+
+#: AccountingServer/locale/temp2.py:195
+msgid "Id"
+msgstr "‎ژماره‌"
+
+#: AccountingServer/locale/temp2.py:198
+msgid "Payback"
+msgstr "‎پێدانەوە"
+
+#: AccountingServer/locale/temp2.py:201
+msgid "Add New Sale"
+msgstr "‎فرۆشی نوێ"
+
+#: AccountingServer/locale/temp2.py:215 AccountingServer/locale/temp2.py:241
+msgid "Not Paid"
+msgstr "‎نه‌دراوه‌"
+
+#: AccountingServer/locale/temp2.py:219
+msgid "Registeration Date"
+msgstr "‎ڕێكه‌وتی تۆماركردن"
+
+#: AccountingServer/locale/temp2.py:220
+msgid "Print Sale"
+msgstr "‎چاپی فرۆش"
+
+#: AccountingServer/locale/temp2.py:234
+msgid "Prepaid"
+msgstr "‎پێش په‌رداخت"
+
+#: AccountingServer/locale/temp2.py:235
+msgid "Remain Value"
+msgstr "‎پاشماوه‌"
+
+#: AccountingServer/locale/temp2.py:237
+msgid "No."
+msgstr "‎ژماره‌"
+
+#: AccountingServer/locale/temp2.py:238
+msgid "Due Date"
+msgstr "‎كۆتایی"
+
+#: AccountingServer/locale/temp2.py:239
+msgid "Installment Value"
+msgstr "‎به‌های قیست"
+
+#: AccountingServer/locale/temp2.py:240
+msgid "Payment"
+msgstr "‎پێدانەوە"
+
+#: AccountingServer/locale/temp2.py:242
+msgid "Save Sale"
+msgstr "‎پاشه‌كه‌وتی فرۆش"
+
+#: AccountingServer/locale/temp2.py:243
+msgid "Manage Sales"
+msgstr "‎بەڕێوەبردن فرۆشه‌كان"
+
+#: AccountingServer/locale/temp2.py:246 AccountingServer/locale/temp2.py:259
+msgid "Storage Stock"
+msgstr "‎گه‌ڕانه‌وه‌ی بارخانه‌"
+
+#: AccountingServer/locale/temp2.py:250
+msgid "Full Purchase"
+msgstr "‎كۆی كڕین"
+
+#: AccountingServer/locale/temp2.py:252
+msgid "Full Sale"
+msgstr "‎كۆی فرۆش"
+
+#: AccountingServer/locale/temp2.py:254
+msgid "Storages"
+msgstr "‎بارخانه‌كان"
+
+#: AccountingServer/locale/temp2.py:255 AccountingServer/locale/temp2.py:270
+msgid "Save Storage"
+msgstr "‎پاشه‌كه‌وتی بارخانه‌"
+
+#: AccountingServer/locale/temp2.py:257 AccountingServer/locale/temp2.py:268
+msgid "Storage Phone"
+msgstr "‎تەلەفۆن"
+
+#: AccountingServer/locale/temp2.py:258
+msgid "Storage Address"
+msgstr "‎شوێنی بارخانه‌"
+
+#: AccountingServer/locale/temp2.py:260
+msgid "Storage Items"
+msgstr "‎خه‌زێنه‌ی كاڵا"
+
+#: AccountingServer/locale/temp2.py:266
+msgid "Storage Info"
+msgstr "‎زانیاری بارخانه‌"
+
+#: AccountingServer/locale/temp2.py:274
+msgid "Suppliers"
+msgstr "‎فرۆشیاره‌كان"
+
+#: AccountingServer/locale/temp2.py:275 AccountingServer/locale/temp2.py:311
+msgid "Save Supplier"
+msgstr "‎پاشه‌كه‌وتی فرۆشیار"
+
+#: AccountingServer/locale/temp2.py:276
+msgid "Supplier Id"
+msgstr "‎ژماره‌ی فرۆشیار"
+
+#: AccountingServer/locale/temp2.py:278
+msgid "Supplier Contact Manager"
+msgstr "‎لایه‌نی په‌یوه‌ندیدار"
+
+#: AccountingServer/locale/temp2.py:279 AccountingServer/locale/temp2.py:309
+msgid "Phone no"
+msgstr "‎تەلەفۆن"
+
+#: AccountingServer/locale/temp2.py:280 AccountingServer/locale/temp2.py:310
+msgid "Work Field"
+msgstr "‎پیشه‌"
+
+#: AccountingServer/locale/temp2.py:288 AccountingServer/locale/temp2.py:306
+msgid "Supplier Info"
+msgstr "‎زانیاری فرۆشیار"
+
+#: AccountingServer/locale/temp2.py:308
+msgid "Supplier Manager"
+msgstr "‎لایه‌نی په‌یوه‌ندیدار"
+
+#~ msgid "Samal web application server"
+#~ msgstr "وب سرور سامال"
+
+#~ msgid "Starting server at"
+#~ msgstr "شروع سرور در "
+
+#~ msgid "End server listening"
+#~ msgstr "خاتمه سرور"
+
+#~ msgid "Server is Stoped"
+#~ msgstr "اتمام کار سرور"
+
+#~ msgid "Operation"
+#~ msgstr "عملیات"
+
+#~ msgid "Accounting Web Application"
+#~ msgstr "سیستم یکپارچه حسابداری"
+
+#, fuzzy
+#~ msgid "Person Family"
+#~ msgstr "کد"

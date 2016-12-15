@@ -1,0 +1,43 @@
+<script type="text/javascript">
+     function SaveSupplier(){
+        $.post('/info/supplier.save',$('#fSupplierData').serialize(),function(){
+             LoadPage('info/supplier.manage');
+             CloseDialog();
+        });
+    }
+</script>
+<div class="form">
+    <h6>{{#_}}Supplier Info{{/_}}</h6>
+    <div class="content">
+        <form id="fSupplierData" method="post" onsubmit="return false;" autocomplete="off">
+            <input type="hidden" name="id" id="data_id" value="{{supplier.id}}" />
+            <p>
+                <label class="desc">{{#_}}Supplier Name{{/_}}</label>
+                <input id="txtName" name="name" type="text" value="{{supplier.name}}" />
+            </p>
+            <p>
+                <label class="desc">{{#_}}Supplier Manager{{/_}}</label>
+                <input id="txtManager" name="manager" type="text" value="{{supplier.manager}}" />
+            </p>
+            <p>
+                <label class="desc">{{#_}}Phone no{{/_}}</label>
+                <input id="txtTell" name="tell" type="text" value="{{supplier.tell}}" />
+            </p>
+            <p>
+                <label class="desc">{{#_}}Work Field{{/_}}</label>
+                <input id="txtField" class="large" name="field" type="text" value="{{supplier.field}}" />
+            </p>
+            <p>
+                <label class="desc"></label>
+                <button onclick="SaveSupplier()">
+                    <span class="fa fa-check-circle"></span>
+                    {{#_}}Save Supplier{{/_}}
+                </button>
+                 <button class="end" type="button" onclick="CloseDialog()">
+                    {{#_}}Cancel{{/_}}
+                    <i class="fa fa-times-circle"></i>
+                </button>
+            </p>
+        </form>
+    </div>
+</div>

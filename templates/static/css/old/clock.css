@@ -1,0 +1,64 @@
+#experiment{
+	overflow: hidden;
+}
+#clock{
+	display: block;
+	width: 378px;
+	height: 378px;
+	margin: 0 auto;
+	position: relative;
+	background: url('../images/clockFace.png');
+}
+ 
+#hour,#minute,#second{
+	position: absolute;
+}
+
+#hour img,#minute img ,#second img{
+	border-radius: 200px;
+}
+ 
+#second img{
+	-webkit-transition: -webkit-transform 600000s linear;
+	-moz-transition: -moz-transform 600000s linear;
+	-o-transition: -o-transform 600000s linear;
+	-ms-transition: -ms-transform 600000s linear;
+	transition: transform 600000s linear;
+}
+.start #second img{
+	-webkit-transform: rotate(3600000deg);
+	-moz-transform: rotate(3600000deg);
+	-o-transform: rotate(3600000deg);
+	-ms-transform: rotate(3600000deg);
+	-transform: rotate(3600000deg);
+}
+
+#minute img {
+	-webkit-transition: -webkit-transform 360000s linear;
+	-moz-transition: -moz-transform 360000s linear;
+	-o-transition: -o-transform 360000s linear;
+	-ms-transition: -ms-transform 360000s linear;
+	transition: transform 360000s linear;
+}
+.start #minute img{
+	-webkit-transform: rotate(36000deg);
+	-moz-transform: rotate(36000deg);
+	-o-transform: rotate(36000deg);
+	-ms-transform: rotate(36000deg);
+	transform: rotate(36000deg);
+}
+
+#hour img {
+	-webkit-transition: -webkit-transform 216000s linear;
+	-moz-transition: -moz-transform 216000s linear;
+	-o-transition: -o-transform 216000s linear;
+	-ms-transition: -ms-transform 216000s linear;
+	transition: transform 216000s linear;
+}
+.start #hour img{
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	transform: rotate(360deg);
+} 

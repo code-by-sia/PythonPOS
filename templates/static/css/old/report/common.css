@@ -1,0 +1,193 @@
+*
+{
+	font-family: tahoma;
+	direction: rtl;
+}
+.Page *
+{
+	font-family: "B Roya" ,tahoma;
+}
+.Page, body
+{
+	font-size: 12pt;
+}
+/* TO CALC SCREEN DPI */
+#dpi
+{
+	height: 1in;
+	left: -100%;
+	position: absolute;
+	top: -100%;
+	width: 1in;
+}
+h1
+{
+	font-family: "B Roya" ,serif,arial,tahoma;
+}
+h1 small
+{
+	display: block;
+	font-size: 8pt;
+	font-family: "B Roya" ,serif,arial,tahoma;
+}
+h1 small strong
+{
+	font-weight: bold;
+}
+
+
+div.Page
+{
+	font-family: serif,arial;
+	color: black;
+	direction: rtl;
+	width: 21cm;
+	height: 29.7cm; 
+}
+
+#XK .Page.A5
+{
+	width: 15cm !important;
+	height: 21cm !important;
+}
+#XK .Page.Landscape
+{
+	height: 21cm !important;
+	width: 29.7cm !important;
+}
+
+div.Page .header
+{
+	width: 700px;
+	margin: 10px auto;
+}
+div.Page.A5 .header
+{
+	width: 565px !important;
+	margin: 0 auto;
+}
+div.Page .header h1
+{
+	padding-top: 40px;
+	font-size: 14pt;
+	text-align: center;
+}
+div.Page .header span
+{
+	font-size: 12px;
+}
+
+
+
+small
+{
+	font-size: 10pt;
+}
+.txtctr
+{
+	text-align: center;
+}
+.txt270
+{
+	-moz-transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
+	transform: rotate(270deg);
+	font-size: 10px;
+	float: left;
+	position: relative;
+}
+.price, td.price
+{
+	text-align: left !important;
+	direction: ltr !important;
+}
+/* Table */
+
+
+td.center
+{
+	text-align: center !important;
+}
+
+
+.Page table
+{
+	margin: 14px auto;
+}
+.Page table td, .Page table th
+{
+	border: solid 1px #000; 
+	padding: 0 5px;
+	height: 22px;
+	line-height:22px;
+	vertical-align: middle;
+	margin: 0;
+}
+
+table thead th
+{
+	background: #7cf;
+	border-bottom: none;
+}
+table tbody tr:first-child td
+{
+	border-top: solid 1px #000;
+}
+table tbody tr:nth-child(odd) td
+{
+	background: #e2eff6;
+}
+
+
+table
+{
+	width: 700px;
+	margin: 0 auto;
+}
+table td, table th
+{
+	font-size: 9pt;
+	direction: rtl;
+	text-align: center;
+}
+table td
+{
+	border: solid #000 1px; 
+}
+table td:last-child
+{
+	border-left: solid 1px #000;
+}
+table tbody tr:last-child td
+{
+	border-bottom: solid 1px #000;
+}
+table th
+{
+	text-align: center;
+	vertical-align: middle;
+	border-bottom: none;
+	border-left: 0px;
+	background: #7cf;
+}
+table tfoot td
+{
+	border-bottom: solid 1px #000;
+}
+table tfoot td:first-child
+{
+	border-bottom: none;
+}
+table td.borderTop
+{
+	border-top: solid 1px #000;
+}
+table thead th:last-child
+{
+	border-left: solid 1px #000;
+}
+table .border-bott th
+{
+	border-bottom: solid 1px #000;
+}
+

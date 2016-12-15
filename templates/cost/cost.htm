@@ -1,0 +1,47 @@
+<script type="text/javascript">
+     function SaveCost(){
+        $.post('/info/cost.save',$('#fCostData').serialize(),function(){
+             CloseDialog();
+             LoadPage('info/cost.manage');
+        });
+    }
+</script>
+<div class="form">
+    <h6>{{#_}}Cost Information{{/_}}</h6>
+    <div class="content">
+        <form id="fCostData" method="post" onsubmit="return false;" autocomplete="off">
+            <input type="hidden" name="id" id="data_id" value="{{cost.id}}" />
+            <p>
+                <label class="desc">{{#_}}Cost Title{{/_}}</label>
+                <input id="txtTitle" name="title" type="text" value="{{cost.title}}" />
+            </p>
+            <p>
+                <label class="desc">{{#_}}Invoice No{{/_}}</label>
+                <input id="txtInoviceNo" name="invoiceno" type="text" value="{{cost.invoiceno}}" />
+            </p>
+            <p>
+                <label class="desc">{{#_}}Register Date{{/_}}</label>
+                <input id="txtRegdate" name="regdate" type="text" class="" value="{{cost.regdate}}" />
+            </p>
+            <p>
+                <label class="desc">{{#_}}Time{{/_}}</label>
+                <input id="txtTime" name="regtime" type="text" class="" value="{{cost.regtime}}" />
+            </p>
+            <p>
+                <label class="desc">{{#_}}Amount{{/_}}</label>
+                <input id="txtAmount" name="amount" type="text" class="price ltr center" value="{{cost.amount_string}}" />
+            </p>
+            <p>
+                <label class="desc"></label>
+                <button onclick="SaveCost()">
+                    <span class="fa fa-check-circle"></span>
+                    {{#_}}Save Cost{{/_}}
+                </button>
+                 <button class="end" type="button" onclick="CloseDialog()">
+                    {{#_}}Cancel{{/_}}
+                    <i class="fa fa-times-circle"></i>
+                </button>
+            </p>
+         </form>
+    </div>
+</div>

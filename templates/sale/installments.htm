@@ -1,0 +1,46 @@
+<style>
+    #pay-list{
+        text-align:center;
+        padding:5px 0 0 0;
+        height:374px;
+        background:#ccc;
+        overflow:auto;
+    }
+
+    #pay-list .pay {
+        display:inline-block;
+        background:#fff;
+        box-shadow:0 2px 2px #777;
+        border-radius:3px;
+        margin:2px;
+        padding:2px;
+        width:180px;
+    }
+    #pay-list .pay p {
+        text-align:right;
+        margin:0;
+        padding:0;
+    }
+    #pay-list .pay p label{
+        min-width:70px;
+        padding:0 5px;
+        line-height:18px;
+        display:inline-block;
+    }
+</style>
+<div class="form">
+    <h6>{{#_}}Sale Installmets{{/_}}</h6>
+    <div id="pay-list">
+        {{#sale.installments}}
+        <div class="pay">
+            <p><label>{{#_}}Id{{/_}}:</label>{{index}}</p>
+            <p><label>{{#_}}Date{{/_}}:</label>{{date}}</p>
+            <p><label>{{#_}}Amount{{/_}}:</label>{{amount_string}}</p>
+            <p><label>{{#_}}Payback{{/_}}:</label>{{payback}}</p>
+        </div>
+        {{/sale.installments}}
+    </div>
+    <p class="center">
+        <button type="button" onclick="CloseDialog()">{{#_}}Cancel{{/_}}</button>
+    </p>
+</div>

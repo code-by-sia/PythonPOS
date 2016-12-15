@@ -1,0 +1,42 @@
+<script text="text/javascript">
+    function GoBack(){
+        LoadPage('/info/storage.manage');
+    }
+</script>
+<div class="form">
+    <h6>{{#_}}Good List{{/_}}</h6>
+    <div class="content">
+        <div><span>{{#_}}Storage Name{{/_}} : {{storage.name}}</span>  </div>
+        <div>{{#_}}Storage Stock{{/_}} :  <span style="direction:rtl;display:inline-block;font-weight:bold">{{storage.stock}}</span> </div>
+        <table class="data-table">
+            <thead>
+                <th>#</th>
+                <th>{{#_}}Product Name{{/_}}</th>
+                <th>{{#_}}Quantity{{/_}}</th>
+                <th>{{#_}}Purchase{{/_}}</th>
+                <th>{{#_}}Full Purchase{{/_}}</th>
+                <!--<th>{{#_}}Sale{{/_}}</th>-->
+                <!--<th>{{#_}}Full Sale{{/_}}</th>-->
+
+            </thead>
+            <tbody>
+                 {{#products}}
+                  <tr>
+                      <td style="width:20px">#</td>
+                      <td>{{product.name}}</td>
+                      <td>{{current}}</td>
+                      <td>{{purchase_string}}</td>
+                      <td>{{total_purchase_string}}</td>
+
+
+
+                  </tr>
+                {{/products}}
+            </tbody>
+        </table>
+
+        <p>
+            <button onclick="GoBack()">{{#_}}Return{{/_}}</button>
+        </p>
+    </div>
+</div>

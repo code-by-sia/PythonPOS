@@ -1,0 +1,152 @@
+<script type="text/javascript">
+var row_id=1;
+var uindex = 0;
+
+function BoundRows(selector){
+    $(selector + ' .qty,' + selector + ' .purchase').keyup(function(){
+        var row= $(this).parent().parent();
+        var qty= getNum(row.find('.qty').val());
+        var purchase= getNum(row.find('.purchase').val());
+        var fsale = ShowMoney(purchase * qty);
+        row.find('.fullsale').html(fsale);
+        CalcSummation();
+    });
+}
+
+function AddNewRow(){
+    var tr  = '<tr>';
+        tr += '<td class="center index">'+ row_id++ +'</td>';
+        tr += '<td class="group-name"><select  name="g['+ uindex +']">';
+        tr += '{{#group-list}}<option value="{{id}}">{{id}}-{{name}}</option>{{/group-list}}';
+        tr += '</select></td>';
+        tr += '<td><input name="n['+ uindex +']" class="name"/></td>';
+        tr += '<td><input name="p['+ uindex +']" class="purchase price ltr"/></td>';
+        tr += '<td><input name="s['+ uindex +']" class="sale price ltr"/></td>';
+        tr += '<td><input name="q['+ uindex +']" class="qty price ltr" /></td>';
+        tr += '<td class="fullsale"></td>';
+        tr += '<td><a href="#" onclick="DeleteOrderRow(this)"><i class="fa fa-times"></i>{{#_}}Delete{{/_}}</a></td>';
+        tr += '</tr>';
+    uindex++;
+    $('#order-details').append(tr)
+
+    MaskMoney('#order-details tr:last-child .price');
+    BoundRows('#order-details tr:last-child');
+
+}
+
+function CalcSummation(){
+    var sqty=0;
+    var ssum=0;
+    $('#order-details tr').each(function(index,row){
+        sqty += getNum($(row).find('.qty').val());
+        ssum += getNum($(row).find('.fullsale').text());
+    });
+    $('#colSumQty').text(ShowMoney(sqty));
+    $('#colSumSale').text(ShowMoney(ssum));
+
+
+}
+function RenewRowIndexes(){
+    row_id=0;
+    $('#order-details tr .index').each(function(index,cell){
+        row_id= index +1;
+        $(cell).text(row_id);
+
+    });
+    row_id++;
+    CalcSummation();
+}
+function DeleteOrderRow(sender){
+    $(sender).parent().parent().remove();
+    RenewRowIndexes();
+}
+
+function SavePurchase(){
+
+    ﻿if($('#SupplierId').val()==undefined)
+        MessageBox('کاربر گرامی','لطفاً فروشنده را انتخاب کنید');
+	else if(row_id== 1)
+		MessageBox('کاربر گرامی','هیچ سطری وارد نشده است');
+	else{
+		$.ajax({
+            type: 'POST',
+            url: 'purchase/save',
+            data: $('#fPersonData').serialize(),
+            dataType: 'json',
+            success: function(data) {
+                $('#txtId').val(data.Id);
+				$('#btnPrintPurchase').attr('disabled','');
+            }
+        });
+	}
+}
+
+$(document).ready(function(){
+    var sqty = 0;
+    var ssum = 0;
+    $('#order-details tr').each(function(index,rowitem){
+
+        var row= $(rowitem);
+        var qty= getNum(row.find('.qty').val());
+        var purchase= getNum(row.find('.purchase').val());
+        sqty += qty;
+        ssum += (qty * purchase);
+        var fsale = ShowMoney(purchase * qty);
+        row.find('.fullsale').text(fsale);
+        row.find('.index').text(row_id);
+        var pid = row.find('.product-id').val();
+        if(pid != undefined && pid >= uindex )
+            uindex = (pid * 1) + 1;
+        $('#colSumQty').text(ShowMoney(sqty));
+        $('#colSumSale').text(ShowMoney(ssum));
+        row_id++;
+    });
+    BoundRows('#order-details tr');
+});
+</script>
+<div class="form">
+    <h6>{{#_}}Purchase Details{{/_}}</h6>
+    <div class="content">
+        <table id="order">
+            <thead>
+                <th width="30px">#</th>
+                <th>{{#_}}Product Group{{/_}}</th>
+                <th>{{#_}}Product Name{{/_}}</th>
+                <th>{{#_}}Purchase Price{{/_}}</th>
+                <th>{{#_}}Sale Price{{/_}}</th>
+                <th>{{#_}}Quantity{{/_}}</th>
+                <th>{{#_}}Full Purchase Price{{/_}}</th>
+            </thead>
+            <tbody id="order-details">
+            {{#products}}
+                <tr>
+                    <td class="center index">#</td>
+                    <td class="group-name">{{id}}-{{name}}</td>
+                    <td>{{name}}</td>
+                    <td>{{purchase_string}}</td>
+                    <td>{{sale_string}}</td>
+                    <td>{{quantity}}</td>
+                    <td class="fullsale">{{full_purchase_string}}</td>
+                </tr>
+            {{/products}}
+            </tbody>
+            <!--<tfoot>-->
+                <!--<td colspan="4" style="padding:4px 0 2px" class="merged">-->
+
+                <!--</td>-->
+                <!--<td style="text-align:left;padding:2px 5px">-->
+                    <!--{{#_}}Total Purchase{{/_}}-->
+                <!--</td>-->
+                <!--<td id="colSumQty">0</td>-->
+                <!--<td id="colSumSale" colspan="2">0</td>-->
+            <!--</tfoot>-->
+        </table>
+        <p>
+             <button class="end" type="button" onclick="CloseDialog()">
+                {{#_}}Close{{/_}}
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </p>
+    </div>
+
+</div>

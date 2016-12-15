@@ -1,0 +1,143 @@
+<style type="text/css">
+    #txtNID{color: green;}
+    .red-text{color: red !important;font-weight: bold;}
+    #fData{text-align: right;}
+    .td-action{
+        padding: 2px 6px !important;
+        text-align: center !important;
+        border-right: none;
+    }
+    .td-action button{width: 100%;}
+
+</style>
+
+<div class="form">
+    <h6>{{#_}}Supplier Info{{/_}}</h6>
+    <div class="content">
+        <form id="fData" method="post" onsubmit="return false;" autocomplete="off">
+            <p>
+    <label class="desc" for="txtId" >{{#_}}Person Id{{/_}}</label>
+    <input type="text" name="code" id="txtId" class="field text tiny center ltr" value="{{person.id}}" />
+    <label class="desc center" for="txtNID" >{{#_}}National Id{{/_}}</label>
+    <input type="text" name="nid" id="txtNID" class="field text tiny center ltr" value="{{person.nationalid}}" />
+    <strong style="font-weight:bold" id="Check" ></strong>
+</p> 
+<p>
+  <label class="desc" for="txtName" >{{#_}}First Name{{/_}}</label>
+  <input type="text" name="name" id="txtName" class="field text tiny" value="{{person.firstname}}" />
+  <label class="desc center" for="txtFamily" >{{#_}}Last Name{{/_}}</label>
+  <input type="text" name="family" id="txtFamily" class="field text small" value="{{person.lastname}}" />
+</p>
+ 
+<p>
+  <label class="desc" for="txtParent" >{{#_}}Parent Name{{/_}}</label>
+  <input type="text" name="parent" id="txtParent" class="field text tiny" value="{{person.parentname}}" />
+  <label for="txtBirth" class="desc center">{{#_}}Birth Date{{/_}}</label>
+  <input type="text" maxlength="10"  value="{{person.birthdate}}" class="field text tiny center date ltr" id="txtBirth" name="birthDate"  />
+</p>
+<p>
+    <label class="desc" for="txtHome" >{{#_}}Home Tel{{/_}}</label>
+    <input type="text" name="home" id="txtHome" class="field text tiny ltr" maxlength="11" value="{{person.home}}" />
+</p>
+<p>
+    <label class="desc" for="txtWork" >{{#_}}Work Tel{{/_}}</label>
+    <input type="text" name="work" id="txtWork" class="field text tiny ltr" maxlength="11" value="{{person.work}}" />
+</p>
+
+</div>
+<p class="merged center">
+    <button class="start" type="button" onclick="LoadPage('info/person.manage')">
+        {{#_}}Manage Persons{{/_}}
+        <i class="fa fa-list-alt"></i>
+    </button>
+    <button class="end" type="button" onclick="SaveMember()">
+        {{#_}}Save Person{{/_}}
+        <i class="fa fa-check-circle"></i>
+    </button>
+</p>
+
+</div>
+</div>
+
+<script type="text/javascript"> 
+$(document).ready(function() {
+	MaskNID('#txtNID');
+	MaskCell('#txtCell');
+	MaskPhone('#txtHome,#txtWork,#txtFax');
+	
+	$('#txtNID').change(function(){
+		var NID  = $('#txtNID').val();
+		var INID = NID.toString().length;
+		if(INID == 12){
+			$('#Check').html('');
+			$.get('info/person.check',{'NID':NID},function(Dx){
+				if(Dx != 'sys::not-found')
+					$('#Check').html(Dx);
+			});
+		}
+	});
+
+	$('#cboOwnerType').change(function(){
+		if($(this).val()==3)
+			$('#heir-tab').fadeIn();
+		else
+			$('#heir-tab').fadeOut();
+	});
+}); 
+ 
+function SaveMember(){
+	var gender =0;
+	if($('#chkMale').attr('checked'))
+		gender=1;
+	
+	var MemberData =
+	{
+
+		'id':$('#txtId').val(),
+		'personalCode':$('#txtPersonalCode').val(),
+		'date_issue':$('#date_issue').val(),
+		'memberType' :$('#cboOwnerType').val(),
+		'name':$('#txtName').val(),
+		'family':$('#txtFamily').val(),
+		'parent':$('#txtParent').val(),
+		'birthDate':$('#txtBirth').val(),
+		'nid':$('#txtNID').val(),
+		'gender':gender,
+		'home_address':$('#txtHomeAddr').val(),
+		'home_post':$('#txtHomeCode').val(),
+		'work_address':$('#txtWorkAddr').val(),
+		'work_post':$('#txtWorkCode').val(),
+		'home':$('#txtHome').val(),
+		'work':$('#txtWork').val(),
+		'cell':$('#txtCell').val(),
+		'email':$('#txtMail').val()
+	};
+	
+	$.getJSON('info/person.save',MemberData,function(responseData){
+		if(responseData.Result == 'success')
+			$('#txtId').val(responseData.Id);
+		else
+			MessageBox('Error','Dear User');
+	});
+
+	return false;
+}
+
+function NID_CODE(){
+	var n= $('#txtNID').val();
+	var code= n.replace(/[^0-9]/g,'');
+	var t= CheckNID(code);
+	if(code.length == 10){
+		if(CheckNID(n)){
+			$('#txtNID').removeClass('red-text');
+		}
+		else{
+			$('#txtNID').addClass('red-text');
+		}
+	}
+}
+$('#txtNID').keyup(NID_CODE);
+$('#txtNID').blur(NID_CODE);
+CalcColSums();
+</script>
+

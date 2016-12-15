@@ -1,0 +1,38 @@
+<script text="text/javascript">
+    function GoBack(){
+        LoadPage('/info/supplier.manage');
+    }
+</script>
+<div class="form">
+    <h6>{{#_}}Good List{{/_}}</h6>
+    <div class="content">
+        <p>{{#_}}Supplier Name{{/_}} : {{supplier.name}}
+           {{#_}}Total Purchase{{/_}} : <span style="direction:rtl;display:inline-block;font-weight:bold" > {{supplier.purchaseamount}}</span></p>
+        <table class="data-table" id="tblpurchaselist">
+            <thead>
+                <th>#</th>
+                <th>{{#_}}Product Name{{/_}}</th>
+                <th>{{#_}}Quantity{{/_}}</th>
+                <th>{{#_}}Purchase{{/_}}</th>
+
+            </thead>
+            <tbody>
+                 {{#products}}
+                  <tr>
+                      <td style="width:20px">{{index}}</td>
+                      <td>{{name}}</td>
+                      <td>{{quantity}}</td>
+                      <td>{{purchase_string}}</td>
+                  </tr>
+                {{/products}}
+            </tbody>
+        </table>
+
+        <p>
+            <button class="end" type="button" onclick="GoBack()">
+                {{#_}}Return{{/_}}
+
+            </button>
+        </p>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+<script type="text/javascript">
+function DeletePurchase(id,sender){
+    $.getJSON('/purchase/delete',{'id':id},
+        function(response){
+            if(response.result == 'OK')
+                $(sender)
+                    .parent()
+                    .parent()
+                    .fadeOut()
+        }
+    );
+}
+</script>
+<div class="form">
+    <h6 >{{#_}}Manage Purchases{{/_}}</h6>
+    <div class="content">
+        <p>
+            <button onclick="LoadPage('purchase/new')" >
+                {{#_}}Add New Purchase{{/_}}
+                <span class="fa fa-plus"></span>
+            </button>
+        </p>
+        <p>
+            <table class="data-table">
+                <thead>
+                    <th>{{#_}}Purchase No{{/_}}</th>
+                    <th>{{#_}}Purchase Date{{/_}}</th>
+                    <th>{{#_}}Storage Name{{/_}}</th>
+                    <th>{{#_}}Supplier Name{{/_}}</th>
+                    <th>{{#_}}Purchase Amount{{/_}}</th>
+                    <th>{{#_}}Edit{{/_}}</th>
+                    <th>{{#_}}Delete{{/_}}</th>
+                </thead>
+                <tbody id="grdPurchases">
+                {{#purchases}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{date}}</td>
+                        <td>{{storage.name}}</td>
+                        <td>{{supplier.name}}</td>
+                        <td>{{amount_string}}</td>
+                        {{^verified}}
+                        <td class="center" width="70px">
+                            <a href="#" onclick="LoadPage('/purchase/edit',{'id':'{{id}}'})">
+                                <span class="fa fa-edit"></span>
+                                {{#_}}Edit{{/_}}
+                            </a>
+                        </td>
+                        <td class="center" width="70px">
+                            <a href="#" onclick="DeletePurchase({{id}},this)">
+                                <span class="fa fa-trash-o" ></span>
+                                {{#_}}Delete{{/_}}
+                            </a>
+                        </td>
+                        {{/verified}}
+                        {{#verified}}
+                        <td class="center" width="70px">
+                            <a href="#" onclick="LoadPage('/purchase/edit',{'id':'{{id}}'})">
+                                <span class="fa fa-search"></span>
+                                {{#_}}View{{/_}}
+                            </a>
+                        </td>
+                        <td class="center" width="70px">
+                            <a href="/report/order?Id={{id}}" target="_blanck">
+                                <span class="fa fa-print" ></span>
+                                {{#_}}Print{{/_}}
+                            </a>
+                        </td>
+                        {{/verified}}
+                    </tr>
+                {{/purchases}}
+                </tbody>
+            </table>
+        </p>
+    </div>
+</div>

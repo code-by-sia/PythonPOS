@@ -1,0 +1,39 @@
+<script type="text/javascript">
+     function SaveStorage(){
+        $.post('/info/storage.save',$('#fStorageData').serialize(),function(){
+             LoadPage('info/storage.manage');
+             CloseDialog();
+        });
+    }
+</script>
+<div class="form">
+    <h6>{{#_}}Storage Info{{/_}}</h6>
+    <div class="content">
+        <form id="fStorageData" method="post" onsubmit="return false;" autocomplete="off">
+            <input type="hidden" name="id" id="data_id" value="{{storage.id}}" />
+            <p>
+                <label class="desc">{{#_}}Storage Name{{/_}}</label>
+                <input id="txtName" name="name" type="text" value="{{storage.name}}" />
+            </p>
+            <p>
+                <label class="desc">{{#_}}Storage Phone{{/_}}</label>
+                <input id="txtTell" name="tell" type="text" value="{{storage.tell}}" />
+            </p>
+            <p>
+                <label class="desc">{{#_}}Address{{/_}}</label>
+                <input id="txtAddress" class="large" name="address" type="text" value="{{storage.address}}" />
+            </p>
+            <p>
+                <label class="desc"></label>
+                <button onclick="SaveStorage()">
+                    <span class="fa fa-check-circle"></span>
+                    {{#_}}Save Storage{{/_}}
+                </button>
+                 <button class="end" type="button" onclick="CloseDialog()">
+                    {{#_}}Cancel{{/_}}
+                    <i class="fa fa-times-circle"></i>
+                </button>
+            </p>
+        </form>
+    </div>
+</div>

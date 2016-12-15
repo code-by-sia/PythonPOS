@@ -1,0 +1,90 @@
+﻿<script type="text/javascript">
+function DeleteSupplier(id,sender)
+{
+    $.getJSON('/info/supplier.delete',{'id':id},
+        function(res){
+            if(res.result == 'OK')
+                $(sender).parent().parent().fadeOut();
+            else
+                alert(res.msg);
+        });
+}
+function AddNewSupplier(){
+     $.get('info/supplier.new',function(response){
+        ModalDialog(response,{width:450,height:242});
+    });
+}
+function UpdateSupplier(id){
+     $.get('info/supplier.edit',{'id':id},function(response){
+       ModalDialog(response,{width:450,height:242});
+    });
+}
+function PurchaseList(id){
+    //$.get('info/supplier.purchaselist',{'id':id},
+    //function(response){
+    //    ModalDialog(response,{width:665,height:400});
+    //})
+    LoadPage('info/supplier.purchaselist',{'id':id});
+}
+</script>
+<div class="form">
+    <h6>{{#_}}Suppliers{{/_}}</h6>
+    <div class="content">
+         <p>
+            <button onclick="AddNewSupplier()" >
+                <i class="fa fa-plus"></i>
+                {{#_}}Save Supplier{{/_}}
+            </button>
+        </p>
+        <p>
+            <table class="data-table">
+                <thead>
+                    <th width="70px">{{#_}}Supplier Id{{/_}} </th>
+                    <th>{{#_}}Supplier Name{{/_}}</th>
+                    <th>{{#_}}Supplier Contact Manager{{/_}}</th>
+                    <th>{{#_}}Phone no{{/_}}</th>
+                    <th>{{#_}}Work Field{{/_}}</th>
+                    <th>{{#_}}Total Purchase{{/_}}</th>
+                    <th>{{#_}}Purchases{{/_}}</th>
+                    <th >{{#_}}Edit{{/_}}</th>
+                    <th >{{#_}}Delete{{/_}}</th>
+                </thead>
+                <tbody>
+                {{#suppliers}}
+                <tr>
+                    <td>{{id}}</td>
+                    <td>{{name}}</td>
+                    <td>{{manager}}</td>
+                    <td>{{tell}}</td>
+                    <td>{{field}}</td>
+                    <td class="center">{{purchaseamount}}</td>
+
+                    <td class="center" width="70px">
+                        <a href="#" onclick="PurchaseList({{id}})">
+                            <i class="fa fa-align-justify"></i>
+                            {{#_}}List{{/_}}
+                        </a>
+                    </td>
+
+                    <td class="center" width="70px">
+                        <a href="#" onclick="UpdateSupplier({{id}})">
+                            <i class="fa fa-edit"></i>
+                            {{#_}}Edit{{/_}}
+                        </a>
+                    </td>
+                    <td class="center" width="70px">
+                        <a href="#" onclick="DeleteSupplier({{id}},this)">
+                            <i class="fa fa-trash-o"></i>
+                            {{#_}}Delete{{/_}}
+                        </a>
+                    </td>
+
+                </tr>
+                {{/suppliers}}
+
+                </tbody>
+            </table>
+        </p>
+
+    </div>
+</div>

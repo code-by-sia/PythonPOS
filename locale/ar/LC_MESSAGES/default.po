@@ -1,0 +1,1007 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AccountingServer\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-04-25 21:38+0330\n"
+"PO-Revision-Date: 2014-04-25 21:38+0330\n"
+"Last-Translator: \n"
+"Language-Team: Samal <info@samalstudios.com>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: /Users/syamandmaroufi/Code/\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Language: ar\n"
+"X-Source-Language: C\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-SearchPath-0: AccountingServer\n"
+
+#: AccountingServer/__main__.py:32
+msgid "Samal web application server"
+msgstr "سامال تطبيق خادم الويب "
+
+#: AccountingServer/__main__.py:33
+msgid "Starting server at"
+msgstr "بدءا الخادم في"
+
+#: AccountingServer/__main__.py:37
+msgid "End server listening"
+msgstr "الخادم نهاية الاستماع "
+
+#: AccountingServer/__main__.py:39
+msgid "Server is Stopped"
+msgstr "وتوقف الخادم"
+
+#: AccountingServer/core/config.py:23
+msgid "CompanyName"
+msgstr "اسم الشركة"
+
+#: AccountingServer/locale/temp.py:6 AccountingServer/locale/temp2.py:79
+#: AccountingServer/locale/temp2.py:81
+msgid "Login Page"
+msgstr "الدخول الصفحة "
+
+#: AccountingServer/locale/temp.py:7 AccountingServer/locale/temp2.py:80
+msgid "Login Failed"
+msgstr "فشل تسجيل الدخول"
+
+#: AccountingServer/locale/temp.py:8 AccountingServer/locale/temp2.py:84
+msgid "Sign in"
+msgstr "توقيع في"
+
+#: AccountingServer/locale/temp.py:9 AccountingServer/locale/temp2.py:85
+msgid "Close Window"
+msgstr "أغلق النافذة "
+
+#: AccountingServer/locale/temp.py:10 AccountingServer/locale/temp2.py:33
+msgid "Change"
+msgstr "تغییر"
+
+#: AccountingServer/locale/temp.py:11
+msgid "Old Password"
+msgstr "كلمة المرور القديمة "
+
+#: AccountingServer/locale/temp.py:12
+msgid "New Password"
+msgstr "كلمة المرور الجديدة"
+
+#: AccountingServer/locale/temp.py:13
+msgid "Dear User"
+msgstr "عزيزي المستخدم"
+
+#: AccountingServer/locale/temp.py:14
+msgid "Change Password"
+msgstr "تغيير كلمة المرور "
+
+#: AccountingServer/locale/temp.py:15
+msgid "Repeat Password"
+msgstr "تكرار كلمة المرور "
+
+#: AccountingServer/locale/temp.py:16
+msgid "New password at least should be 6 char"
+msgstr "كلمة السر الجديدة على الأقل يجب أن يكون 6 شار"
+
+#: AccountingServer/locale/temp.py:17
+msgid "Repeat of new password is wrong"
+msgstr "تكرار كلمة المرور الجديدة غير صحيح "
+
+#: AccountingServer/locale/temp.py:18
+msgid "Curent password is wrong"
+msgstr "كلمة المرور الحالية غير صحيحة "
+
+#: AccountingServer/locale/temp.py:19
+msgid "For changing password contact administrator"
+msgstr "لتغيير مسؤول الاتصال كلمة المرور"
+
+#: AccountingServer/locale/temp.py:20
+msgid "Password changed successfully"
+msgstr "تغيير كلمة المرور بنجاح "
+
+#: AccountingServer/locale/temp.py:21
+msgid "Add new user"
+msgstr "إضافة مستخدم جديد "
+
+#: AccountingServer/locale/temp.py:22
+msgid "Manage users"
+msgstr "إدارة المستخدمين "
+
+#: AccountingServer/locale/temp.py:23 AccountingServer/locale/temp2.py:82
+msgid "UserName"
+msgstr "اسم المستخدم"
+
+#: AccountingServer/locale/temp.py:24 AccountingServer/locale/temp2.py:83
+msgid "Password"
+msgstr "كلمة السر"
+
+#: AccountingServer/locale/temp.py:25
+msgid "Job"
+msgstr "وظيفة "
+
+#: AccountingServer/locale/temp.py:26 AccountingServer/locale/temp2.py:199
+#: AccountingServer/locale/temp2.py:212
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: AccountingServer/locale/temp.py:28 AccountingServer/locale/temp2.py:208
+msgid "Person Info"
+msgstr "معلومات شخص"
+
+#: AccountingServer/locale/temp.py:29 AccountingServer/locale/temp2.py:342
+msgid "Person Id"
+msgstr "الشخص معرف"
+
+#: AccountingServer/locale/temp.py:30 AccountingServer/locale/temp2.py:344
+msgid "First Name"
+msgstr "الاسم"
+
+#: AccountingServer/locale/temp.py:31 AccountingServer/locale/temp2.py:345
+msgid "Last Name"
+msgstr "مشهور "
+
+#: AccountingServer/locale/temp.py:32 AccountingServer/locale/temp2.py:346
+msgid "Parent Name"
+msgstr "اسم الوالد"
+
+#: AccountingServer/locale/temp.py:33
+msgid "Gender"
+msgstr "جنس"
+
+#: AccountingServer/locale/temp.py:34
+msgid "Male"
+msgstr "ذكر"
+
+#: AccountingServer/locale/temp.py:35
+msgid "Female"
+msgstr "أنثى"
+
+#: AccountingServer/locale/temp.py:36 AccountingServer/locale/temp2.py:343
+msgid "National Id"
+msgstr "الهوية الوطنية"
+
+#: AccountingServer/locale/temp.py:37 AccountingServer/locale/temp2.py:347
+msgid "Birth Date"
+msgstr "تاريخ الولادة "
+
+#: AccountingServer/locale/temp.py:38 AccountingServer/locale/temp2.py:348
+msgid "Home Tel"
+msgstr "هاتف المنزل"
+
+#: AccountingServer/locale/temp.py:39
+msgid "Cell Number"
+msgstr "عدد الخلايا "
+
+#: AccountingServer/locale/temp.py:40 AccountingServer/locale/temp.py:41
+#: AccountingServer/locale/temp2.py:349
+msgid "Work Tel"
+msgstr "هاتف العمل"
+
+#: AccountingServer/locale/temp.py:42
+msgid "Postal Code"
+msgstr "الرمز البريدي"
+
+#: AccountingServer/locale/temp.py:43
+msgid "Work Address"
+msgstr "عنوان العمل"
+
+#: AccountingServer/locale/temp.py:44
+msgid "Home Address"
+msgstr "عنوان المنزل"
+
+#: AccountingServer/locale/temp.py:46 AccountingServer/locale/temp2.py:350
+msgid "Manage Persons"
+msgstr "الاشخاص"
+
+#: AccountingServer/locale/temp.py:47 AccountingServer/locale/temp2.py:195
+#: AccountingServer/locale/temp2.py:214 AccountingServer/locale/temp2.py:351
+msgid "Save Person"
+msgstr "حفظ شخص "
+
+#: AccountingServer/locale/temp.py:48 AccountingServer/locale/temp2.py:227
+#: AccountingServer/locale/temp2.py:266
+msgid "View"
+msgstr "منظر"
+
+#: AccountingServer/locale/temp.py:49
+msgid "Order Report"
+msgstr "أجل تقرير"
+
+#: AccountingServer/locale/temp.py:50
+msgid "Page"
+msgstr "صفحة"
+
+#: AccountingServer/locale/temp.py:51
+msgid "Of"
+msgstr "من"
+
+#: AccountingServer/locale/temp.py:52
+msgid "Total"
+msgstr "مجموع"
+
+#: AccountingServer/locale/temp.py:53
+msgid "Row Index"
+msgstr "مؤشر الصف"
+
+#: AccountingServer/locale/temp.py:54
+msgid "Product Id"
+msgstr "رقم المنتج"
+
+#: AccountingServer/locale/temp.py:55
+msgid "User"
+msgstr "المستخدم"
+
+#: AccountingServer/locale/temp.py:56
+msgid "Sale Report"
+msgstr "بيع تقرير"
+
+#: AccountingServer/locale/temp.py:57 AccountingServer/locale/temp2.py:174
+msgid "Full Sale Price"
+msgstr "كامل للبيع السعر"
+
+#: AccountingServer/locale/temp.py:58
+msgid "Storage Stock Report"
+msgstr "تخزين تقرير الأسهم"
+
+#: AccountingServer/locale/temp.py:59
+msgid "Entrance"
+msgstr "مدخل"
+
+#: AccountingServer/locale/temp.py:60
+msgid "Egress"
+msgstr "خروج"
+
+#: AccountingServer/locale/temp.py:61
+msgid "Remain"
+msgstr "بقي"
+
+#: AccountingServer/locale/temp.py:62
+msgid "Cost List Report"
+msgstr "قائمة التكاليف تقرير"
+
+#: AccountingServer/locale/temp.py:63
+msgid "Sale List Report"
+msgstr "قائمة بيع تقرير"
+
+#: AccountingServer/locale/temp.py:64 AccountingServer/locale/temp2.py:126
+#: AccountingServer/locale/temp2.py:134
+msgid "Appointed"
+msgstr "معين"
+
+#: AccountingServer/locale/temp.py:65
+msgid "Orders"
+msgstr "أوامر"
+
+#: AccountingServer/locale/temp.py:66 AccountingServer/locale/temp2.py:124
+#: AccountingServer/locale/temp2.py:132
+msgid "Sales"
+msgstr "مبيعات"
+
+#: AccountingServer/locale/temp2.py:3
+msgid "Dashboard"
+msgstr "لوحة القيادة"
+
+#: AccountingServer/locale/temp2.py:4
+msgid "System"
+msgstr "نظام "
+
+#: AccountingServer/locale/temp2.py:5
+msgid "Users"
+msgstr "المستخدمين"
+
+#: AccountingServer/locale/temp2.py:6
+msgid "Backup/Restore"
+msgstr "النسخ الاحتياطي / استعادة "
+
+#: AccountingServer/locale/temp2.py:7
+msgid "Settings"
+msgstr "إعدادات "
+
+#: AccountingServer/locale/temp2.py:8
+msgid "Exit"
+msgstr "خروج"
+
+#: AccountingServer/locale/temp2.py:9
+msgid "Confrim"
+msgstr "توكيد"
+
+#: AccountingServer/locale/temp2.py:10
+msgid "Basic Info"
+msgstr "معلومات أساسية "
+
+#: AccountingServer/locale/temp2.py:11
+msgid "Customers"
+msgstr "الزبائن"
+
+#: AccountingServer/locale/temp2.py:12
+msgid "Supliers"
+msgstr "الموردين"
+
+#: AccountingServer/locale/temp2.py:13
+msgid "Storage/Vendoers"
+msgstr "التخزين / البائع "
+
+#: AccountingServer/locale/temp2.py:14
+msgid "Groups"
+msgstr "مجموعات "
+
+#: AccountingServer/locale/temp2.py:15 AccountingServer/locale/temp2.py:26
+#: AccountingServer/locale/temp2.py:302 AccountingServer/locale/temp2.py:357
+msgid "Purchase"
+msgstr "شراء"
+
+#: AccountingServer/locale/temp2.py:16
+msgid "New Purchase"
+msgstr "شراء جديدة"
+
+#: AccountingServer/locale/temp2.py:17
+msgid "Manage Purchase"
+msgstr "إدارة المشتريات"
+
+#: AccountingServer/locale/temp2.py:18
+msgid "Waste"
+msgstr "نفاية "
+
+#: AccountingServer/locale/temp2.py:19 AccountingServer/locale/temp2.py:122
+#: AccountingServer/locale/temp2.py:128 AccountingServer/locale/temp2.py:304
+msgid "Sale"
+msgstr "بيع "
+
+#: AccountingServer/locale/temp2.py:20
+msgid "New Sale"
+msgstr "بيع جديدة "
+
+#: AccountingServer/locale/temp2.py:21 AccountingServer/locale/temp2.py:254
+msgid "Manage Sale"
+msgstr "إدارة بيع"
+
+#: AccountingServer/locale/temp2.py:22
+msgid "Return Back"
+msgstr "عودة عودة"
+
+#: AccountingServer/locale/temp2.py:23 AccountingServer/locale/temp2.py:27
+msgid "Costs"
+msgstr "التكاليف"
+
+#: AccountingServer/locale/temp2.py:24
+msgid "Report"
+msgstr "تقرير"
+
+#: AccountingServer/locale/temp2.py:25 AccountingServer/locale/temp2.py:60
+#: AccountingServer/locale/temp2.py:170 AccountingServer/locale/temp2.py:232
+#: AccountingServer/locale/temp2.py:274
+msgid "Storage"
+msgstr "تخزين "
+
+#: AccountingServer/locale/temp2.py:28
+msgid "Trial Balance"
+msgstr "الرصيد المحاكمة "
+
+#: AccountingServer/locale/temp2.py:29
+msgid "Profit & Cost"
+msgstr "الربح والتكلفة "
+
+#: AccountingServer/locale/temp2.py:30
+msgid "Confirm Purchase"
+msgstr "تأكيد شراء"
+
+#: AccountingServer/locale/temp2.py:31 AccountingServer/locale/temp2.py:68
+msgid "Confirm Sale"
+msgstr "تأكيد بيع"
+
+#: AccountingServer/locale/temp2.py:32
+#, fuzzy
+msgid "Sale List"
+msgstr "قائمة بيع تقرير"
+
+#: AccountingServer/locale/temp2.py:34 AccountingServer/locale/temp2.py:54
+#: AccountingServer/locale/temp2.py:118 AccountingServer/locale/temp2.py:120
+#: AccountingServer/locale/temp2.py:160 AccountingServer/locale/temp2.py:163
+#: AccountingServer/locale/temp2.py:193 AccountingServer/locale/temp2.py:204
+#: AccountingServer/locale/temp2.py:207 AccountingServer/locale/temp2.py:224
+#: AccountingServer/locale/temp2.py:226 AccountingServer/locale/temp2.py:229
+#: AccountingServer/locale/temp2.py:240 AccountingServer/locale/temp2.py:241
+#: AccountingServer/locale/temp2.py:263 AccountingServer/locale/temp2.py:265
+#: AccountingServer/locale/temp2.py:280 AccountingServer/locale/temp2.py:281
+#: AccountingServer/locale/temp2.py:295 AccountingServer/locale/temp2.py:315
+#: AccountingServer/locale/temp2.py:318 AccountingServer/locale/temp2.py:326
+#: AccountingServer/locale/temp2.py:337 AccountingServer/locale/temp2.py:340
+msgid "Delete"
+msgstr "حذف"
+
+#: AccountingServer/locale/temp2.py:35
+#, fuzzy
+msgid "Purchase Details"
+msgstr "تاريخ الشراء"
+
+#: AccountingServer/locale/temp2.py:36 AccountingServer/locale/temp2.py:234
+#, fuzzy
+msgid "Product Group"
+msgstr "نتاج"
+
+#: AccountingServer/locale/temp2.py:37 AccountingServer/locale/temp2.py:147
+#: AccountingServer/locale/temp2.py:235 AccountingServer/locale/temp2.py:300
+#: AccountingServer/locale/temp2.py:355
+msgid "Product Name"
+msgstr "اسم المنتج"
+
+#: AccountingServer/locale/temp2.py:38 AccountingServer/locale/temp2.py:236
+#, fuzzy
+msgid "Purchase Price"
+msgstr "تاريخ الشراء"
+
+#: AccountingServer/locale/temp2.py:39 AccountingServer/locale/temp2.py:63
+#: AccountingServer/locale/temp2.py:172 AccountingServer/locale/temp2.py:237
+#: AccountingServer/locale/temp2.py:277
+msgid "Sale Price"
+msgstr "السعر"
+
+#: AccountingServer/locale/temp2.py:40 AccountingServer/locale/temp2.py:64
+#: AccountingServer/locale/temp2.py:173 AccountingServer/locale/temp2.py:238
+#: AccountingServer/locale/temp2.py:278 AccountingServer/locale/temp2.py:301
+#: AccountingServer/locale/temp2.py:356
+msgid "Quantity"
+msgstr "كمية"
+
+#: AccountingServer/locale/temp2.py:41 AccountingServer/locale/temp2.py:65
+#: AccountingServer/locale/temp2.py:239 AccountingServer/locale/temp2.py:279
+#, fuzzy
+msgid "Full Purchase Price"
+msgstr "شراء كامل"
+
+#: AccountingServer/locale/temp2.py:42 AccountingServer/locale/temp2.py:201
+#: AccountingServer/locale/temp2.py:244 AccountingServer/locale/temp2.py:334
+#: AccountingServer/locale/temp2.py:354
+msgid "Total Purchase"
+msgstr "إجمالي شراء"
+
+#: AccountingServer/locale/temp2.py:43 AccountingServer/locale/temp2.py:67
+msgid "Close"
+msgstr ""
+
+#: AccountingServer/locale/temp2.py:44
+msgid "Confirm Purchases"
+msgstr "تأكيد مشتريات"
+
+#: AccountingServer/locale/temp2.py:45 AccountingServer/locale/temp2.py:218
+msgid "Purchase No"
+msgstr "عدد الشراء"
+
+#: AccountingServer/locale/temp2.py:46 AccountingServer/locale/temp2.py:219
+msgid "Purchase Date"
+msgstr "تاريخ الشراء"
+
+#: AccountingServer/locale/temp2.py:47 AccountingServer/locale/temp2.py:220
+#: AccountingServer/locale/temp2.py:298 AccountingServer/locale/temp2.py:309
+#: AccountingServer/locale/temp2.py:320
+msgid "Storage Name"
+msgstr "اسم التخزين"
+
+#: AccountingServer/locale/temp2.py:48 AccountingServer/locale/temp2.py:221
+#: AccountingServer/locale/temp2.py:330 AccountingServer/locale/temp2.py:353
+#: AccountingServer/locale/temp2.py:360
+msgid "Supplier Name"
+msgstr "اسم المورد"
+
+#: AccountingServer/locale/temp2.py:49 AccountingServer/locale/temp2.py:222
+msgid "Purchase Amount"
+msgstr "المبلغ شراء"
+
+#: AccountingServer/locale/temp2.py:50 AccountingServer/locale/temp2.py:52
+#: AccountingServer/locale/temp2.py:75 AccountingServer/locale/temp2.py:77
+msgid "Details"
+msgstr "تفاصيل"
+
+#: AccountingServer/locale/temp2.py:51 AccountingServer/locale/temp2.py:53
+#: AccountingServer/locale/temp2.py:76 AccountingServer/locale/temp2.py:78
+msgid "Confirm"
+msgstr "أكد"
+
+#: AccountingServer/locale/temp2.py:55 AccountingServer/locale/temp2.py:268
+#, fuzzy
+msgid "Sale Info"
+msgstr "تخزين معلومات"
+
+#: AccountingServer/locale/temp2.py:56 AccountingServer/locale/temp2.py:167
+#: AccountingServer/locale/temp2.py:269
+msgid "Sale Id"
+msgstr "بيع رقم"
+
+#: AccountingServer/locale/temp2.py:57 AccountingServer/locale/temp2.py:137
+#: AccountingServer/locale/temp2.py:270
+#, fuzzy
+msgid "Customer"
+msgstr "الزبائن"
+
+#: AccountingServer/locale/temp2.py:58 AccountingServer/locale/temp2.py:125
+#: AccountingServer/locale/temp2.py:133 AccountingServer/locale/temp2.py:177
+#: AccountingServer/locale/temp2.py:287
+msgid "Installments"
+msgstr "أقساط"
+
+#: AccountingServer/locale/temp2.py:59 AccountingServer/locale/temp2.py:169
+#: AccountingServer/locale/temp2.py:273
+msgid "Row Id"
+msgstr "الصف رقم"
+
+#: AccountingServer/locale/temp2.py:61 AccountingServer/locale/temp2.py:171
+#: AccountingServer/locale/temp2.py:275
+msgid "Product"
+msgstr "نتاج"
+
+#: AccountingServer/locale/temp2.py:62 AccountingServer/locale/temp2.py:276
+#, fuzzy
+msgid "Store In Stock"
+msgstr "تخزين الأوراق المالية"
+
+#: AccountingServer/locale/temp2.py:66 AccountingServer/locale/temp2.py:175
+#: AccountingServer/locale/temp2.py:284
+msgid "Sum"
+msgstr "مجموع"
+
+#: AccountingServer/locale/temp2.py:69 AccountingServer/locale/temp2.py:256
+msgid "Sale No"
+msgstr "بيع عدد"
+
+#: AccountingServer/locale/temp2.py:70 AccountingServer/locale/temp2.py:257
+msgid "Sale Date"
+msgstr "بيع التسجيل"
+
+#: AccountingServer/locale/temp2.py:71 AccountingServer/locale/temp2.py:165
+#: AccountingServer/locale/temp2.py:258
+msgid "Customer Name"
+msgstr "اسم العميل"
+
+#: AccountingServer/locale/temp2.py:72 AccountingServer/locale/temp2.py:259
+msgid "Sale Amount"
+msgstr "بيع المبلغ"
+
+#: AccountingServer/locale/temp2.py:73 AccountingServer/locale/temp2.py:260
+msgid "Remind Amount"
+msgstr "المبلغ ظلت"
+
+#: AccountingServer/locale/temp2.py:74 AccountingServer/locale/temp2.py:261
+msgid "Sale Installments"
+msgstr "بيع الأقساط"
+
+#: AccountingServer/locale/temp2.py:86
+msgid "No data available in table"
+msgstr ""
+
+#: AccountingServer/locale/temp2.py:87
+msgid "Showing _START_ to _END_ of _TOTAL_ entries"
+msgstr "إظهار _START_ إلى _END_ من أصل _TOTAL_ مُدخل"
+
+#: AccountingServer/locale/temp2.py:88
+msgid "Showing 0 to 0 of 0 entries"
+msgstr "إظهار 0 إلى 0 من أصل 0 مُدخل"
+
+#: AccountingServer/locale/temp2.py:89
+msgid "(filtered from _MAX_ total entries)"
+msgstr "(منتقاة من مجموع _MAX_ مُدخل)"
+
+#: AccountingServer/locale/temp2.py:90
+msgid "Show _MENU_ entries"
+msgstr "أظهر مُدخلات _MENU_"
+
+#: AccountingServer/locale/temp2.py:91
+msgid "Loading..."
+msgstr ""
+
+#: AccountingServer/locale/temp2.py:92
+msgid "Processing..."
+msgstr "جاري التحميل..."
+
+#: AccountingServer/locale/temp2.py:93
+msgid "Search:"
+msgstr "ابحث:"
+
+#: AccountingServer/locale/temp2.py:94
+msgid "No matching records found"
+msgstr "لم يُعثر على أية سجلات"
+
+#: AccountingServer/locale/temp2.py:95
+msgid "First"
+msgstr "الأول"
+
+#: AccountingServer/locale/temp2.py:96
+msgid "Last"
+msgstr "الأخير "
+
+#: AccountingServer/locale/temp2.py:97
+msgid "Next"
+msgstr "التالي"
+
+#: AccountingServer/locale/temp2.py:98
+msgid "Previous"
+msgstr "السابق"
+
+#: AccountingServer/locale/temp2.py:99
+msgid "activate to sort column ascending"
+msgstr ""
+
+#: AccountingServer/locale/temp2.py:100
+msgid "activate to sort column descending"
+msgstr ""
+
+#: AccountingServer/locale/temp2.py:101
+msgid "Saved"
+msgstr "حفظ"
+
+#: AccountingServer/locale/temp2.py:102
+msgid "Persian"
+msgstr "الفارسية"
+
+#: AccountingServer/locale/temp2.py:103
+msgid "Cost Information"
+msgstr "تكلف معلومات"
+
+#: AccountingServer/locale/temp2.py:104 AccountingServer/locale/temp2.py:113
+msgid "Cost Title"
+msgstr "تكلفة العنوان"
+
+#: AccountingServer/locale/temp2.py:105 AccountingServer/locale/temp2.py:114
+msgid "Invoice No"
+msgstr "رقم الفاتورة"
+
+#: AccountingServer/locale/temp2.py:106 AccountingServer/locale/temp2.py:115
+msgid "Register Date"
+msgstr "التسجيل"
+
+#: AccountingServer/locale/temp2.py:107
+msgid "Time"
+msgstr "وقت"
+
+#: AccountingServer/locale/temp2.py:108 AccountingServer/locale/temp2.py:116
+#: AccountingServer/locale/temp2.py:189 AccountingServer/locale/temp2.py:251
+msgid "Amount"
+msgstr "مبلغ"
+
+#: AccountingServer/locale/temp2.py:109
+msgid "Save Cost"
+msgstr "حفظ التكلفة"
+
+#: AccountingServer/locale/temp2.py:110 AccountingServer/locale/temp2.py:153
+#: AccountingServer/locale/temp2.py:191 AccountingServer/locale/temp2.py:215
+#: AccountingServer/locale/temp2.py:253 AccountingServer/locale/temp2.py:324
+#: AccountingServer/locale/temp2.py:365
+msgid "Cancel"
+msgstr "إلغاء"
+
+#: AccountingServer/locale/temp2.py:111
+msgid "Manage Costs"
+msgstr "إدارة التكاليف"
+
+#: AccountingServer/locale/temp2.py:112
+msgid "Add New Cost"
+msgstr "إضافة تكلفة جديدة"
+
+#: AccountingServer/locale/temp2.py:117 AccountingServer/locale/temp2.py:119
+#: AccountingServer/locale/temp2.py:159 AccountingServer/locale/temp2.py:162
+#: AccountingServer/locale/temp2.py:192 AccountingServer/locale/temp2.py:203
+#: AccountingServer/locale/temp2.py:206 AccountingServer/locale/temp2.py:223
+#: AccountingServer/locale/temp2.py:225 AccountingServer/locale/temp2.py:262
+#: AccountingServer/locale/temp2.py:264 AccountingServer/locale/temp2.py:314
+#: AccountingServer/locale/temp2.py:317 AccountingServer/locale/temp2.py:325
+#: AccountingServer/locale/temp2.py:336 AccountingServer/locale/temp2.py:339
+msgid "Edit"
+msgstr "تحرير"
+
+#: AccountingServer/locale/temp2.py:121 AccountingServer/locale/temp2.py:127
+#: AccountingServer/locale/temp2.py:299 AccountingServer/locale/temp2.py:312
+msgid "Storage Stock"
+msgstr "تخزين الأوراق المالية"
+
+#: AccountingServer/locale/temp2.py:123 AccountingServer/locale/temp2.py:131
+#: AccountingServer/locale/temp2.py:202 AccountingServer/locale/temp2.py:335
+msgid "Purchases"
+msgstr "مشتريات"
+
+#: AccountingServer/locale/temp2.py:129
+msgid "Chart"
+msgstr "جدول"
+
+#: AccountingServer/locale/temp2.py:130
+msgid "Appointed installments"
+msgstr "أقساط عين"
+
+#: AccountingServer/locale/temp2.py:135
+msgid "List of all instullment on deadline"
+msgstr ""
+
+#: AccountingServer/locale/temp2.py:136 AccountingServer/locale/temp2.py:178
+#: AccountingServer/locale/temp2.py:288
+msgid "No."
+msgstr "عدد"
+
+#: AccountingServer/locale/temp2.py:138 AccountingServer/locale/temp2.py:179
+#: AccountingServer/locale/temp2.py:289
+msgid "Due Date"
+msgstr "دفع التسجيل"
+
+#: AccountingServer/locale/temp2.py:139 AccountingServer/locale/temp2.py:180
+#: AccountingServer/locale/temp2.py:290
+msgid "Installment Value"
+msgstr "القيمة الدفعة"
+
+#: AccountingServer/locale/temp2.py:140
+msgid "Deadline"
+msgstr ""
+
+#: AccountingServer/locale/temp2.py:141 AccountingServer/locale/temp2.py:181
+#: AccountingServer/locale/temp2.py:291
+msgid "Payment"
+msgstr "دفع"
+
+#: AccountingServer/locale/temp2.py:142 AccountingServer/locale/temp2.py:182
+msgid "Paid at"
+msgstr "تدفع في"
+
+#: AccountingServer/locale/temp2.py:143 AccountingServer/locale/temp2.py:184
+msgid "Pay"
+msgstr "دفع"
+
+#: AccountingServer/locale/temp2.py:144
+msgid "  There is no data to show "
+msgstr ""
+
+#: AccountingServer/locale/temp2.py:145 AccountingServer/locale/temp2.py:297
+#: AccountingServer/locale/temp2.py:352
+msgid "Good List"
+msgstr "قائمة جيدة"
+
+#: AccountingServer/locale/temp2.py:146 AccountingServer/locale/temp2.py:150
+#: AccountingServer/locale/temp2.py:156
+msgid "Group Name"
+msgstr "اسم المجموعة"
+
+#: AccountingServer/locale/temp2.py:148 AccountingServer/locale/temp2.py:185
+#: AccountingServer/locale/temp2.py:306 AccountingServer/locale/temp2.py:358
+msgid "Return"
+msgstr "عودة"
+
+#: AccountingServer/locale/temp2.py:149
+msgid "Group"
+msgstr "مجموعة"
+
+#: AccountingServer/locale/temp2.py:151
+msgid "Group Unit"
+msgstr "وحدة المجموعة"
+
+#: AccountingServer/locale/temp2.py:152
+msgid "Save Group"
+msgstr "حفظ المجموعة"
+
+#: AccountingServer/locale/temp2.py:154
+msgid "Manage Group"
+msgstr "إدارة المجموعة"
+
+#: AccountingServer/locale/temp2.py:155
+msgid "Add New Group"
+msgstr "إضافة مجموعة جديدة"
+
+#: AccountingServer/locale/temp2.py:157
+msgid "Group unit"
+msgstr "الوحدة الجماعية"
+
+#: AccountingServer/locale/temp2.py:158
+msgid "Goods List"
+msgstr "قائمة البضائع"
+
+#: AccountingServer/locale/temp2.py:161
+msgid "Goods"
+msgstr "بضائع"
+
+#: AccountingServer/locale/temp2.py:164
+msgid "History"
+msgstr "تاريخ"
+
+#: AccountingServer/locale/temp2.py:166
+msgid "Purchase List"
+msgstr "قائمة الشراء"
+
+#: AccountingServer/locale/temp2.py:168 AccountingServer/locale/temp2.py:271
+msgid "Registeration Date"
+msgstr "تسجيل"
+
+#: AccountingServer/locale/temp2.py:176 AccountingServer/locale/temp2.py:285
+msgid "Prepaid"
+msgstr "المدفوعة مسبقا"
+
+#: AccountingServer/locale/temp2.py:183 AccountingServer/locale/temp2.py:186
+#: AccountingServer/locale/temp2.py:228 AccountingServer/locale/temp2.py:267
+msgid "Print"
+msgstr "طباعة"
+
+#: AccountingServer/locale/temp2.py:187
+msgid "Pay Instullment"
+msgstr "دفع القسط"
+
+#: AccountingServer/locale/temp2.py:188 AccountingServer/locale/temp2.py:250
+msgid "Date"
+msgstr "تاريخ"
+
+#: AccountingServer/locale/temp2.py:190
+msgid "Save"
+msgstr "حفظ"
+
+#: AccountingServer/locale/temp2.py:194
+msgid "Persons"
+msgstr "الأشخاص"
+
+#: AccountingServer/locale/temp2.py:196 AccountingServer/locale/temp2.py:209
+msgid "Person Name"
+msgstr "اسم الشخص"
+
+#: AccountingServer/locale/temp2.py:197 AccountingServer/locale/temp2.py:210
+msgid "City"
+msgstr "مدينة"
+
+#: AccountingServer/locale/temp2.py:198 AccountingServer/locale/temp2.py:211
+msgid "Phone"
+msgstr "هاتف"
+
+#: AccountingServer/locale/temp2.py:200 AccountingServer/locale/temp2.py:213
+#: AccountingServer/locale/temp2.py:322
+msgid "Address"
+msgstr "عنوان"
+
+#: AccountingServer/locale/temp2.py:205 AccountingServer/locale/temp2.py:316
+#: AccountingServer/locale/temp2.py:338
+msgid "List"
+msgstr "قائمة"
+
+#: AccountingServer/locale/temp2.py:216
+msgid "Manage Purchases"
+msgstr "إدارة المشتريات"
+
+#: AccountingServer/locale/temp2.py:217
+msgid "Add New Purchase"
+msgstr "إضافة شراء جديد"
+
+#: AccountingServer/locale/temp2.py:230
+#, fuzzy
+msgid "Order Info"
+msgstr "معلومات شخص"
+
+#: AccountingServer/locale/temp2.py:231
+#, fuzzy
+msgid "Order Id"
+msgstr "أوامر"
+
+#: AccountingServer/locale/temp2.py:233
+#, fuzzy
+msgid "Supplier"
+msgstr "الموردين"
+
+#: AccountingServer/locale/temp2.py:242 AccountingServer/locale/temp2.py:282
+msgid "New Row"
+msgstr "السطر الجدید"
+
+#: AccountingServer/locale/temp2.py:243 AccountingServer/locale/temp2.py:283
+#, fuzzy
+msgid "Delete All"
+msgstr "حذف"
+
+#: AccountingServer/locale/temp2.py:245
+#, fuzzy
+msgid "Save Order"
+msgstr "حفظ شخص "
+
+#: AccountingServer/locale/temp2.py:246 AccountingServer/locale/temp2.py:247
+#, fuzzy
+msgid "Print Order"
+msgstr "طباعة"
+
+#: AccountingServer/locale/temp2.py:248
+msgid "Sale Installmets"
+msgstr "بيع الأقساط"
+
+#: AccountingServer/locale/temp2.py:249
+msgid "Id"
+msgstr "معرف"
+
+#: AccountingServer/locale/temp2.py:252
+msgid "Payback"
+msgstr "الاسترداد"
+
+#: AccountingServer/locale/temp2.py:255
+msgid "Add New Sale"
+msgstr "إضافة بيع جديد"
+
+#: AccountingServer/locale/temp2.py:272
+#, fuzzy
+msgid "Print Sale"
+msgstr "طباعة"
+
+#: AccountingServer/locale/temp2.py:286
+#, fuzzy
+msgid "Remain Value"
+msgstr "بقي"
+
+#: AccountingServer/locale/temp2.py:292 AccountingServer/locale/temp2.py:296
+msgid "Not Paid"
+msgstr ""
+
+#: AccountingServer/locale/temp2.py:293
+#, fuzzy
+msgid "Save Sale"
+msgstr "حفظ الأمتعة"
+
+#: AccountingServer/locale/temp2.py:294
+#, fuzzy
+msgid "Manage Sales"
+msgstr "إدارة بيع"
+
+#: AccountingServer/locale/temp2.py:303
+msgid "Full Purchase"
+msgstr "شراء كامل"
+
+#: AccountingServer/locale/temp2.py:305
+msgid "Full Sale"
+msgstr "بيع كامل"
+
+#: AccountingServer/locale/temp2.py:307
+msgid "Storages"
+msgstr "مخازن"
+
+#: AccountingServer/locale/temp2.py:308 AccountingServer/locale/temp2.py:323
+msgid "Save Storage"
+msgstr "حفظ الأمتعة"
+
+#: AccountingServer/locale/temp2.py:310 AccountingServer/locale/temp2.py:321
+msgid "Storage Phone"
+msgstr "تخزين الهاتف"
+
+#: AccountingServer/locale/temp2.py:311
+msgid "Storage Address"
+msgstr "تخزين العنوان"
+
+#: AccountingServer/locale/temp2.py:313
+msgid "Storage Items"
+msgstr "تخزين الأصناف"
+
+#: AccountingServer/locale/temp2.py:319
+msgid "Storage Info"
+msgstr "تخزين معلومات"
+
+#: AccountingServer/locale/temp2.py:327
+#, fuzzy
+msgid "Suppliers"
+msgstr "الموردين"
+
+#: AccountingServer/locale/temp2.py:328 AccountingServer/locale/temp2.py:364
+msgid "Save Supplier"
+msgstr "حفظ مزود"
+
+#: AccountingServer/locale/temp2.py:329
+msgid "Supplier Id"
+msgstr "المورد رقم"
+
+#: AccountingServer/locale/temp2.py:331
+msgid "Supplier Contact Manager"
+msgstr "المورد الاتصال مدير"
+
+#: AccountingServer/locale/temp2.py:332 AccountingServer/locale/temp2.py:362
+msgid "Phone no"
+msgstr "هاتف"
+
+#: AccountingServer/locale/temp2.py:333 AccountingServer/locale/temp2.py:363
+msgid "Work Field"
+msgstr "مجال العمل"
+
+#: AccountingServer/locale/temp2.py:341 AccountingServer/locale/temp2.py:359
+msgid "Supplier Info"
+msgstr "معلومات المورد"
+
+#: AccountingServer/locale/temp2.py:361
+msgid "Supplier Manager"
+msgstr "مدير المورد"
+
+#: AccountingServer/modules/__init__.py:87
+msgid "Accounting Web Application"
+msgstr "المحاسبة تطبيق ويب"
+
+#~ msgid "Operation"
+#~ msgstr "عملية"

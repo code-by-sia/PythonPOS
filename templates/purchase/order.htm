@@ -1,0 +1,228 @@
+<script type="text/javascript">
+var row_id=1;
+var uindex = 0;
+
+function BoundRows(selector){
+    $(selector + ' .qty,' + selector + ' .purchase').keyup(function(){
+        var row= $(this).parent().parent();
+        var qty= getNum(row.find('.qty').val());
+        var purchase= getNum(row.find('.purchase').val());
+        var fsale = ShowMoney(purchase * qty);
+        row.find('.fullsale').html(fsale);
+        CalcSummation();
+    });
+}
+
+function AddNewRow(){
+    var tr  = '<tr>';
+        tr += '<td class="center index">'+ row_id++ +'</td>';
+        tr += '<td class="group-name"><select  name="g['+ uindex +']">';
+        tr += '{{#group-list}}<option value="{{id}}">{{id}}-{{name}}</option>{{/group-list}}';
+        tr += '</select></td>';
+        tr += '<td><input name="n['+ uindex +']" class="name"/></td>';
+        tr += '<td><input name="p['+ uindex +']" class="purchase price ltr"/></td>';
+        tr += '<td><input name="s['+ uindex +']" class="sale price ltr"/></td>';
+        tr += '<td><input name="q['+ uindex +']" class="qty price ltr" /></td>';
+        tr += '<td class="fullsale"></td>';
+        tr += '<td><a href="#" onclick="DeleteOrderRow(this)"><i class="fa fa-times"></i>{{#_}}Delete{{/_}}</a></td>';
+        tr += '</tr>';
+    uindex++;
+    $('#order-details').append(tr)
+
+    MaskMoney('#order-details tr:last-child .price');
+    BoundRows('#order-details tr:last-child');
+
+}
+
+function CalcSummation(){
+    var sqty=0;
+    var ssum=0;
+    $('#order-details tr').each(function(index,row){
+        sqty += getNum($(row).find('.qty').val());
+        ssum += getNum($(row).find('.fullsale').text());
+    });
+    $('#colSumQty').text(ShowMoney(sqty));
+    $('#colSumSale').text(ShowMoney(ssum));
+
+
+}
+function RenewRowIndexes(){
+    row_id=0;
+    $('#order-details tr .index').each(function(index,cell){
+        row_id= index +1;
+        $(cell).text(row_id);
+
+    });
+    row_id++;
+    CalcSummation();
+}
+function DeleteOrderRow(sender){
+    $(sender).parent().parent().remove();
+    RenewRowIndexes();
+}
+
+function SavePurchase(){
+
+    ﻿if($('#SupplierId').val()==undefined)
+        MessageBox('کاربر گرامی','لطفاً فروشنده را انتخاب کنید');
+	else if(row_id== 1)
+		MessageBox('کاربر گرامی','هیچ سطری وارد نشده است');
+	else{
+		$.ajax({
+            type: 'POST',
+            url: 'purchase/save',
+            data: $('#fOrderData').serialize(),
+            dataType: 'json',
+            success: function(data) {
+                $('#txtId').val(data.Id);
+				$('.print_purchase').attr('href','/report/order?Id='+data.Id);
+				$('#btnPrintPurchase').attr('disabled','');
+				Success();
+            }
+        });
+	}
+}
+
+$(document).ready(function(){
+    var sqty = 0;
+    var ssum = 0;
+    $('#order-details tr').each(function(index,rowitem){
+
+        var row= $(rowitem);
+        var qty= getNum(row.find('.qty').val());
+        var purchase= getNum(row.find('.purchase').val());
+        sqty += qty;
+        ssum += (qty * purchase);
+        var fsale = ShowMoney(purchase * qty);
+        row.find('.fullsale').text(fsale);
+        row.find('.index').text(row_id);
+        var pid = row.find('.product-id').val();
+        if(pid != undefined && pid >= uindex )
+            uindex = (pid * 1) + 1;
+        $('#colSumQty').text(ShowMoney(sqty));
+        $('#colSumSale').text(ShowMoney(ssum));
+        row_id++;
+    });
+    BoundRows('#order-details tr');
+});
+</script>
+<style>
+    #order-details td {padding:0;text-align:center;}
+    td.group-id{width:50px}
+    td input{width:100%;text-align:center;}
+    td.group-name{width:120px}
+    td select{width:100%;height:32px;margin:0;-webkit-appearance:none;border:none;background:transparent;padding:0 4px;}
+    td select ,td select option {text-align:center;}
+    td select:after {width:0;height:0;border-top:solid thin red;content:'';}
+    td a {overflow:hidden;}
+    #order-details input {margin:0;padding:0;line-height:25px;background:transparent;border:none;}
+</style>
+<div class="form">
+    <h6>{{#_}}Order Info{{/_}}</h6>
+
+    <div class="content">
+        <form id="fOrderData" method="post" onsubmit="return false;" autocomplete="off">
+            <div class="merged">
+                <label class="desc center">{{#_}}Order Id{{/_}}</label>
+                <input id="txtId" name="id" name="id" type="text" class="center" size="5" maxlength="4" value="{{order.id}}" />
+                <label class="desc center">{{#_}}Storage{{/_}}</label>
+                <div class="select" >
+                    <select id="StorageId" name="storageId" {{#order.verified}} disabled="disabled" {{/order.verified}} >
+                       {{#storages}}
+                        <option {{#selected}} selected="selected" {{/selected}}value="{{id}}">{{name}}</option>
+                       {{/storages}}
+                    </select>
+                </div>
+                <label class="desc center">{{#_}}Supplier{{/_}}</label>
+                <div class="select"  >
+                    <select id="SupplierId" name="supplierId" {{#order.verified}}disabled="disabled" {{/order.verified}} >
+                       {{#suppliers}}
+                        <option value="{{id}}"{{#selected}} selected="selected" {{/selected}}>{{name}}</option>
+                       {{/suppliers}}
+                    </select>
+                </div>
+
+            </div>
+            <p>
+                <table id="order">
+                    <thead>
+                        <th width="30px">#</th>
+                        <th>{{#_}}Product Group{{/_}}</th>
+                        <th>{{#_}}Product Name{{/_}}</th>
+                        <th>{{#_}}Purchase Price{{/_}}</th>
+                        <th>{{#_}}Sale Price{{/_}}</th>
+                        <th>{{#_}}Quantity{{/_}}</th>
+                        <th>{{#_}}Full Purchase Price{{/_}}</th>
+                        {{^order.verified}}
+                        <th>{{#_}}Delete{{/_}}</th>
+                        {{/order.verified}}
+                    </thead>
+                    <tbody id="order-details">
+                    {{#products}}
+                        <tr>
+                            <td class="center index">#</td>
+                            <td class="group-name">
+
+                                <select name="g[{{id}}]" selectedValue="{{group.id}}"{{#order.verified}} disabled="disabled" {{/order.verified}}>
+                                    {{#groups}}
+                                        <option value="{{id}}"{{#selected}} selected="selected" {{/selected}}>
+                                            {{id}}-{{name}}
+                                        </option>
+                                    {{/groups}}
+                                </select>
+                                <input class="product-id" type="hidden" name="i[{{id}}]" value="{{id}}">
+                            </td>
+                            <td><input name="n[{{id}}]" class="name" value="{{name}}"{{#order.verified}} disabled="disabled" {{/order.verified}}/></td>
+                            <td><input name="p[{{id}}]" class="purchase price ltr" value="{{purchase_string}}"{{#order.verified}} disabled="disabled" {{/order.verified}} /></td>
+                            <td><input name="s[{{id}}]" class="sale price ltr" value="{{sale_string}}"{{#order.verified}} disabled="disabled" {{/order.verified}} /></td>
+                            <td><input name="q[{{id}}]" class="qty price ltr" value="{{quantity}}"{{#order.verified}} disabled="disabled" {{/order.verified}} /></td>
+                            <td class="fullsale"></td>
+                            {{^order.verified}}
+                            <td>
+                                <a href="#" onclick="DeleteOrderRow(this)">
+                                    <i class="fa fa-times"></i>
+                                    {{#_}}Delete{{/_}}</a>
+                            </td>
+                            {{/order.verified}}
+                        </tr>
+                    {{/products}}
+                    </tbody>
+                    <tfoot>
+                        <td colspan="4" style="padding:4px 0 2px" class="merged">
+                            {{^order.verified}}
+                            <button class="start" onclick="AddNewRow()">
+                                <i class="fa fa-plus"></i>
+                                {{#_}}New Row{{/_}}
+                            </button>
+                            <button class="end" onclick="$('#order-details').html('');CalcSummation();row_id = 1;">
+                                <i class="fa fa-times"></i>
+                                {{#_}}Delete All{{/_}}
+                            </button>
+                            {{/order.verified}}
+                        </td>
+                        <td style="text-align:left;padding:2px 5px">
+                            {{#_}}Total Purchase{{/_}}
+                        </td>
+                        <td id="colSumQty">0</td>
+                        <td id="colSumSale" colspan="2">0</td>
+                    </tfoot>
+                </table>
+            </p>
+            <p class="merged center">
+
+                <button class="start" {{#order.verified}}disabled="disabled" {{/order.verified}} onclick="SavePurchase()">
+                    <span class="fa fa-check-circle"></span>
+                    {{#_}}Save Order{{/_}}
+                </button>
+                <!-- button class="end"{{^order.id}} disabled="disabled" {{/order.id}}type="button" onclick="PrintPurchase()" id="btnPrintPurchase">
+                    <i class="fa fa-print"></i>
+                    {{#_}}Print Order{{/_}}
+                </button -->
+                <a target="_blank" href="/report/order?Id={{order.id}}" class="button end print_purchase" {{^order.id}} disabled="disabled" {{/order.id}} id="btnPrintPurchase" >
+                    <i class="fa fa-print"></i>
+                    {{#_}}Print Order{{/_}}
+                </a>
+            </p>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,103 @@
+<script type="text/javascript" src="/static/js/canvasjs.min.js"></script>
+<script type="text/javascript">
+
+var chart = new CanvasJS.Chart("stock-chart",
+{
+  title:{
+    text:'{{#_}}Storage Stock{{/_}}',
+    fontFamily:'Rudaw'
+  },
+  data: [
+  {
+   type: "column",
+   dataPoints: [
+   {{#storages}}
+    {
+        y:{{percentage}},
+        indexLabel:"{{name}}",
+        indexLabelFontFamily:'Rudaw'
+
+    },
+   {{/storages}}
+   ]
+ }
+ ],
+ creditText:''//F--K copyright
+});
+
+chart.render();
+
+
+var chart = new CanvasJS.Chart("sale-chart",
+{
+  creditText:'',
+  title:{
+    text: "{{#_}}Sale{{/_}}",
+    fontFamily:'Rudaw'
+  },
+  legend:{
+    fontFamily:'Rudaw'
+  },
+  axisX:{
+    /*labelAngle:-45,
+    valueFormatString:'M-D-Y', */
+    //labelFontFamily:'Rudaw'
+  },
+  data: [
+      {{#users}}
+      {
+        type: "line",
+        xValueType:'dateTime',
+        lineThickness: 3,
+        name:'{{name}} {{family}}',
+        showInLegend:true,
+        dataPoints: [
+            {{#SalesByDate}}
+                { y: {{totalsale}},x:new Date('{{sale.date}}') , label: '{{sale.date}}' },
+            {{/SalesByDate}}
+
+        ]
+      },
+      {{/users}}
+  ]
+});
+
+chart.render();
+
+function loadCharts(tab)
+{
+    if(tab == 1)
+        $('#dash-box').load('dashboard/instulments');
+    else
+        $('#dash-box').load('dashboard/charts');
+}
+</script>
+
+
+
+<div class="tool">
+    <ul class="rates">
+       <li>
+           <i class="fa fa-briefcase"></i>
+           <strong>{{#_}}Purchases{{/_}}</strong>
+           <small>{{order.today}}</small>
+       </li>
+       <li>
+           <i class="fa fa-shopping-cart"></i>
+           <strong>{{#_}}Sales{{/_}}</strong>
+           <small>{{sale.today}}</small>
+       </li>
+       <li>
+           <i class="fa fa-sort-amount-asc"></i>
+           <strong>{{#_}}Installments{{/_}}</strong>
+           <small>{{inst.today}}</small>
+       </li>
+       <li>
+           <i class="fa fa-bell"></i>
+           <strong>{{#_}}Appointed{{/_}}</strong>
+           <small>{{inst.appointed}}</small>
+       </li>
+    </ul>
+</div>
+<div id="stock-chart" style="display:inline-block;height: 400px; width: 600px;direction:ltr"></div>
+<div id="sale-chart" style="display:inline-block;height: 400px; width: 600px;direction:ltr"></div>

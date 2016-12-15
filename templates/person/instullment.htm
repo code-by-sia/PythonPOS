@@ -1,0 +1,38 @@
+<script type="text/javascript">
+     function SaveInst(){
+        $.getJSON('/info/person.instullment.save',$('#fInstullmentData').serialize(),function(data){
+             var row = $('#__instullment_'+data.id);
+             row.removeClass('red');
+             //row.addClass('green');
+             row.find('td.opt').html("<a href='report/instullment?id="+data.id+"' target='_blank'> <span class='fa fa-print'></span> {{#_}}Print{{/_}}</a>");
+             CloseDialog();
+        });
+    }
+</script>
+<div class="form">
+    <h6>{{#_}}Pay Instullment{{/_}}</h6>
+    <div class="content">
+        <form id="fInstullmentData" method="post" onsubmit="return false;" autocomplete="off">
+            <input type="hidden" name="id" id="data_id" value="{{inst.id}}" />
+            <p>
+                <label class="desc">{{#_}}Date{{/_}}</label>
+                <input id="txtDate" name="dateback" type="text" class="center" value="{{inst.currentdate}}" />
+            </p>
+            <p>
+                <label class="desc">{{#_}}Amount{{/_}}</label>
+                <input id="txtAmount" name="amount" type="text" class="price ltr center" readonly="readonly" value="{{inst.amount_string}}" />
+            </p>
+            <p>
+                <label class="desc"></label>
+                <button onclick="SaveInst()">
+                    <span class="fa fa-check-circle"></span>
+                    {{#_}}Save{{/_}}
+                </button>
+                 <button class="end" type="button" onclick="CloseDialog()">
+                    {{#_}}Cancel{{/_}}
+                    <i class="fa fa-times-circle"></i>
+                </button>
+            </p>
+         </form>
+    </div>
+</div>

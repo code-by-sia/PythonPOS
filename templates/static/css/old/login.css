@@ -1,0 +1,221 @@
+/* Stylesheet */
+
+
+/* Imports */
+
+@import url(animate.css);
+
+/* Selections */
+
+::selection {
+ 	color: #fff;
+ 	text-shadow: none;
+ 	background: #444;
+}
+
+::-moz-selection {
+ 	color: #fff;
+ 	text-shadow: none;
+ 	background: #444;
+}
+
+/* Basics */
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family:  Tahoma, Helvetica, sans-serif;
+	color: #444;
+	-webkit-font-smoothing: antialiased;
+	direction:rtl;
+}
+
+body{
+	 background: url('/static/images/bg.jpg')
+}
+
+#container {
+	position: fixed;
+	width: 340px;
+	height: 259px;
+	top: 50%;
+	right: 50%;
+	margin-top: -140px;
+	margin-right: -170px;
+	background: #fff;
+	border-radius: 3px;
+	border: 1px solid #ccc;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+	-webkit-animation-name: bounceIn;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-name: bounceIn;
+	-moz-animation-fill-mode: both;
+	-moz-animation-duration: 1s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: linear;
+	animation-name: bounceIn;
+	animation-fill-mode: both;
+	animation-duration: 1s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+
+form {
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+label {
+	color: #555;
+	display: inline-block;
+	margin-right: 18px;
+	padding-top: 10px;
+	font-size: 14px;
+}
+
+p a {
+	font-size: 11px;
+	color: #aaa;
+	float: left;
+	margin-top: -13px;
+	margin-left: 20px;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+p a:hover {
+	color: #555;
+}
+
+input , button {
+	font-family: Tahoma, Helvetica, sans-serif;
+	font-size: 12px;
+	outline: none;
+}
+
+input[type=name],
+input[type=password] {
+	color: #777;
+	padding-right: 10px;
+	margin: 10px;
+	margin-top: 12px;
+	margin-right: 18px;
+	width: 254px;
+	height: 35px;
+	border: 1px solid #c7d0d2;
+	border-radius: 2px;
+	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #f5f7f8;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	transition: all .4s ease;
+}
+
+input[type=name]:hover,
+input[type=password]:hover {
+	border: 1px solid #b6bfc0;
+	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .7), 0 0 0 5px #f5f7f8;
+}
+
+input[type=name]:focus,
+input[type=password]:focus {
+	border: 1px solid #a8c9e4;
+	box-shadow: inset 0 1.5px 3px rgba(190, 190, 190, .4), 0 0 0 5px #e6f2f9;
+}
+
+.lower {
+	background: #ecf2f5;
+	width: 100%;
+	height: 59px;
+	box-shadow: inset 0 1px 1px #fff;
+	border-top: 1px solid #ccc;
+	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+input[type=checkbox] {
+	margin-right: 20px;
+	margin-top: 30px;
+}
+
+.check {
+	margin-right: 3px;
+	font-size: 11px;
+	color: #444;
+	text-shadow: 0 1px 0 #fff;
+}
+
+button{
+	margin: 17px 20px;
+	float: left;
+}
+
+.show{
+	-moz-transition-duration:3s;
+	display: block !important;
+}
+#Setting-Box a{
+	cursor: pointer !important; 
+}
+#Setting-Box {
+	position: absolute;
+	width: 200px;
+	background:white;
+	top: 25px;
+	left: -2px;
+	display: none;
+	border: solid 1px rgba(0,0,0,.1);
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-shadow: 0 0 8px #e3e3e3;
+	-moz-box-shadow: 0 0 8px #e3e3e3;
+	-webkit-box-shadow: 0 0 8px #e3e3e3;
+	cursor: default;
+	z-index: 999999;
+	display: none;
+}
+
+#Setting-Box .content{
+	height: 70px;
+	padding: 5px;
+}
+#Setting-Box .lower{
+	height: 50px;
+}
+#Setting-Box input[type=submit]{
+	margin: 10px ;
+}
+#Setting-Box .arrow{
+	background: url(images/arrow.png);
+	width: 21px;
+	height: 12px;
+	display: block;
+	float: left;
+	position: relative;
+	top: -10px;
+	left: 10px;
+}
+
+
+
+#txtUser , #txtPwd {
+	padding-left: 36px;
+	text-align: right;
+	direction: rtl;
+}
+
+::-webkit-input-placeholder  { color:#ccc; }
+input:-moz-placeholder { color:#ccc; }
+#copyright{
+	font-size: 10pt;
+	box-shadow:none;
+}
+#btnLogin 
+{
+	float:right;
+	margin:17px;
+}

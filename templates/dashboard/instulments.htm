@@ -1,0 +1,100 @@
+<style type="text/css">
+    .warning{
+        font-size: 27
+    px;
+        color: #800000;
+        font-family: tahoma;
+        line-height: 276px;
+    }
+   #inst-list{
+        padding:5px;
+        min-height:400px;
+    }
+    .maroon{
+        color:maroon;
+    }
+    .rates {
+        list-style:none;
+        display:table;
+        width:100%;
+    }
+    .rates li{
+        display:table-cell;
+    }
+    .rates li strong {
+        font-size:20px;
+        padding:23px 10px 0 10px;
+        display:block;
+    }
+    .rates li small {
+        color:#7a828d;
+        font-size:12px;
+        text-shadow:0 1px 0 rgba(0,0,0,0.75);
+    }
+    .form h6 {
+        height:32px;
+        padding:0;
+        overflow:hidden;
+    }
+    .form h6 button {
+        border-radius:0;
+        margin:0;
+        border-width:0 0 0 1px;
+        height:32px;
+        float:right;
+    }
+</style>
+<script type="text/javascript">
+function PayInstullment(id)
+{
+    event.preventDefault();
+    $.get('info/person.instullment',{'id':id},function(response){
+       ModalDialog(response,{width:319,height:160});
+    });
+}
+
+</script>
+<div>
+    <div class="tool">
+        <ul class="rates">
+
+               <li>
+                   <strong>{{#_}}List of all instullment on deadline{{/_}}</strong>
+               </li>
+        </ul>
+    </div>
+    <p></p>
+    <div id="inst-list">
+
+        <table class="data-table">
+            <thead>
+                <th width="40px">{{#_}}No.{{/_}}</th>
+                <th width="">{{#_}}Customer{{/_}}</th>
+                <th width="">{{#_}}Due Date{{/_}}</th>
+                <th>{{#_}}Installment Value{{/_}}</th>
+                <th>{{#_}}Deadline{{/_}}</th>
+                <th width="110px">{{#_}}Payment{{/_}}</th>
+            </thead>
+
+            <tbody id="installments">
+            {{#insts}}
+                <tr  {{^dateback}} class="maroon" id="__instullment_{{id}}" {{/dateback}} >
+                    <td>{{index}}</td>
+                    <td>{{sale.customer.name}}</td>
+                    <td>{{date}}</td>
+                    <td>{{amount_string}}</td>
+                    <td>{{deadline}}</td>
+                    <td class="opt" title="{{#dateback}} {{#_}}Paid at{{/_}} : {{dateback}}  {{/dateback}}">
+
+                        {{^dateback}}
+                            <a href="" onclick="PayInstullment({{id}})"> <span class="fa fa-money"></span> {{#_}}Pay{{/_}}</a>
+                        {{/dateback}}
+                    </td>
+                </tr>
+            {{/insts}}
+            </tbody>
+        </table>
+
+           <!--<h3 class="warning"> {{#_}}  There is no data to show {{/_}}</h3>-->
+     </div>
+</div>

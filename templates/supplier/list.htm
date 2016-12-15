@@ -1,0 +1,23 @@
+{{#data}}
+<tr>
+    <td>{{id}}</td>
+    <td>{{firstname}}</td>
+    <td>{{lastname}}</td>
+    <td>{{parentname}}</td>
+    <td>{{nationalid}}</td>
+    <td>{{birthdate}}</td>
+    <td class="center" width="70px">
+        <a href="#" onclick="LoadPage('info/person.edit?id={{id}}')">
+            <i class="fa fa-edit"></i>
+            {{#_}}Edit{{/_}}
+        </a>
+    </td>
+    <td class="center" width="70px">
+        <a href="#" onclick="DeletePerson({{id}},sender)">
+            <i class="fa fa-trash-o"></i>
+            {{#_}}Delete{{/_}}
+        </a>
+    </td>
+
+</tr>
+{{/data}}

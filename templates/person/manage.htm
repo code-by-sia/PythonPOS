@@ -1,0 +1,84 @@
+﻿<script type="text/javascript">
+function DeletePerson(id,sender)
+{
+    $.getJSON('/info/person.delete',{'id':id},
+        function(res){
+            if(res.result == 'OK')
+                $(sender).parent().parent().fadeOut();
+            else
+                alert(res.msg);
+        });
+}
+function AddNewPerson(){
+     $.get('info/person.new',function(response){
+        ModalDialog(response,{width:460,height:285});
+    });
+}
+function UpdatePerson(id){
+     $.get('info/person.edit',{'id':id},function(response){
+       ModalDialog(response,{width:460,height:285});
+    });
+}
+function PurchaseList(id){
+    LoadPage('info/person.history',{'id':id});
+}
+</script>
+<div class="form">
+    <h6>{{#_}}Persons{{/_}}</h6>
+    <div class="content">
+         <p>
+            <button onclick="AddNewPerson()" >
+                <i class="fa fa-plus"></i>
+                {{#_}}Save Person{{/_}}
+            </button>
+        </p>
+        <p>
+            <table class="data-table">
+                <thead>
+                    <th>{{#_}}Person Name{{/_}}</th>
+                    <th>{{#_}}City{{/_}}</th>
+                    <th>{{#_}}Phone{{/_}}</th>
+                    <th>{{#_}}Email{{/_}}</th>
+                    <th>{{#_}}Address{{/_}}</th>
+                    <th>{{#_}}Total Purchase{{/_}}</th>
+                    <th>{{#_}}Purchases{{/_}}</th>
+                    <th >{{#_}}Edit{{/_}}</th>
+                    <th >{{#_}}Delete{{/_}}</th>
+                </thead>
+                <tbody>
+                {{#persons}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{city}}</td>
+                    <td>{{phone}}</td>
+                    <td>{{email}}</td>
+                    <td>{{address}}</td>
+                    <td class="center">{{total_purchase}}</td>
+
+                    <td class="center" width="70px">
+                        <a href="#" onclick="PurchaseList({{id}})">
+                            <i class="fa fa-align-justify"></i>
+                            {{#_}}List{{/_}}
+                        </a>
+                    </td>
+
+                    <td class="center" width="70px">
+                        <a href="#" onclick="UpdatePerson({{id}})">
+                            <i class="fa fa-edit"></i>
+                            {{#_}}Edit{{/_}}
+                        </a>
+                    </td>
+                    <td class="center" width="70px">
+                        <a href="#" onclick="DeletePerson({{id}},this)">
+                            <i class="fa fa-trash-o"></i>
+                            {{#_}}Delete{{/_}}
+                        </a>
+                    </td>
+
+                </tr>
+                {{/persons}}
+                </tbody>
+            </table>
+        </p>
+    </div>
+</div>

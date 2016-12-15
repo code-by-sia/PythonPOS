@@ -1,0 +1,38 @@
+<script type="text/javascript">
+    function SaveGroup(){
+        $.post('/info/group.save',$('#fGroupData').serialize(),function(){
+             LoadPage('info/group.manage');
+             CloseDialog();
+        });
+    }
+
+</script>
+<div class='form'>
+	<h6>{{#_}}Group{{/_}}</h6>
+	<div class='content'>
+		<p>
+            <form id="fGroupData" method="post" onsubmit="return false;" autocomplete="off">
+               <input type="hidden" id="id" name="id" value="{{group.id}}" />
+               <p>
+                    <label class="desc">{{#_}}Group Name{{/_}}</label>
+                    <input id="txtName" name="name" type="text" value="{{group.name}}" />
+                </p>
+                <p>
+                    <label class="desc">{{#_}}Group Unit{{/_}}</label>
+                    <input id="unit" name="unit" type="text" value="{{group.unit}}" />
+                </p>
+                <p>
+                    <label class="desc"></label>
+                    <button onclick="SaveGroup()">
+                        <span class="fa fa-check-circle"></span>
+                        {{#_}}Save Group{{/_}}
+                    </button>
+                    <button class="end" type="button" onclick="CloseDialog()">
+                        {{#_}}Cancel{{/_}}
+                        <i class="fa fa-times-circle"></i>
+                    </button>
+                </p>
+            </form>
+		</p>
+	</div>
+</div>

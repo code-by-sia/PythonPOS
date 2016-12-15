@@ -1,0 +1,29 @@
+<script text="text/javascript">
+    function GoBack(){
+        LoadPage('/info/group.manage');
+    }
+</script>
+<div class="form">
+    <h6>{{#_}}Good List{{/_}}</h6>
+    <div class="content">
+        <p>{{#_}}Group Name{{/_}} : {{group.name}}</p>
+        <table class="data-table">
+            <thead>
+                <th>#</th>
+                <th>{{#_}}Product Name{{/_}}</th>
+            </thead>
+            <tbody>
+                 {{#products}}
+                  <tr>
+                      <td style="width:20px">#</td>
+                      <td>{{name}}</td>
+                  </tr>
+                {{/products}}
+            </tbody>
+        </table>
+
+        <p>
+            <button onclick="GoBack()">{{#_}}Return{{/_}}</button>
+        </p>
+    </div>
+</div>

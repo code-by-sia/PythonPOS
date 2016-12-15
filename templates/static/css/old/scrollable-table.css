@@ -1,0 +1,14 @@
+/*-------------------- scrollable---------------------*/ 
+div.tableContainer { clear: both; margin-bottom: 3px; overflow: hidden;}
+.tableContainer thead tr { display: block; }
+.tableContainer tbody { display: block; height: 338px; overflow: auto; }
+.tableContainer thead th{ display: table-cell; font-size: 11px; padding: 2px 4px !important; }
+.tableContainer td{ display: table-cell; padding: 4px; }
+.tableContainer p{ padding: 0px; }
+.tableContainer tr > td:last-child{ white-space: nowrap; }
+.tableContainer tr > th:last-child{ }
+html:not([dummy]) .tableContainer thead th { width: 350px; }
+html:not([dummy]) .tableContainer thead th + th { width: 58px; }
+.tableContainer tbody td, [dummy="dummy"]{ width: 372px; }
+.tableContainer tbody td + td, [dummy="dummy"] { width: 38px; }
+

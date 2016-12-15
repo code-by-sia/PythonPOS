@@ -1,0 +1,97 @@
+@media screen
+{
+	body
+	{
+		overflow: hidden;
+	}
+
+	#report-header
+	{
+		height: 26px;
+		padding: 3px;
+		margin: 6px 4px 0 4px;
+		border-radius: 5px 5px 0 0;
+		text-align: center;
+	}
+	#report-header h1
+	{
+		display: inline-block;
+		margin-top: 4px;
+		font-size: 16px !important;
+		font-weight: bold;
+	}
+	#report-toolbar-left
+	{
+		float: left;
+		margin-left: 0px;
+	}
+	#report-toolbar-right
+	{
+		float: right;
+	}
+	#report-header .btn-group button
+	{
+		padding: 4px;
+	}
+	#JK
+	{
+		display: block;
+		position: absolute;
+		bottom: 4px;
+		top: 40px;
+		right: 4px;
+		left: 4px;
+		margin: 0px;
+		min-width: 860px;
+		overflow: auto;
+		border: solid 1px #c0c0c0;
+		background: url( 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAGUlEQVQImWNIqL7tiwszJFTf9mXABQabJAAKGxooqye0mwAAAABJRU5ErkJggg==' );
+		text-align: center;
+	}
+
+	#XK
+	{
+		display: block;
+		width: 22cm;
+		height: 2px;
+		margin: 0 auto;
+		padding: 0;
+		position: relative;
+		left: -50%;
+		-webkit-transform: scale(.7);
+		-moz-transform: scale(.7);
+	}
+
+	#XK .Page
+	{
+		background: #fff;
+		display: block;
+		margin: 20px auto;
+		overflow: hidden;
+		outline: solid 1px #000;
+		font-size: 12pt;
+		font-family: "B Roya" ,tahoma;
+	}
+
+	#XK .space
+	{
+		margin: 30px auto;
+		width: 21cm;
+		clear: both;
+	}
+
+	.just-print
+	{
+		display: none !important;
+		background: red;
+	}
+
+
+	label.center
+	{
+		text-align: center;
+	}
+
+
+
+}

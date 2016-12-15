@@ -1,0 +1,148 @@
+<style>
+    .rates {
+        list-style:none;
+        display:table;
+        width:100%;
+    }
+    .rates li{
+        display:table-cell;
+    }
+    .rates li strong {
+        font-size:20px;
+        padding:14px 10px 0 10px;
+        display:block;
+    }
+    .rates li small {
+        color:#7a828d;
+        font-size:12px;
+        text-shadow:0 1px 0 rgba(0,0,0,0.75);
+    }
+    .form h6 {
+        height:32px;
+        padding:0;
+        overflow:hidden;
+    }
+    .form h6 button {
+        border-radius:0;
+        margin:0;
+        border-width:0 0 0 1px;
+        height:32px;
+        float:right;
+    }
+</style>
+
+<script type="text/javascript" src="/static/js/canvasjs.min.js"></script>
+<script type="text/javascript">
+
+    var chart = new CanvasJS.Chart("stock-chart",
+    {
+      title:{
+        text:'{{#_}}Storage Stock{{/_}}',
+        fontFamily:'Yekan'
+      },
+      data: [
+      {
+       type: "pie",
+       dataPoints: [
+       {{#storages}}
+        {
+            y:{{percentage}},
+            indexLabel:"{{name}}",
+            indexLabelFontFamily:'Yekan'
+
+        },
+       {{/storages}}
+       ]
+     }
+     ],
+     creditText:''//F--K copyright
+   });
+
+    chart.render();
+
+
+    var chart = new CanvasJS.Chart("sale-chart",
+    {
+      creditText:'',
+      title:{
+        text: "{{#_}}Sale{{/_}}",
+        fontFamily:'Yekan'
+      },
+      legend:{
+        fontFamily:'Yekan'
+      },
+      axisX:{
+        /*labelAngle:-45,
+        valueFormatString:'M-D-Y', */
+        //labelFontFamily:'Yekan'
+      },
+      data: [
+          {{#users}}
+          {
+            type: "line",
+            xValueType:'dateTime',
+            lineThickness: 3,
+            name:'{{name}} {{family}}',
+            showInLegend:true,
+            dataPoints: [
+                {{#SalesByDate}}
+                    { y: {{totalsale}},x:new Date('{{sale.date}}') , label: '{{sale.date}}' },
+                {{/SalesByDate}}
+
+            ]
+          },
+          {{/users}}
+      ]
+    });
+
+    chart.render();
+
+    function loadCharts(tab)
+    {
+        if(tab == 1)
+            $('#dash-box').load('dashboard/instulments');
+        else
+            $('#dash-box').load('dashboard/charts');
+    }
+  </script>
+
+
+
+<div class="form" style="text-align:center">
+    <h6>
+        <button onclick="loadCharts(0)"><i class="fa fa-dashboard"></i>  {{#_}}Chart{{/_}}</button>
+        <button id="appointed_installments" onclick="loadCharts(1)" ><i class="fa fa-bars"></i>  {{#_}}Appointed installments{{/_}}</button>
+
+    </h6>
+    <div id="dash-box">
+        <div class="tool">
+           <ul class="rates">
+
+               <li>
+                   <i class="fa fa-briefcase"></i>
+                   <strong>{{#_}}Purchases{{/_}}</strong>
+                   <small>{{order.today}}</small>
+               </li>
+               <li>
+                   <i class="fa fa-shopping-cart"></i>
+                   <strong>{{#_}}Sales{{/_}}</strong>
+                   <small>{{sale.today}}</small>
+               </li>
+               <li>
+                   <i class="fa fa-sort-amount-asc"></i>
+                   <strong>{{#_}}Installments{{/_}}</strong>
+                   <small>{{inst.today}}</small>
+               </li>
+               <li>
+                   <i class="fa fa-bell"></i>
+                   <strong>{{#_}}Appointed{{/_}}</strong>
+                   <small>{{inst.appointed}}</small>
+               </li>
+
+
+           </ul>
+        </div>
+         <div id="stock-chart" style="display:inline-block;height: 400px; width: 600px;direction:ltr"></div>
+        <div id="sale-chart" style="display:inline-block;height: 400px; width: 600px;direction:ltr"></div>
+    </div>
+</div>

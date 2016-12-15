@@ -1,0 +1,29 @@
+1,Dashboard,,dashboard,0,,1
+2,System,,,0,,1
+3,Users,,auth/users,0,2,1
+4,Backup/Restore,,,0,2,1
+5,Settings,,system/setting,0,2,1
+6,Exit,,system/logout,0,2,1
+7,Confrim,,,0,,1
+8,Basic Info,,,0,,1
+9,Customers,,info/person.manage,0,8,1
+10,Supliers,,info/supplier.manage,0,8,1
+11,Storage/Vendoers,,info/storage.manage,0,8,1
+12,Groups,,info/group.manage,0,8,1
+13,Purchase,,car/list,0,,1
+14,New Purchase,,purchase/new,0,13,1
+15,Manage Purchase,,purchase/manage,0,13,1
+16,Waste,,,0,13,1
+17,Sale,,,0,,1
+18,New Sale,,sale/new,0,17,1
+19,Manage Sale,,sale/manage,0,17,1
+20,Return Back,,sale/return,0,17,1
+21,Costs,,info/cost.manage,0,8,1
+22,Report,,,0,,1
+24,Storage,,viewer/storage,0,22,1
+25,Purchase,,viewer/order,0,22,1
+26,Costs,,viewer/cost,0,22,1
+27,Trial Balance,,viewer/balance,0,22,1
+28,Profit & Cost,,viewer/loss-profit,0,22,1
+31,Confirm Purchase,,confirm/purchase,0,7,1
+32,Confirm Sale,,confirm/sale,0,7,1

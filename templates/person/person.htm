@@ -1,0 +1,47 @@
+<script type="text/javascript">
+     function SavePerson(){
+        $.post('/info/person.save',$('#fPersonData').serialize(),function(){
+             LoadPage('info/person.manage');
+             CloseDialog();
+        });
+    }
+</script>
+<div class="form">
+    <h6>{{#_}}Person Info{{/_}}</h6>
+    <div class="content">
+        <form id="fPersonData" method="post" onsubmit="return false;" autocomplete="off">
+            <input type="hidden" name="id" id="data_id" value="{{person.id}}" />
+            <p>
+                <label class="desc">{{#_}}Person Name{{/_}}</label>
+                <input id="txtName" name="name" type="text" value="{{person.name}}" />
+            </p>
+            <p>
+                <label class="desc">{{#_}}City{{/_}}</label>
+                <input id="txtCity" name="city" type="text" value="{{person.city}}" />
+            </p>
+            <p>
+                <label class="desc">{{#_}}Phone{{/_}}</label>
+                <input id="txtPhone" name="phone" type="text" value="{{person.phone}}" />
+            </p>
+            <p>
+                <label class="desc">{{#_}}Email{{/_}}</label>
+                <input id="txtEmail" class="large" name="email" type="text" value="{{person.email}}" />
+            </p>
+            <p>
+                <label class="desc">{{#_}}Address{{/_}}</label>
+                <input id="txtAddress" class="large" name="address" type="text" value="{{person.address}}" />
+            </p>
+            <p>
+                <label class="desc"></label>
+                <button onclick="SavePerson()">
+                    <span class="fa fa-check-circle"></span>
+                    {{#_}}Save Person{{/_}}
+                </button>
+                 <button class="end" type="button" onclick="CloseDialog()">
+                    {{#_}}Cancel{{/_}}
+                    <i class="fa fa-times-circle"></i>
+                </button>
+            </p>
+        </form>
+    </div>
+</div>

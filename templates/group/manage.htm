@@ -1,0 +1,75 @@
+<script type="text/javascript">
+function DeleteGroup(id,sender)
+{
+    $.getJSON('/info/group.delete',{'id':id},
+        function(res){
+            if(res.result == 'OK')
+                $(sender).parent().parent().fadeOut();
+            else
+                alert(res.msg);
+        });
+}
+function AddNewGroup(){
+     $.get('info/group.new',function(response){
+        ModalDialog(response,{width:450,height:165});
+    });
+}
+function UpdateGroup(id){
+     $.get('info/group.edit',{'id':id},function(response){
+        ModalDialog(response,{width:450,height:165});
+    });
+}
+function GoodsList(id)
+{
+    LoadPage('info/group.goodlist',{'id':id})
+}
+</script>
+
+<div class="form">
+    <h6>{{#_}}Manage Group{{/_}}</h6>
+    <div class="content">
+         <p>
+            <button onclick="AddNewGroup()" >
+                <span class="fa fa-plus"></span>
+                {{#_}}Add New Group{{/_}}
+            </button>
+        </p>
+        <p>
+            <table class="data-table" id="group-table">
+                <thead>
+                    <th>{{#_}}Group Name{{/_}}</th>
+                    <th>{{#_}}Group unit{{/_}}</th>
+                    <th>{{#_}}Goods List{{/_}}</th>
+                    <th >{{#_}}Edit{{/_}}</th>
+                     <th >{{#_}}Delete{{/_}}</th>
+                </thead>
+                <tbody>
+                {{#groups}}
+                    <tr>
+                        <td>{{name}}</td>
+                        <td>{{unit}}</td>
+                         <td class="center" width="70px">
+                            <a href="#" onclick="GoodsList({{id}})">
+                                <span class="fa fa-align-justify"></span>
+                                {{#_}}Goods{{/_}}
+                            </a>
+                        </td>
+                        <td class="center" width="70px">
+                            <a href="#" onclick="UpdateGroup({{id}})">
+                                <span class="fa fa-edit"></span>
+                                {{#_}}Edit{{/_}}
+                            </a>
+                        </td>
+                        <td class="center" width="70px">
+                            <a href="#" onclick="DeleteGroup({{id}},this)">
+                                <span class="fa fa-trash-o" ></span>
+                                {{#_}}Delete{{/_}}
+                            </a>
+                        </td>
+                    </tr>
+                {{/groups}}
+                </tbody>
+            </table>
+        </p>
+    </div>
+</div>

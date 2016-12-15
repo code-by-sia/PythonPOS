@@ -1,0 +1,352 @@
+
+
+<style>
+    #sale-details td {padding:0;text-align:center;}
+    td.group-id{width:50px}
+    td input{width:100%;text-align:center;}
+    td.group-name{width:120px}
+    td select{width:100%;height:32px;margin:0;-webkit-appearance:none;border:none;background:transparent;padding:0 4px;}
+    td select ,td select option {text-align:center;}
+    td select:after {width:0;height:0;border-top:solid thin red;content:'';}
+    td a {overflow:hidden;}
+    #sale-details input ,#installments input {margin:0;padding:0;line-height:25px;background:transparent;border:none;box-shadow:none;border-radius:0;}
+    #sale-details input:focus ,#installments input:focus{border:none;box-shadow:none;border-radius:0;}
+</style>
+<div class="form">
+    <h6>{{#_}}Sale Info{{/_}}</h6>
+    <div class="content">
+        <form id="fSaleData" method="post" onsubmit="return false;" autocomplete="off">
+            <div class="merged">
+                <label class="desc">{{#_}}Sale Id{{/_}}</label>
+                <input id="txtSaleId" name="id" class="center" type="text" size="4" value="{{Sale.id}}" />
+                <label class="desc center">{{#_}}Customer{{/_}}</label>
+                <div class="select">
+                    <select id="cboCustomer" name="customerId"{{#Sale.verified}} disabled="disabled" {{/Sale.verified}}>
+                        {{#Customers}}
+                            <option value="{{id}}" {{#selected}} selected="selected" {{/selected}}>{{name}}</option>
+                        {{/Customers}}
+                    </select>
+                </div>
+                <label class="desc center">{{#_}}Registeration Date{{/_}}</label>
+                <input id="txtDate" type="text" class="date ltr center" value="{{Sale.date}}" {{#Sale.verified}} disabled="disabled" {{/Sale.verified}}/>
+
+                <a target="_blank" href="/report/sale?Id={{Sale.id}}" class="button" {{^Sale.id}} disabled="disabled" {{/Sale.id}} id="btnPrintSale" >
+                    <i class="fa fa-print"></i>
+                    {{#_}}Print Sale{{/_}}
+                </a>
+
+            </div>
+            <p>
+                <table id="sale">
+                    <thead>
+                        <th width="40px">{{#_}}Row Id{{/_}}</th>
+                        <th>{{#_}}Storage{{/_}}</th>
+                        <th>{{#_}}Product{{/_}}</th>
+                        <th>{{#_}}Store In Stock{{/_}}</th>
+                        <th>{{#_}}Sale Price{{/_}}</th>
+                        <th>{{#_}}Quantity{{/_}}</th>
+                        <th>{{#_}}Full Purchase Price{{/_}}</th>
+                        {{^Sale.verified}}
+                        <th>{{#_}}Delete{{/_}}</th>
+                        {{/Sale.verified}}
+                    </thead>
+                    <tbody id="sale-details" >
+                    {{#Sale_details}}
+                    <tr>
+                        <td class="center index">{{index}}</td>
+                        <td>
+                            <select class="storage" onchange="StorageChange(this)" name="g[{{index}}]" {{#Sale.verified}} disabled="disabled" {{/Sale.verified}}>
+                                {{#StorageList}}<option value="{{id}}"{{#selected}} selected="selected" {{/selected}}>{{name}}</option>{{/StorageList}}
+                            </select>
+                        </td>
+                        <td>
+                            <select class="product" name="p[{{index}}]" onchange="PorductSelect(this)" {{#Sale.verified}} disabled="disabled" {{/Sale.verified}}>
+                                {{#ProductList}}
+                                <option value="{{product.id}}"
+                                        {{#selected}} selected="selected" {{/selected}}
+                                        data-sale="{{sell_string}}"
+                                        data-purchase="{{purchase_string}}"
+                                        data-store="{{current}}"
+                                        class="product_{{product.id}}" >{{product.name}}</option>
+                                {{/ProductList}}
+                            </select>
+                        </td>
+                        <td class="store ltr"></td>
+                        <td><input name="s[{{index}}]" class="sale price ltr" onchange="PriceChange(this)" onkeyup="PriceChange(this)" value="{{saleprice_string}}" {{#Sale.verified}} disabled="disabled" {{/Sale.verified}}/></td>
+                        <td><input name="q[{{index}}]" class="qty ltr" onchange="PriceChange(this)" onkeyup="PriceChange(this)" value="{{quantity}}" {{#Sale.verified}} disabled="disabled" {{/Sale.verified}}/></td>
+                        <td class="fullsale">{{full_sale_string}}</td>
+                        {{^Sale.verified}}
+                        <td>
+                            <a href="#" onclick="DeleteSaleRow(this)">
+                                <i class="fa fa-times"></i>{{#_}}Delete{{/_}}</a>
+                        </td>
+                        {{/Sale.verified}}
+                    </tr>
+                    {{/Sale_details}}
+                    </tbody>
+                    <tfoot>
+                        <td colspan="4" style="padding:4px 0 2px" class="merged">
+                            {{^Sale.verified}}
+                            <button class="start" onclick="AddNewRow()">
+                                <i class="fa fa-plus"></i>
+                                {{#_}}New Row{{/_}}
+                            </button>
+                            <button class="end" onclick="$('#sale-details').html('');uindex=0;row_id=1;CalcSummation();">
+                                <i class="fa fa-times"></i>
+                                {{#_}}Delete All{{/_}}
+                            </button>
+                            {{/Sale.verified}}
+                        </td>
+                        <td style="text-align:left;padding:2px 5px">
+                            {{#_}}Sum{{/_}}
+                        </td>
+                        <td id="colSumQty" ></td>
+                        <td id="colSumSale" colspan="2"></td>
+                    </tfoot>
+                </table>
+            </p>
+            <p style="padding-top:5px;">
+                <label class="desc">{{#_}}Prepaid{{/_}}</label>
+                <input type="text" id="txtPrepaid" onchange="CalcSummation()" onkeyup="CalcSummation()"
+                {{#Sale.verified}} disabled="disabled" {{/Sale.verified}}class="desc ltr price" value="{{Sale.advance_string}}" name="prepaid"  />
+                <label class="desc center">{{#_}}Remain Value{{/_}}</label>
+                <input type="text" id="txtRemain" class="desc ltr" readonly="readonly" {{#Sale.verified}} disabled="disabled" {{/Sale.verified}} />
+                <label class="desc center">{{#_}}Installments{{/_}}</label>
+                <input type="text" name="pays" id="txtPays" {{#Sale.verified}}disabled="disabled" {{/Sale.verified}} onchange="CreateInstallments()" class="desc center ltr" value="{{Sale.installment}}" size="4"/>
+
+            </p>
+            <p>
+                <table>
+                    <thead>
+                        <th width="40px">{{#_}}No.{{/_}}</th>
+                        <th width="160px">{{#_}}Due Date{{/_}}</th>
+                        <th>{{#_}}Installment Value{{/_}}</th>
+                        <th width="160px">{{#_}}Payment{{/_}}</th>
+                    </thead>
+                    <tbody id="installments">
+                    {{#Sale_installments}}
+                        <tr>
+                            <td>{{index}}</td>
+                            <td><input type="text" class="date ltr" name="b_d[{{index}}]" value="{{date}}" /></td>
+                            <td><input type="text" class="price ltr" name="y_p[{{index}}]" value="{{amount_string}}" /></td>
+                            <td>
+                                {{#dateback}}
+                                    {{dateback}}
+                                {{/dateback}}
+                                {{^dateback}}
+                                    {{#_}}Not Paid{{/_}}
+                                {{/dateback}}
+
+                            </td>
+                        </tr>
+                    {{/Sale_installments}}
+                    </tbody>
+                </table>
+            </p>
+            <p class="merged center">
+                <button class="start" {{#Sale.verified}}disabled="disabled" {{/Sale.verified}} onclick="SaveSale()">
+                    <span class="fa fa-check-circle"></span>
+                    {{#_}}Save Sale{{/_}}
+                </button>
+                <button class="end" type="button" onclick="LoadPage('sale/manage')">
+                    <i class="fa fa-bars"></i>
+                    {{#_}}Manage Sales{{/_}}
+                </button>
+            </p>
+        </form>
+    </div>
+</div>
+
+
+
+
+<script type="text/javascript">
+
+var row_id=1;
+var uindex=0;
+var __loading=true;
+
+$(document).ready(function(){
+
+    $('#sale-details tr').each(function(){
+        var pid   = $(this).find('.product').val();
+        var store = $(this).find('.product_' + pid ).attr('data-store');
+        $(this).find('.store').text(store);
+    });
+    RenewRowIndexes();
+});
+
+function SaveSale(){
+
+    if($('#cboCustomer').val()==undefined)
+        alert('لطفاً مشتری را انتخاب کنید');
+	else if(row_id<=1)
+		alert('هیچ سطری وارد نشده است');
+	else{
+		$.ajax({
+            type: 'POST',
+            url: 'sale/save',
+            data: $('#fSaleData').serialize(),
+            dataType: 'json',
+            success: function(data) {
+                $('#txtSaleId').val(data.Id);
+				Success();
+            }
+        });
+	}
+
+}
+
+function DeleteSaleRow(sender){
+    $(sender).parent().parent().remove();
+    RenewRowIndexes();
+}
+
+function CalcSummation(){
+    var sqty=0;
+    var ssum=0;
+    $('#sale-details tr').each(function(index,row){
+        sqty += getNum($(row).find('.qty').val());
+        ssum += getNum($(row).find('.fullsale').text());
+    });
+    $('#colSumQty').text(ShowMoney(sqty));
+    $('#colSumSale').text(ShowMoney(ssum));
+
+    CalcRemainValue();
+}
+function RenewRowIndexes(){
+    row_id=0;
+    $('#sale-details tr .index').each(function(index,cell){
+        row_id= index +1;
+        $(cell).text(row_id);
+
+    });
+    row_id++;
+    uindex = row_id;
+    CalcSummation();
+}
+
+function StorageChange(sender){
+    var csel = $(sender);
+    var crow = csel.parent().parent();
+    crow.find('.sale').val(0);
+    crow.find('.store').text('');
+    $.getJSON('info/storage.goodlist?id=' + $(sender).val() +  '&json=1',function(data){
+        var psel = crow.find(".product");
+        psel.html('');
+        $(data).each(function(index,item){
+            console.log(item);
+            psel.append('<option value="' + item.id + '" data-sale="' +
+                    item.sale+ '" data-purchase="'+
+                    item.purchase + '" data-store="' +
+                    item.qty + '" class="product_' + item.id + '" >' + item.name + '</option>');
+        });
+        psel.change();
+        crow.find('.qty').change();
+    });
+}
+function PorductSelect(obj){
+    row= $(obj).parent().parent();
+    var pid=  $(obj).val();
+    var opt = $(obj).find('.product_' + pid );
+    row.find('.sale').val(opt.attr('data-sale'));
+    row.find('.store').text(opt.attr('data-store'))
+    row.find('.qty').change();
+}
+
+function PriceChange(sender){
+    var row = $(sender).parent().parent();
+    var qty = getNum(row.find('.qty').val());
+    var sale= getNum(row.find('.sale').val());
+    var fsale = ShowMoney(sale * qty );
+    row.find('.fullsale').text(fsale);
+    CalcSummation();
+}
+
+function AddNewRow(){
+    var tr  = '<tr>';
+        tr += '<td class="center index">'+ row_id++ +'</td>';
+        tr += '<td><select class="storage" onchange="StorageChange(this)"  name="g['+ uindex +']">';
+        tr += '{{#Storages}}<option value="{{id}}">{{name}}</option>{{/Storages}}';
+        tr += '</select></td>';
+        tr += '<td><select class="product" name="p['+ uindex + ']" onchange="PorductSelect(this)"></select></td>';
+        tr += '<td class="store ltr"></td>';
+        tr += '<td><input name="s['+ uindex +']" onchange="PriceChange(this)" onkeyup="PriceChange(this)" class="sale price ltr"/></td>';
+        tr += '<td><input name="q['+ uindex +']" onchange="PriceChange(this)" onkeyup="PriceChange(this)" class="qty ltr" /></td>';
+        tr += '<td class="fullsale"></td>';
+        tr += '<td><a href="#" onclick="DeleteSaleRow(this)"><i class="fa fa-times"></i>{{#_}}Delete{{/_}}</a></td>';
+        tr += '</tr>';
+    uindex++;
+    $('#sale-details').append(tr)
+
+    MaskMoney('#sale-details tr:last-child .price');
+    $('#sale-details tr:last-child .storage').change();
+
+}
+
+function ShowInstallmentsDialog(){
+
+    $.get('/sale/installments',{
+            'SaleId':$('#txtSaleId').val(),
+            'Pays':$('#txtPays').val()
+        },function(response){
+            ModalDialog(response,{
+                width:600,
+                height:455
+            });
+        });
+}
+
+function CalcRemainValue(){
+    var sum = getNum($('#colSumSale').text());
+    var rem = getNum($('#txtPrepaid').val());
+    $('#txtRemain').val(ShowMoney(sum-rem));
+    CreateInstallments();
+}
+
+function CreateInstallments(){
+    var rem = getNum($('#txtRemain').val());
+    var pays= getNum($('#txtPays').val());
+    var pay = Math.floor(rem / pays);
+    var pay_str = ShowMoney(pay);
+
+    var date=$('#txtDate').val();
+    var date_arr = date.split('/');
+    var year  = date_arr[0];
+    var month = date_arr[1];
+    var day   = date_arr[2];
+
+    $('#installments').html('');
+
+
+    var add_new_row = function(index,date,pay_str,status){
+        var row ='<tr>';
+            row+='<td>' + index + '</td>';
+            row+='<td><input type="text" class="date ltr" name="b_d[' + i + ']" value="' + date + '" /></td>';
+            row+='<td><input type="text" class="price ltr" name="y_p[' + i + ']" value="' + pay_str + '" /></td>';
+            row+='<td>{{#_}}Not Paid{{/_}}</td>';
+            row+='</tr>';
+        $('#installments').append(row);
+    };
+
+    for(i=1;i<pays;i++){
+        rem = rem - pay;
+        if(++month > 12 ){
+            month=1;
+            year++;
+        }
+        add_new_row(i,year +  '/' + ((month<10)?'0':'') + month + '/' + day ,pay_str);
+    }
+    if(pays >  0 ) {
+        if(++month > 12 ){
+            month=1;
+            year++;
+        }
+        add_new_row(i,year +  '/' + ((month<10)?'0':'') + month + '/' + day ,ShowMoney(rem));
+    }
+    MaskDate("#installments .date");
+    MaskMoney("#installments .price");
+}
+
+
+</script>

@@ -1,0 +1,71 @@
+<script type="text/javascript">
+function ConfirmSale(id,sender)
+{
+    $.getJSON('/confirm/sale.confirm',{'id':id},
+        function(response){
+            if(response.result == 'OK')
+                $(sender)
+                    .parent()
+                    .parent()
+                    .fadeOut()
+        }
+    );
+}
+function SaleDetails(id){
+     $.get('confirm/sale.details',{'id':id},function(response){
+        ModalDialog(response,{width:960,height:400});
+    });
+}
+</script>
+<div class="form">
+    <h6 >{{#_}}Confirm Sale{{/_}}</h6>
+    <div class="content">
+
+        <p>
+            <table class="data-table">
+                <thead>
+                    <th>{{#_}}Sale No{{/_}}</th>
+                    <th>{{#_}}Sale Date{{/_}}</th>
+                    <th>{{#_}}Customer Name{{/_}}</th>
+                    <th>{{#_}}Sale Amount{{/_}}</th>
+                    <th>{{#_}}Remind Amount{{/_}}</th>
+                    <th>{{#_}}Sale Installments{{/_}}</th>
+                    <th>{{#_}}Details{{/_}}</th>
+                    <th>{{#_}}Confirm{{/_}}</th>
+                </thead>
+                <tbody id="grdSales">
+                {{#sales}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{date}}</td>
+                        <td>{{customer.name}}</td>
+                        <td>{{amount_string}}</td>
+                        <td>{{remind_string}}</td>
+                        <td>{{installment}}</td>
+
+
+
+                        <td class="center" width="70px">
+                            <a href="#" onclick="SaleDetails({{id}})">
+                                <span class="fa fa-th-list"></span>
+                                {{#_}}Details{{/_}}
+                            </a>
+                        </td>
+
+                        <td class="center" width="70px">
+                            <a href="#" onclick="ConfirmSale({{id}},this)">
+                                <span class="fa fa-check" ></span>
+                                {{#_}}Confirm{{/_}}
+                            </a>
+                        </td>
+
+
+
+
+                    </tr>
+                {{/sales}}
+                </tbody>
+            </table>
+        </p>
+    </div>
+</div>

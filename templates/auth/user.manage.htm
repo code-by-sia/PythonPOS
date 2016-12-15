@@ -1,0 +1,44 @@
+﻿<script>
+  function EditUser (UserId) {
+    LoadPage('auth/user.form',{'Code':UserId})
+  }
+
+  function DeactiveUser (UserId) {
+    
+  }
+</script>
+<div class="form">
+    <h6>مدیریت کاربران</h6>
+    <div class="content">
+        <p>
+            <table>
+              <thead >
+                <th>کد کاربر</th>
+                <th>نام کاربری</th>
+                <th>نام و نام خانوادگی</th>
+                <th>سمت کاری</th>
+                <th>صندوق پستی</th>
+                <th>عملیات</th>
+              </thead>
+              <tbody id="grdUserList">
+              {{#users}}
+              <tr class="bigrow">
+                  <td>-</td>
+                  <td>{{username}}</td>
+                  <td>{{name}} {{family}}</td>
+                  <td>{{job}}</td>
+                  <td>{{mail}}</td>
+                  <td/>
+              </tr>
+              {{/users}}
+              </tbody>
+            </table>
+        </p>
+        <p>
+          <button onclick="LoadPage('Module/user/form');" class="button">
+            افزودن کاربر جدید
+            <span class="ui-icon ui-icon-plus"></span>
+          </button>
+        </p>
+    </div>
+</div>

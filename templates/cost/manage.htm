@@ -1,0 +1,68 @@
+<script type="text/javascript">
+function DeleteCost(id,sender){
+    $.getJSON('/info/cost.delete',{'id':id},
+        function(response){
+            if(response.result == 'OK')
+                $(sender)
+                    .parent()
+                    .parent()
+                    .fadeOut()
+        }
+    );
+}
+function AddNewCost(){
+     $.get('info/cost.new',function(response){
+        ModalDialog(response,{width:447,height:283});
+    });
+}
+function UpdateCost(id){
+     $.get('info/cost.edit',{'id':id},function(response){
+        ModalDialog(response,{width:447,height:283});
+    });
+}
+</script>
+<div class="form">
+    <h6 >{{#_}}Manage Costs{{/_}}</h6>
+    <div class="content">
+        <p>
+            <button onclick="AddNewCost()" >
+                {{#_}}Add New Cost{{/_}}
+                <span class="fa fa-plus"></span>
+            </button>
+        </p>
+        <p>
+            <table class="data-table">
+                <thead>
+                    <th>{{#_}}Cost Title{{/_}}</th>
+                    <th>{{#_}}Invoice No{{/_}}</th>
+                    <th>{{#_}}Register Date{{/_}}</th>
+                    <th>{{#_}}Amount{{/_}}</th>
+                    <th>{{#_}}Edit{{/_}}</th>
+                    <th>{{#_}}Delete{{/_}}</th>
+                </thead>
+                <tbody id="grdMembers">
+                {{#costs}}
+                    <tr>
+                        <td>{{title}}</td>
+                        <td>{{invoiceno}}</td>
+                        <td>{{regdate}} {{regtime}}</td>
+                        <td>{{amount_string}}</td>
+                        <td class="center" width="70px">
+                            <a href="#" onclick="UpdateCost({{id}})">
+                                <span class="fa fa-edit"></span>
+                                {{#_}}Edit{{/_}}
+                            </a>
+                        </td>
+                        <td class="center" width="70px">
+                            <a href="#" onclick="DeleteCost({{id}},this)">
+                                <span class="fa fa-trash-o" ></span>
+                                {{#_}}Delete{{/_}}
+                            </a>
+                        </td>
+                    </tr>
+                {{/costs}}
+                </tbody>
+            </table>
+        </p>
+    </div>
+</div>

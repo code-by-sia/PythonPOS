@@ -1,0 +1,86 @@
+<script type="text/javascript">
+
+function DeleteStorage(id,sender)
+{
+    $.getJSON('/info/storage.delete',{'id':id},
+        function(res){
+            if(res.result == 'OK')
+                $(sender).parent().parent().fadeOut();
+            else
+                alert(res.msg);
+        });
+}
+function AddNewStorage(){
+     $.get('info/storage.new',function(response){
+        ModalDialog(response,{width:500,height:200});
+    });
+}
+function UpdateStorage(id){
+     $.get('info/storage.edit',{'id':id},function(response){
+       ModalDialog(response,{width:500,height:200});
+    });
+}
+function GoodsList(id)
+{
+    LoadPage('info/storage.goodlist',{'id':id})
+}
+
+</script>
+<div class="form">
+    <h6>{{#_}}Storages{{/_}}</h6>
+    <div class="content">
+         <p>
+            <button onclick="AddNewStorage()" >
+                <i class="fa fa-plus"></i>
+                {{#_}}Save Storage{{/_}}
+            </button>
+        </p>
+        <p>
+            <table class="data-table">
+                <thead>
+                    <th>{{#_}}Storage Name{{/_}}</th>
+                    <th>{{#_}}Storage Phone{{/_}}</th>
+                    <th>{{#_}}Storage Address{{/_}}</th>
+                    <th>{{#_}}Storage Stock{{/_}}</th>
+                    <th>{{#_}}Storage Items{{/_}}</th>
+                    <th >{{#_}}Edit{{/_}}</th>
+                    <th >{{#_}}Delete{{/_}}</th>
+                </thead>
+                <tbody>
+                {{#storages}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{tell}}</td>
+                    <td>{{address}}</td>
+
+                    <td class="center">{{stock}}</td>
+
+                    <td class="center" width="70px">
+                        <a href="#" onclick="GoodsList({{id}})">
+                            <i class="fa fa-align-justify"></i>
+                            {{#_}}List{{/_}}
+                        </a>
+                    </td>
+
+                    <td class="center" width="70px">
+                        <a href="#" onclick="UpdateStorage({{id}})">
+                            <i class="fa fa-edit"></i>
+                            {{#_}}Edit{{/_}}
+                        </a>
+                    </td>
+                    <td class="center" width="70px">
+                        <a href="#" onclick="DeleteStorage({{id}},this)">
+                            <i class="fa fa-trash-o"></i>
+                            {{#_}}Delete{{/_}}
+                        </a>
+                    </td>
+
+                </tr>
+                {{/storages}}
+
+                </tbody>
+            </table>
+        </p>
+
+    </div>
+</div>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="fa" >
+<head>
+	<meta charset="utf-8">
+	<title>{{Title}}</title>
+    <script>
+
+
+
+        var _i18n_datatable = {
+            "sEmptyTable":     "{{#_}}No data available in table{{/_}}",
+            "sInfo":           "{{#_}}Showing _START_ to _END_ of _TOTAL_ entries{{/_}}",
+            "sInfoEmpty":      "{{#_}}Showing 0 to 0 of 0 entries{{/_}}",
+            "sInfoFiltered":   "{{#_}}(filtered from _MAX_ total entries){{/_}}",
+            "sInfoPostFix":    "",
+            "sInfoThousands":  ",",
+            "sLengthMenu":     "{{#_}}Show _MENU_ entries{{/_}}",
+            "sLoadingRecords": "{{#_}}Loading...{{/_}}",
+            "sProcessing":     "{{#_}}Processing...{{/_}}",
+            "sSearch":         "{{#_}}Search:{{/_}}",
+            "sZeroRecords":    "{{#_}}No matching records found{{/_}}",
+            "oPaginate": {
+                "sFirst":    "{{#_}}First{{/_}}",
+                "sLast":     "{{#_}}Last{{/_}}",
+                "sNext":     "{{#_}}Next{{/_}}",
+                "sPrevious": "{{#_}}Previous{{/_}}"
+            },
+            "oAria": {
+                "sSortAscending":  ": {{#_}}activate to sort column ascending{{/_}}",
+                "sSortDescending": ": {{#_}}activate to sort column descending{{/_}}"
+            }
+        };
+    </script>
+	<script type="text/javascript" src="/static/js/jquery-1.3.2.min.js"></script>
+	<script type="text/javascript" src="/static/js/ui/ui.core.js"></script>
+	<script type="text/javascript" src="/static/js/jquery.maskMoney.js"></script>
+	<script type="text/javascript" src="/static/js/Horof.js"  ></script>
+	<script type="text/javascript" src="/static/js/jquery.maskedinput.min.js"></script>
+	<script type="text/javascript" src="/static/js/ui/ui.tabs.js"></script>
+	<script type="text/javascript" src="/static/js/ui/ui.dialog.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/static/js/iosOverlay.js" ></script>
+	<script type="text/javascript" src="/static/js/custom.js" ></script>
+    <script type="text/javascript">
+        window.i18n_saved= '{{#_}}Saved{{/_}}';
+    </script>
+	<link rel="shortcut icon" href="Logo-small.png"/>
+    <link href="/static/css/font-awesome.min.css" rel="stylesheet" media="all" />
+    <link href="/static/css/iosOverlay.css" rel="stylesheet" media="all"/>
+	<link href="/static/css/main.css" rel="stylesheet" media="all" />
+
+</head>
+<body class="lang-{{lang}}">
+    <img src="/static/Uploads/logo.svg" style="position:fixed;z-index:-999999;top:50%;right:50%;width:500px;margin:-70px -250px 0 0;" />
+    <div id="modal-back">
+        <div id="modal-container">
+        </div>
+    </div>
+    <div>
+        <ul id="nav" class="head-bar">
+        {{#Navigation}}
+            <li><a href="{{href}}">{{i18nTitle}}</a>
+                {{#submenus.count}}
+                    <ul>
+                    {{#submenus}}
+                       <li><a href="{{href}}">{{i18nTitle}}</a>
+                            {{#submenus.count}}
+                            <ul>
+                            {{#submenus}}
+                               <li><a href="{{href}}">{{i18nTitle}}</a></li>
+                            {{/submenus}}
+                            </ul>
+                        {{/submenus.count}}
+                       </li>
+                    {{/submenus}}
+                    </ul>
+                {{/submenus.count}}
+            </li>
+        {{/Navigation}}
+
+            <li class="left">
+                <img onclick="ShowTodo()" src="/static/images/fa_IR.svg" height="16px">
+                <span onclick="ShowTodo()">{{#_}}Persian{{/_}}</span>
+            </li>
+            <li class="left" onclick="ShowClock()" >
+                <img src="/static/images/time.png">
+                <span>{{Today}}</span>
+            </li>
+            <li class="left" onclick="ShowTodo()" >
+                <img src="/static/images/user.png">
+                <span>{{UserName}}</span>
+            </li>
+
+        </ul>
+    </div>
+
+    <div id="ModuleContainer">
+
+    </div>
+
+    <div id="copyright" class="head-bar" >
+        <span>
+        <a target="_blank" href="#" style="color:#44f;direction:ltr"> SamalStudios@ </a>
+        </span>
+    </div>
+</body>
+</html>

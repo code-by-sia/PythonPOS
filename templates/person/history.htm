@@ -1,0 +1,187 @@
+<script type="text/javascript">
+
+var row_id=1;
+var uindex=0;
+var __loading=true;
+
+function GoBack(){
+    LoadPage('/info/person.manage');
+}
+function PayInstullment(id)
+{
+    event.preventDefault();
+    $.get('info/person.instullment',{'id':id},function(response){
+       ModalDialog(response,{width:319,height:160});
+    });
+}
+function CalcSummation(){
+    var sqty=0;
+    var ssum=0;
+    $('#sale-details tr').each(function(index,row){
+        sqty += getNum($(row).find('.qty').val());
+        ssum += getNum($(row).find('.fullsale').text());
+    });
+    $('#colSumQty').text(ShowMoney(sqty));
+    $('#colSumSale').text(ShowMoney(ssum));
+
+    CalcRemainValue();
+}
+
+function ShowInstallmentsDialog(){
+
+    $.get('/sale/installments',{
+            'SaleId':$('#txtSaleId').val(),
+            'Pays':$('#txtPays').val()
+        },function(response){
+            ModalDialog(response,{
+                width:600,
+                height:455
+            });
+        });
+}
+
+function CalcRemainValue(){
+    var sum = getNum($('#colSumSale').text());
+    var rem = getNum($('#txtPrepaid').val());
+    $('#txtRemain').val(ShowMoney(sum-rem));
+}
+$(document).ready(function(){
+    $('#sale-details tr').each(function(){
+        var pid   = $(this).find('.product').val();
+        var store = $(this).find('.product_' + pid ).attr('data-store');
+        $(this).find('.store').text(store);
+    });
+});
+
+</script>
+<style>
+    #sale-details td {padding:0;text-align:center;}
+    td.group-id{width:50px}
+    td input{width:100%;text-align:center;}
+    td.group-name{width:120px}
+    td select{width:100%;height:32px;margin:0;-webkit-appearance:none;border:none;background:transparent;padding:0 4px;}
+    td select ,td select option {text-align:center;}
+    td select:after {width:0;height:0;border-top:solid thin red;content:'';}
+    td a {overflow:hidden;}
+    #sale-details input ,#installments input {margin:0;padding:0;line-height:25px;background:transparent;border:none;box-shadow:none;border-radius:0;}
+    #sale-details input:focus ,#installments input:focus{border:none;box-shadow:none;border-radius:0;}
+
+    ul{padding:5px 15px;}
+    .NoBorder{border:none;}
+    .gap{padding-left:9px;}
+    .seperator{
+        margin: 32px 0px;
+        height: 7px;
+        background-color: #F1F1F1;
+    }
+    .red{ color:red;}
+    .green { color:green;}
+</style>
+<div class="form">
+    <h6>{{#_}}History{{/_}}</h6>
+    <div class="content">
+        <h5>{{#_}}Customer Name{{/_}} : <strong>{{person.name}}</strong></h5>
+        <p>{{#_}}Purchase List{{/_}}</p>
+
+
+        <ul>
+        {{#sales}}
+
+            <li>
+                <label class="gap">{{#_}}Sale Id{{/_}} : </label><label class="desc">{{id}}</label>
+                <label class="gap center">{{#_}}Registeration Date{{/_}} : </label><label class="desc">{{date}}</label>
+
+                <table>
+                    <tbody>
+                        <tr>
+
+
+                            <td style="width:68%;border:none;padding:5px;">
+                                 <table>
+                                    <thead>
+                                        <tr>
+                                             <th width="50px">{{#_}}Row Id{{/_}}</th>
+                                            <th>{{#_}}Storage{{/_}}</th>
+                                            <th style="width:35%">{{#_}}Product{{/_}}</th>
+                                            <th>{{#_}}Sale Price{{/_}}</th>
+                                            <th>{{#_}}Quantity{{/_}}</th>
+                                            <th>{{#_}}Full Sale Price{{/_}}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#details}}
+                                        <tr>
+                                            <td>{{id}}</td>
+                                            <td>{{storage.name}}</td>
+                                            <td>{{product.name}}</td>
+                                            <td>{{saleprice_string}}</td>
+                                            <td>{{quantity}}</td>
+                                            <td>{{full_sale_string}}</td>
+                                        </tr>
+                                        {{/details}}
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="3"  style="padding:4px 0 2px" class="merged NoBorder"></td>
+                                                <td style="text-align:left;padding:2px 5px">{{#_}}Sum{{/_}}</td>
+                                                <td id="colSumQty" >{{sumqty}}</td>
+                                                <td id="colSumSale" >{{sumsale_string}}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <td colspan="3" style="padding:4px 0 2px" class="merged NoBorder"></td>
+                                                <td style="text-align:left;padding:2px 5px">{{#_}}Prepaid{{/_}}</td>
+                                                <td colspan="2" >{{advance_string}}</td>
+                                            </tr>
+
+                                             <tr>
+                                                <td colspan="3" style="padding:4px 0 2px" class="merged NoBorder"></td>
+                                                <td style="text-align:left;padding:2px 5px">{{#_}}Installments{{/_}}</td>
+                                                <td colspan="2" >{{installment}}</td>
+                                            </tr>
+
+                                        </tfoot>
+                                    </tbody>
+                                </table>
+
+                            </td>
+
+                            <td style="width:30%;border:none">
+                                {{#installments.count}}
+                                <table class="'NoBorder">
+                                    <thead>
+                                        <!--<th width="40px">{{#_}}No.{{/_}}</th>-->
+                                        <th width="110px">{{#_}}Due Date{{/_}}</th>
+                                        <th>{{#_}}Installment Value{{/_}}</th>
+                                        <th width="110px">{{#_}}Payment{{/_}}</th>
+                                    </thead>
+                                    <tbody id="installments">
+                                    {{#installments}}
+                                        <tr  {{^dateback}} class="red" id="__instullment_{{id}}" {{/dateback}} >
+                                            <!--<td>{{index}}</td>-->
+                                            <td>{{date}}</td>
+                                            <td>{{amount_string}}</td>
+                                            <td class="opt" title="{{#dateback}} {{#_}}Paid at{{/_}} : {{dateback}}  {{/dateback}}">
+                                                {{#dateback}}
+                                                     <a href="report/instullment?id={{id}}" target="_blank"> <span class="fa fa-print"></span> {{#_}}Print{{/_}}</a>
+                                                {{/dateback}}
+
+                                                {{^dateback}}
+                                                    <a href="" onclick="PayInstullment({{id}})"> <span class="fa fa-money"></span> {{#_}}Pay{{/_}}</a>
+                                                {{/dateback}}
+                                            </td>
+                                        </tr>
+                                    {{/installments}}
+                                    </tbody>
+                                </table>
+                               {{/installments.count}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </li>
+            <li class="seperator"></li>
+        {{/sales}}
+        </ul>
+        <p><button onclick="GoBack()">{{#_}}Return{{/_}}</button></p>
+    </div>
+</div>

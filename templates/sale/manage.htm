@@ -1,0 +1,78 @@
+<script type="text/javascript">
+function DeleteSale(id,sender){
+    $.getJSON('/sale/delete',{'id':id},
+        function(response){
+            if(response.result == 'OK')
+                $(sender)
+                    .parent()
+                    .parent()
+                    .fadeOut()
+        }
+    );
+}
+</script>
+<div class="form">
+    <h6 >{{#_}}Manage Sale{{/_}}</h6>
+    <div class="content">
+        <p>
+            <button onclick="LoadPage('sale/new')" >
+                {{#_}}Add New Sale{{/_}}
+                <span class="fa fa-plus"></span>
+            </button>
+        </p>
+        <p>
+            <table class="data-table">
+                <thead>
+                    <th>{{#_}}Sale No{{/_}}</th>
+                    <th>{{#_}}Sale Date{{/_}}</th>
+                    <th>{{#_}}Customer Name{{/_}}</th>
+                    <th>{{#_}}Sale Amount{{/_}}</th>
+                    <th>{{#_}}Remind Amount{{/_}}</th>
+                    <th>{{#_}}Sale Installments{{/_}}</th>
+                    <th>{{#_}}Edit{{/_}}</th>
+                    <th>{{#_}}Delete{{/_}}</th>
+                </thead>
+                <tbody id="grdPurchases">
+                {{#sales}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{date}}</td>
+                        <td>{{customer.name}}</td>
+                        <td>{{amount_string}}</td>
+                        <td>{{remind_string}}</td>
+                        <td>{{installment}}</td>
+                        {{^verified}}
+                        <td class="center" width="70px">
+                            <a href="#" onclick="LoadPage('/sale/edit',{'id':'{{id}}'})">
+                                <span class="fa fa-edit"></span>
+                                {{#_}}Edit{{/_}}
+                            </a>
+                        </td>
+                        <td class="center" width="70px">
+                            <a href="#" onclick="DeleteSale({{id}},this)">
+                                <span class="fa fa-trash-o" ></span>
+                                {{#_}}Delete{{/_}}
+                            </a>
+                        </td>
+                        {{/verified}}
+                        {{#verified}}
+                           <td class="center" width="70px">
+                            <a href="#" onclick="LoadPage('/sale/edit',{'id':'{{id}}'})">
+                                <span class="fa fa-search"></span>
+                                {{#_}}View{{/_}}
+                            </a>
+                        </td>
+                        <td class="center" width="70px">
+                            <a href="/report/sale?Id={{id}}" target="_blanck">
+                                <span class="fa fa-print" ></span>
+                                {{#_}}Print{{/_}}
+                            </a>
+                        </td>
+                        {{/verified}}
+                    </tr>
+                {{/sales}}
+                </tbody>
+            </table>
+        </p>
+    </div>
+</div>

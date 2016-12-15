@@ -1,0 +1,120 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AccountingServer\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-24 00:04+0330\n"
+"PO-Revision-Date: 2014-03-24 00:04+0330\n"
+"Last-Translator: Syamand Ma'roufi <syamandmaroufi@gmail.com>\n"
+"Language-Team: Samal\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: /Users/syamandmaroufi/Code/\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : (n%100>=3 "
+"&& n%100<=10) ? 3 : n%100>=11 ? 4 : 5);\n"
+"X-Language: ar\n"
+"X-Source-Language: C\n"
+"X-Generator: Poedit 1.6.4\n"
+"X-Poedit-SearchPath-0: AccountingServer\n"
+
+#: AccountingServer/__main__.py:27
+msgid "Samal web application server"
+msgstr ""
+
+#: AccountingServer/__main__.py:28
+msgid "Starting server at"
+msgstr ""
+
+#: AccountingServer/__main__.py:31
+msgid "End server listening"
+msgstr ""
+
+#: AccountingServer/__main__.py:33
+msgid "Server is Stoped"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:6
+msgid "Login Page"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:7
+msgid "Login Failed"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:8
+msgid "Sign in"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:9
+msgid "Change"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:10
+msgid "Old Password"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:11
+msgid "New Password"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:12
+msgid "Dear User"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:13
+msgid "Change Password"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:14
+msgid "Repeat Password"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:15
+msgid "New password at least should be 6 char"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:16
+msgid "Repeat of new password is wrong"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:17
+msgid "Curent password is wrong"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:18
+msgid "For changing password contact administrator"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:19
+msgid "Password changed successfully"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:20
+msgid "Add new user"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:21
+msgid "Manage users"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:22
+msgid "UserName"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:23
+msgid "Password"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:24
+msgid "Job"
+msgstr ""
+
+#: AccountingServer/locale/temp.py:25
+msgid "Email"
+msgstr ""
+
+#: AccountingServer/modules/container.py:32
+msgid "Accounting Web Application"
+msgstr ""

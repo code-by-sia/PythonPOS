@@ -1,0 +1,71 @@
+@page 
+{
+	size:21cm 29.7cm;
+	margin:0;
+}
+@media print
+{
+	body, *
+	{
+		margin: 0;
+		padding: 0;
+		font-size: 12pt;
+		font-family: "B Roya" ,tahoma;
+		outline: 0;
+		border: none;
+	}
+	#JK
+	{
+		overflow: visible;
+		display: block;
+		margin: 0;
+		padding: 0;
+		opacity: 1;
+		left: 0px;
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		right: 0;
+		left: 0;
+		background: #fff;
+		text-align: center;
+	}
+
+	#XK
+	{
+		-moz-transform: none !important;
+		-webkit-transform: none !important;
+		margin: -2px;
+		padding: 0;
+	}
+
+	#XK .Page
+	{
+		box-shadow: none;
+		padding: 0 !important ;
+		margin: 0 !important;
+		clear: both;
+		display: block; 
+		overflow: hidden;
+		border: none;
+	}
+
+
+	#XK .Page 
+	{
+		page-break-after:always;
+		page-break-before:avoid;
+        page-break-inside: avoid;
+	}
+	.not-print
+	{
+		display: none;
+		visibility: hidden;
+	}
+	.print-style
+	{
+		border: none;
+		background: #fff;
+	}
+
+}
