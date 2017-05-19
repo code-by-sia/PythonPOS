@@ -2163,7 +2163,7 @@ if __name__ == '__main__':
     _= config.i18n
 
     PORT= int(os.getenv('PORT','8000'))
-    HOST='localhost'
+    HOST= os.getenv('HOST','localhost')
     httpd = HTTPServer((HOST,PORT),RequestHandler)
 
     #config.makeTempLang(Menu.select())
