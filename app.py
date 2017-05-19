@@ -17,11 +17,11 @@ from urllib.parse import urlparse
 
 class config:
     __author__ = 'SiamandMaroufi'
-    
+
     server_path = os.path.dirname(os.path.realpath(__file__))
     lang_name ='fa'
     app_lang    = [lang_name]
-    app_locale  = 'en_US'#use English for MS Windows
+    app_locale  = 'en_US'
     app_db_user = 'root';
     app_db_pass  = '';
 
@@ -489,7 +489,7 @@ class Session(BaseModel):
         # except:
         #     print ('error')
         #     return None
-        
+
         try_stmt
 
     def Logout(self):
@@ -2162,8 +2162,7 @@ if __name__ == '__main__':
    # glrobal _
     _= config.i18n
 
-
-    PORT=8000
+    PORT= int(os.getenv('PORT','8000'))
     HOST='localhost'
     httpd = HTTPServer((HOST,PORT),RequestHandler)
 
@@ -2182,6 +2181,3 @@ if __name__ == '__main__':
         print (_('Server is Stopped'))
         print ('>  %s - %s' % (getDate(),getTime()))
     pass
-
-
-
