@@ -856,16 +856,12 @@ class SaleInstallment(BaseModel):
         return res
 
     def appointed(self):
-        list = SaleInstallment.raw("SELECT * ,datediff(date,curdate()) as 'deadline' FROM `saleinstallment` WHERE (dateback is null)  having deadline < 5 order by deadline asc")
-        count = 0
-        for li in list:
-            count += 1
-        # try:
-        #     list = SaleInstallment.raw("SELECT * ,datediff(date,curdate()) as 'deadline' FROM `saleinstallment` WHERE (dateback is null)  having deadline < 1000 order by deadline asc")
-        #     res = list.count()
-        #     print(res)
-        # except:
-        #     res = 0
+        today = datetime.today()
+        enddate = today + timedelta(days=7)
+        count = SaleInstallment.select()\
+                               .where((SaleInstallment.dateback.is_null()) & (SaleInstallment.date > enddate))\
+                               .count()
+
         return count
 
 class StorageChange(BaseModel):
@@ -1070,12 +1066,15 @@ class Dashboard(Template):
     def Process(self,section):
 
         if section == 'instulments':
-            insts = SaleInstallment.raw("SELECT * ,datediff(date,curdate()) as 'deadline' FROM `saleinstallment` WHERE (dateback is null)  having deadline < 5  order by deadline asc")
+            today = datetime.today()
+            enddate = today + timedelta(days=7)
+            insts = SaleInstallment.select()\
+                                   .where((SaleInstallment.dateback.is_null(True))&(SaleInstallment.date < enddate))
             i = 1
             for inst in insts:
                 inst.index = i
                 i += 1
-            self.RenderFile('dashboard/instulments.htm',{'insts':insts,'_':config.i18n})
+            self.RenderFile('dashboard/instulments.htm',{'insts':insts,'_':config.i18n,'today':today})
 
         elif section == 'charts':
             users = User.select()
