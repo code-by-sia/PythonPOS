@@ -19,9 +19,9 @@ class config:
     __author__ = 'SiamandMaroufi'
 
     server_path = os.path.dirname(os.path.realpath(__file__))
-    lang_name ='fa'
+    lang_name   = os.getenv('APP_LANG','fa')
     app_lang    = [lang_name]
-    app_locale  = 'en_US.utf8'
+    app_locale  = os.getenv('APP_LOCALE','en_US.utf8')
     app_db_user = 'root';
     app_db_pass  = '';
 
@@ -2166,18 +2166,21 @@ if __name__ == '__main__':
     HOST='localhost'
     httpd = HTTPServer((HOST,PORT),RequestHandler)
 
-#    config.makeTempLang(Menu.select())
-     #DbSetup().SetupDataBase()
+    #config.makeTempLang(Menu.select())
+    #DbSetup().SetupDataBase()
     # DbSetup().BackUp()
 
-    try:
-        print (_('Samal web application server'))
-        print (_('Starting server at')+' http://%s:%s' % (HOST,PORT))
-        print ('>  %s - %s' % (getDate(),getTime()))
-        httpd.serve_forever()
-        httpd.server_close()
-        print (_('End server listening'))
-    except KeyboardInterrupt:
-        print (_('Server is Stopped'))
-        print ('>  %s - %s' % (getDate(),getTime()))
-    pass
+    IS_TEST = os.getenv('BUILD_TEST')
+
+    if IS_TEST != 'TEST':
+        try:
+            print (_('Samal web application server'))
+            print (_('Starting server at')+' http://%s:%s' % (HOST,PORT))
+            print ('>  %s - %s' % (getDate(),getTime()))
+            httpd.serve_forever()
+            httpd.server_close()
+            print (_('End server listening'))
+        except KeyboardInterrupt:
+            print (_('Server is Stopped'))
+            print ('>  %s - %s' % (getDate(),getTime()))
+        pass
