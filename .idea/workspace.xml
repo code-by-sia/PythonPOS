@@ -2,13 +2,363 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="493aee98-b27c-411a-9dcf-442663b4ec3e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/menu.csv" />
-      <change type="DELETED" beforePath="C:\GitLab\dal\templates\static\Uploads\fed-ex.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitLab\dal\templates\static\Uploads\fed-ex.svg" afterPath="" />
-      <change type="DELETED" beforePath="C:\GitLab\dal\templates\static\Uploads\logo.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database.db" afterPath="$PROJECT_DIR$/database.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/peewee.db" afterPath="$PROJECT_DIR$/peewee.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/config.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/controller.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/report.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/common/reportViewer.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/authentication.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/basicInfo.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/confirm.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/container.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/costs.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/dashboard.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/purchase.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/reportController.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/reports/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/reports/cost.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/reports/installment.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/reports/order.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/reports/sale.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/reports/saleList.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/reports/storage.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/sales.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/static.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/system.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/controllers/testDev.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/models/__init__.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/models/models.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/views/static/css/old/ui.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/views/static/js/upload.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
+      <change beforePath="$PROJECT_DIR$/database.db" afterPath="$PROJECT_DIR$/database.db" />
+      <change beforePath="$PROJECT_DIR$/templates/ReportViewer.xsl" afterPath="$PROJECT_DIR$/views/ReportViewer.xsl" />
+      <change beforePath="$PROJECT_DIR$/templates/auth/password.change.htm" afterPath="$PROJECT_DIR$/views/auth/password.change.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/auth/user.manage.htm" afterPath="$PROJECT_DIR$/views/auth/user.manage.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/confirm/purchase.details.htm" afterPath="$PROJECT_DIR$/views/confirm/purchase.details.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/confirm/purchase.htm" afterPath="$PROJECT_DIR$/views/confirm/purchase.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/confirm/sale.details.htm" afterPath="$PROJECT_DIR$/views/confirm/sale.details.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/confirm/sale.htm" afterPath="$PROJECT_DIR$/views/confirm/sale.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/container/login.htm" afterPath="$PROJECT_DIR$/views/container/login.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/container/main.htm" afterPath="$PROJECT_DIR$/views/container/main.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/cost/cost.htm" afterPath="$PROJECT_DIR$/views/cost/cost.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/cost/manage.htm" afterPath="$PROJECT_DIR$/views/cost/manage.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard/charts.htm" afterPath="$PROJECT_DIR$/views/dashboard/charts.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard/home.htm" afterPath="$PROJECT_DIR$/views/dashboard/home.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard/instulments.htm" afterPath="$PROJECT_DIR$/views/dashboard/instulments.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/error/404.htm" afterPath="$PROJECT_DIR$/views/error/404.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/error/not-implemented.htm" afterPath="$PROJECT_DIR$/views/error/not-implemented.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/group/goodlist.htm" afterPath="$PROJECT_DIR$/views/group/goodlist.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/group/group.htm" afterPath="$PROJECT_DIR$/views/group/group.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/group/manage.htm" afterPath="$PROJECT_DIR$/views/group/manage.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/person/history.htm" afterPath="$PROJECT_DIR$/views/person/history.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/person/instullment.htm" afterPath="$PROJECT_DIR$/views/person/instullment.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/person/list.htm" afterPath="$PROJECT_DIR$/views/person/list.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/person/manage.htm" afterPath="$PROJECT_DIR$/views/person/manage.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/person/person.htm" afterPath="$PROJECT_DIR$/views/person/person.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/purchase/manage.htm" afterPath="$PROJECT_DIR$/views/purchase/manage.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/purchase/order.htm" afterPath="$PROJECT_DIR$/views/purchase/order.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/reports/cost.xsl" afterPath="$PROJECT_DIR$/views/reports/cost.xsl" />
+      <change beforePath="$PROJECT_DIR$/templates/reports/default.xsl" afterPath="$PROJECT_DIR$/views/reports/default.xsl" />
+      <change beforePath="$PROJECT_DIR$/templates/reports/installment.xsl" afterPath="$PROJECT_DIR$/views/reports/installment.xsl" />
+      <change beforePath="$PROJECT_DIR$/templates/reports/order.xsl" afterPath="$PROJECT_DIR$/views/reports/order.xsl" />
+      <change beforePath="$PROJECT_DIR$/templates/reports/report-footer.xsl" afterPath="$PROJECT_DIR$/views/reports/report-footer.xsl" />
+      <change beforePath="$PROJECT_DIR$/templates/reports/sale-list.xsl" afterPath="$PROJECT_DIR$/views/reports/sale-list.xsl" />
+      <change beforePath="$PROJECT_DIR$/templates/reports/sale.xsl" afterPath="$PROJECT_DIR$/views/reports/sale.xsl" />
+      <change beforePath="$PROJECT_DIR$/templates/reports/storage.xsl" afterPath="$PROJECT_DIR$/views/reports/storage.xsl" />
+      <change beforePath="$PROJECT_DIR$/templates/sale/installments.htm" afterPath="$PROJECT_DIR$/views/sale/installments.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/sale/manage.htm" afterPath="$PROJECT_DIR$/views/sale/manage.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/sale/sale.htm" afterPath="$PROJECT_DIR$/views/sale/sale.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/static/Logo-medium.png" afterPath="$PROJECT_DIR$/views/static/Logo-medium.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/Logo-small.png" afterPath="$PROJECT_DIR$/views/static/Logo-small.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/Logo.png" afterPath="$PROJECT_DIR$/views/static/Logo.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/Uploads/logo.svg" afterPath="$PROJECT_DIR$/views/static/Uploads/logo.svg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/amcharts.js" afterPath="$PROJECT_DIR$/views/static/amcharts/amcharts.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/exporting/amexport.js" afterPath="$PROJECT_DIR$/views/static/amcharts/exporting/amexport.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/exporting/canvg.js" afterPath="$PROJECT_DIR$/views/static/amcharts/exporting/canvg.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/exporting/filesaver.js" afterPath="$PROJECT_DIR$/views/static/amcharts/exporting/filesaver.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/exporting/jspdf.js" afterPath="$PROJECT_DIR$/views/static/amcharts/exporting/jspdf.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/exporting/jspdf.plugin.addimage.js" afterPath="$PROJECT_DIR$/views/static/amcharts/exporting/jspdf.plugin.addimage.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/exporting/rgbcolor.js" afterPath="$PROJECT_DIR$/views/static/amcharts/exporting/rgbcolor.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/funnel.js" afterPath="$PROJECT_DIR$/views/static/amcharts/funnel.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/gauge.js" afterPath="$PROJECT_DIR$/views/static/amcharts/gauge.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/images/dragIcon.gif" afterPath="$PROJECT_DIR$/views/static/amcharts/images/dragIcon.gif" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/images/dragIconBlack.gif" afterPath="$PROJECT_DIR$/views/static/amcharts/images/dragIconBlack.gif" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/images/dragIconH.gif" afterPath="$PROJECT_DIR$/views/static/amcharts/images/dragIconH.gif" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/images/dragIconHBlack.gif" afterPath="$PROJECT_DIR$/views/static/amcharts/images/dragIconHBlack.gif" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/images/export.png" afterPath="$PROJECT_DIR$/views/static/amcharts/images/export.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/images/exportWhite.png" afterPath="$PROJECT_DIR$/views/static/amcharts/images/exportWhite.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/images/lens.png" afterPath="$PROJECT_DIR$/views/static/amcharts/images/lens.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/images/lensWhite.png" afterPath="$PROJECT_DIR$/views/static/amcharts/images/lensWhite.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern1.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern1.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern10.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern10.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern11.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern11.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern12.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern12.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern13.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern13.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern14.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern14.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern15.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern15.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern16.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern16.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern17.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern17.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern18.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern18.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern19.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern19.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern2.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern2.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern20.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern20.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern21.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern21.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern3.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern3.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern4.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern4.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern5.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern5.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern6.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern6.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern7.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern7.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern8.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern8.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/black/pattern9.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/black/pattern9.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/chalk/pattern1.jpg" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/chalk/pattern1.jpg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/chalk/pattern1r.jpg" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/chalk/pattern1r.jpg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/chalk/pattern2.jpg" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/chalk/pattern2.jpg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/chalk/pattern3.jpg" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/chalk/pattern3.jpg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/chalk/pattern4.jpg" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/chalk/pattern4.jpg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/chalk/pattern5.jpg" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/chalk/pattern5.jpg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/chalk/pattern6.jpg" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/chalk/pattern6.jpg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern1.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern1.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern10.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern10.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern11.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern11.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern12.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern12.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern13.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern13.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern14.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern14.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern15.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern15.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern16.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern16.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern17.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern17.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern18.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern18.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern19.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern19.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern2.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern2.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern20.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern20.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern21.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern21.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern3.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern3.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern4.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern4.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern5.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern5.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern6.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern6.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern7.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern7.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern8.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern8.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/patterns/white/pattern9.png" afterPath="$PROJECT_DIR$/views/static/amcharts/patterns/white/pattern9.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/pie.js" afterPath="$PROJECT_DIR$/views/static/amcharts/pie.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/radar.js" afterPath="$PROJECT_DIR$/views/static/amcharts/radar.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/serial.js" afterPath="$PROJECT_DIR$/views/static/amcharts/serial.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/style.css" afterPath="$PROJECT_DIR$/views/static/amcharts/style.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/themes/black.js" afterPath="$PROJECT_DIR$/views/static/amcharts/themes/black.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/themes/chalk.js" afterPath="$PROJECT_DIR$/views/static/amcharts/themes/chalk.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/themes/dark.js" afterPath="$PROJECT_DIR$/views/static/amcharts/themes/dark.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/themes/light.js" afterPath="$PROJECT_DIR$/views/static/amcharts/themes/light.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/themes/patterns.js" afterPath="$PROJECT_DIR$/views/static/amcharts/themes/patterns.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/amcharts/xy.js" afterPath="$PROJECT_DIR$/views/static/amcharts/xy.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/views/static/css/bootstrap.min.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/font-awesome.css" afterPath="$PROJECT_DIR$/views/static/css/font-awesome.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/views/static/css/font-awesome.min.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/iosOverlay.css" afterPath="$PROJECT_DIR$/views/static/css/iosOverlay.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/main.css" afterPath="$PROJECT_DIR$/views/static/css/main.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/animate.css" afterPath="$PROJECT_DIR$/views/static/css/old/animate.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/arrow.gif" afterPath="$PROJECT_DIR$/views/static/css/old/arrow.gif" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/calc.css" afterPath="$PROJECT_DIR$/views/static/css/old/calc.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/charts.css" afterPath="$PROJECT_DIR$/views/static/css/old/charts.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/clock.css" afterPath="$PROJECT_DIR$/views/static/css/old/clock.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/custom.css" afterPath="$PROJECT_DIR$/views/static/css/old/custom.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/datatable.css" afterPath="$PROJECT_DIR$/views/static/css/old/datatable.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/flexigrid.css" afterPath="$PROJECT_DIR$/views/static/css/old/flexigrid.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/arrow.png" afterPath="$PROJECT_DIR$/views/static/css/old/images/arrow.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/close_node.gif" afterPath="$PROJECT_DIR$/views/static/css/old/images/close_node.gif" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/file.gif" afterPath="$PROJECT_DIR$/views/static/css/old/images/file.gif" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/folder-closed.gif" afterPath="$PROJECT_DIR$/views/static/css/old/images/folder-closed.gif" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/folder.gif" afterPath="$PROJECT_DIR$/views/static/css/old/images/folder.gif" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/icons-black.png" afterPath="$PROJECT_DIR$/views/static/css/old/images/icons-black.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/icons-blue.png" afterPath="$PROJECT_DIR$/views/static/css/old/images/icons-blue.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/icons-gray.png" afterPath="$PROJECT_DIR$/views/static/css/old/images/icons-gray.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/icons-lgray.png" afterPath="$PROJECT_DIR$/views/static/css/old/images/icons-lgray.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/icons-white.png" afterPath="$PROJECT_DIR$/views/static/css/old/images/icons-white.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/key.gif" afterPath="$PROJECT_DIR$/views/static/css/old/images/key.gif" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/loading-bg.gif" afterPath="$PROJECT_DIR$/views/static/css/old/images/loading-bg.gif" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/minus.gif" afterPath="$PROJECT_DIR$/views/static/css/old/images/minus.gif" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/node.gif" afterPath="$PROJECT_DIR$/views/static/css/old/images/node.gif" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/plus.gif" afterPath="$PROJECT_DIR$/views/static/css/old/images/plus.gif" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/red_node.gif" afterPath="$PROJECT_DIR$/views/static/css/old/images/red_node.gif" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/toggle-collapse-dark.png" afterPath="$PROJECT_DIR$/views/static/css/old/images/toggle-collapse-dark.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/toggle-collapse-light.png" afterPath="$PROJECT_DIR$/views/static/css/old/images/toggle-collapse-light.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/toggle-expand-dark.png" afterPath="$PROJECT_DIR$/views/static/css/old/images/toggle-expand-dark.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/toggle-expand-light.png" afterPath="$PROJECT_DIR$/views/static/css/old/images/toggle-expand-light.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/images/user.png" afterPath="$PROJECT_DIR$/views/static/css/old/images/user.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/jquery.treeTable.css" afterPath="$PROJECT_DIR$/views/static/css/old/jquery.treeTable.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/login.css" afterPath="$PROJECT_DIR$/views/static/css/old/login.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/main-report.css" afterPath="$PROJECT_DIR$/views/static/css/old/main-report.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/main.css" afterPath="$PROJECT_DIR$/views/static/css/old/main.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/report/common.css" afterPath="$PROJECT_DIR$/views/static/css/old/report/common.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/report/h1.png" afterPath="$PROJECT_DIR$/views/static/css/old/report/h1.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/report/has_landscape.css" afterPath="$PROJECT_DIR$/views/static/css/old/report/has_landscape.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/report/low_contrast_linen - Copy.png" afterPath="$PROJECT_DIR$/views/static/css/old/report/low_contrast_linen - Copy.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/report/print.css" afterPath="$PROJECT_DIR$/views/static/css/old/report/print.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/report/screen.css" afterPath="$PROJECT_DIR$/views/static/css/old/report/screen.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/reset.css" afterPath="$PROJECT_DIR$/views/static/css/old/reset.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/scrollable-table.css" afterPath="$PROJECT_DIR$/views/static/css/old/scrollable-table.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/old/ui.css" afterPath="$PROJECT_DIR$/common/__init__.py" />
+      <change beforePath="$PROJECT_DIR$/templates/static/css/report.css" afterPath="$PROJECT_DIR$/views/static/css/report.css" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/BRoya.eot" afterPath="$PROJECT_DIR$/views/static/fonts/BRoya.eot" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/BRoya.ttf" afterPath="$PROJECT_DIR$/views/static/fonts/BRoya.ttf" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/BRoya.woff" afterPath="$PROJECT_DIR$/views/static/fonts/BRoya.woff" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/BRoyaBd_0.ttf" afterPath="$PROJECT_DIR$/views/static/fonts/BRoyaBd_0.ttf" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/BRoya_0.ttf" afterPath="$PROJECT_DIR$/views/static/fonts/BRoya_0.ttf" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/BYagut.eot" afterPath="$PROJECT_DIR$/views/static/fonts/BYagut.eot" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/BYagut.ttf" afterPath="$PROJECT_DIR$/views/static/fonts/BYagut.ttf" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/BYagut.woff" afterPath="$PROJECT_DIR$/views/static/fonts/BYagut.woff" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/BYekan.eot" afterPath="$PROJECT_DIR$/views/static/fonts/BYekan.eot" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/BYekan.ttf" afterPath="$PROJECT_DIR$/views/static/fonts/BYekan.ttf" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/BYekan.woff" afterPath="$PROJECT_DIR$/views/static/fonts/BYekan.woff" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/FontAwesome.otf" afterPath="$PROJECT_DIR$/views/static/fonts/FontAwesome.otf" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/digital-7-webfont.eot" afterPath="$PROJECT_DIR$/views/static/fonts/digital-7-webfont.eot" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/digital-7-webfont.svg" afterPath="$PROJECT_DIR$/views/static/fonts/digital-7-webfont.svg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/digital-7-webfont.ttf" afterPath="$PROJECT_DIR$/views/static/fonts/digital-7-webfont.ttf" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/digital-7-webfont.woff" afterPath="$PROJECT_DIR$/views/static/fonts/digital-7-webfont.woff" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/views/static/fonts/fontawesome-webfont.eot" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/views/static/fonts/fontawesome-webfont.svg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/views/static/fonts/fontawesome-webfont.ttf" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/views/static/fonts/fontawesome-webfont.woff" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/rudawbold.eot" afterPath="$PROJECT_DIR$/views/static/fonts/rudawbold.eot" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/rudawbold.svg" afterPath="$PROJECT_DIR$/views/static/fonts/rudawbold.svg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/rudawbold.ttf" afterPath="$PROJECT_DIR$/views/static/fonts/rudawbold.ttf" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/rudawbold.woff" afterPath="$PROJECT_DIR$/views/static/fonts/rudawbold.woff" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/rudawregular2.eot" afterPath="$PROJECT_DIR$/views/static/fonts/rudawregular2.eot" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/rudawregular2.svg" afterPath="$PROJECT_DIR$/views/static/fonts/rudawregular2.svg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/rudawregular2.ttf" afterPath="$PROJECT_DIR$/views/static/fonts/rudawregular2.ttf" />
+      <change beforePath="$PROJECT_DIR$/templates/static/fonts/rudawregular2.woff" afterPath="$PROJECT_DIR$/views/static/fonts/rudawregular2.woff" />
+      <change beforePath="$PROJECT_DIR$/templates/static/head.jpg" afterPath="$PROJECT_DIR$/views/static/head.jpg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/DEMO.png" afterPath="$PROJECT_DIR$/views/static/images/DEMO.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/ar_IQ.png" afterPath="$PROJECT_DIR$/views/static/images/ar_IQ.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/ar_IQ.svg" afterPath="$PROJECT_DIR$/views/static/images/ar_IQ.svg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/bg.jpg" afterPath="$PROJECT_DIR$/views/static/images/bg.jpg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/check.png" afterPath="$PROJECT_DIR$/views/static/images/check.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/clockFace.png" afterPath="$PROJECT_DIR$/views/static/images/clockFace.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/cross.png" afterPath="$PROJECT_DIR$/views/static/images/cross.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/dark-tile.png" afterPath="$PROJECT_DIR$/views/static/images/dark-tile.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/dark.png" afterPath="$PROJECT_DIR$/views/static/images/dark.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/en_UK.png" afterPath="$PROJECT_DIR$/views/static/images/en_UK.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/en_US.svg" afterPath="$PROJECT_DIR$/views/static/images/en_US.svg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/fa_IR.png" afterPath="$PROJECT_DIR$/views/static/images/fa_IR.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/fa_IR.svg" afterPath="$PROJECT_DIR$/views/static/images/fa_IR.svg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/file.png" afterPath="$PROJECT_DIR$/views/static/images/file.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/glyphicons-halflings-white.png" afterPath="$PROJECT_DIR$/views/static/images/glyphicons-halflings-white.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/glyphicons-halflings.png" afterPath="$PROJECT_DIR$/views/static/images/glyphicons-halflings.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/hourHand.png" afterPath="$PROJECT_DIR$/views/static/images/hourHand.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/Star.png" afterPath="$PROJECT_DIR$/views/static/images/icons/Star.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/atm.png" afterPath="$PROJECT_DIR$/views/static/images/icons/atm.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/atm_pos.png" afterPath="$PROJECT_DIR$/views/static/images/icons/atm_pos.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/back.png" afterPath="$PROJECT_DIR$/views/static/images/icons/back.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/book.png" afterPath="$PROJECT_DIR$/views/static/images/icons/book.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/calculator.png" afterPath="$PROJECT_DIR$/views/static/images/icons/calculator.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/check.png" afterPath="$PROJECT_DIR$/views/static/images/icons/check.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/clock.png" afterPath="$PROJECT_DIR$/views/static/images/icons/clock.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/color-palette.png" afterPath="$PROJECT_DIR$/views/static/images/icons/color-palette.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/comment.png" afterPath="$PROJECT_DIR$/views/static/images/icons/comment.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/cut.png" afterPath="$PROJECT_DIR$/views/static/images/icons/cut.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/downloads.png" afterPath="$PROJECT_DIR$/views/static/images/icons/downloads.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/error.png" afterPath="$PROJECT_DIR$/views/static/images/icons/error.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/flag.png" afterPath="$PROJECT_DIR$/views/static/images/icons/flag.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/folder.png" afterPath="$PROJECT_DIR$/views/static/images/icons/folder.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/font.png" afterPath="$PROJECT_DIR$/views/static/images/icons/font.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/forward.png" afterPath="$PROJECT_DIR$/views/static/images/icons/forward.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/heart.png" afterPath="$PROJECT_DIR$/views/static/images/icons/heart.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/help.png" afterPath="$PROJECT_DIR$/views/static/images/icons/help.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/home.png" afterPath="$PROJECT_DIR$/views/static/images/icons/home.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/info.png" afterPath="$PROJECT_DIR$/views/static/images/icons/info.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/link.png" afterPath="$PROJECT_DIR$/views/static/images/icons/link.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/list.png" afterPath="$PROJECT_DIR$/views/static/images/icons/list.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/loan.png" afterPath="$PROJECT_DIR$/views/static/images/icons/loan.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/lock.png" afterPath="$PROJECT_DIR$/views/static/images/icons/lock.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/mail.png" afterPath="$PROJECT_DIR$/views/static/images/icons/mail.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/notice.png" afterPath="$PROJECT_DIR$/views/static/images/icons/notice.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/page.png" afterPath="$PROJECT_DIR$/views/static/images/icons/page.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/pass.png" afterPath="$PROJECT_DIR$/views/static/images/icons/pass.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/paste.png" afterPath="$PROJECT_DIR$/views/static/images/icons/paste.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/photos.png" afterPath="$PROJECT_DIR$/views/static/images/icons/photos.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/print.png" afterPath="$PROJECT_DIR$/views/static/images/icons/print.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/quit.png" afterPath="$PROJECT_DIR$/views/static/images/icons/quit.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/rubbish-bin.png" afterPath="$PROJECT_DIR$/views/static/images/icons/rubbish-bin.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/search.png" afterPath="$PROJECT_DIR$/views/static/images/icons/search.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/settings.png" afterPath="$PROJECT_DIR$/views/static/images/icons/settings.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/sound.png" afterPath="$PROJECT_DIR$/views/static/images/icons/sound.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/stop.png" afterPath="$PROJECT_DIR$/views/static/images/icons/stop.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/success.png" afterPath="$PROJECT_DIR$/views/static/images/icons/success.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/tools.png" afterPath="$PROJECT_DIR$/views/static/images/icons/tools.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/undo.png" afterPath="$PROJECT_DIR$/views/static/images/icons/undo.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/uploads.png" afterPath="$PROJECT_DIR$/views/static/images/icons/uploads.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/user.png" afterPath="$PROJECT_DIR$/views/static/images/icons/user.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/icons/wallet_louis_vuitton_bills.png" afterPath="$PROJECT_DIR$/views/static/images/icons/wallet_louis_vuitton_bills.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/ku_KU.svg" afterPath="$PROJECT_DIR$/views/static/images/ku_KU.svg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/loading.gif" afterPath="$PROJECT_DIR$/views/static/images/loading.gif" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/minuteHand.png" afterPath="$PROJECT_DIR$/views/static/images/minuteHand.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/new-message.png" afterPath="$PROJECT_DIR$/views/static/images/new-message.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/page.jpg" afterPath="$PROJECT_DIR$/views/static/images/page.jpg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/report.png" afterPath="$PROJECT_DIR$/views/static/images/report.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/restore.png" afterPath="$PROJECT_DIR$/views/static/images/restore.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/secondHand.png" afterPath="$PROJECT_DIR$/views/static/images/secondHand.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/security.png" afterPath="$PROJECT_DIR$/views/static/images/security.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/setting.png" afterPath="$PROJECT_DIR$/views/static/images/setting.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/time.png" afterPath="$PROJECT_DIR$/views/static/images/time.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/images/user.png" afterPath="$PROJECT_DIR$/views/static/images/user.png" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/Horof.js" afterPath="$PROJECT_DIR$/views/static/js/Horof.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/bgiframe.js" afterPath="$PROJECT_DIR$/views/static/js/bgiframe.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/bkp-report.js" afterPath="$PROJECT_DIR$/views/static/js/bkp-report.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/calc.js" afterPath="$PROJECT_DIR$/views/static/js/calc.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/canvasjs.min.js" afterPath="$PROJECT_DIR$/views/static/js/canvasjs.min.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/chart.min.js" afterPath="$PROJECT_DIR$/views/static/js/chart.min.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/charts.js" afterPath="$PROJECT_DIR$/views/static/js/charts.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/clock.js" afterPath="$PROJECT_DIR$/views/static/js/clock.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/cookie.js" afterPath="$PROJECT_DIR$/views/static/js/cookie.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/css-clocks_1.js" afterPath="$PROJECT_DIR$/views/static/js/css-clocks_1.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/custom.js" afterPath="$PROJECT_DIR$/views/static/js/custom.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/flexigrid.js" afterPath="$PROJECT_DIR$/views/static/js/flexigrid.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/highcharts.js" afterPath="$PROJECT_DIR$/views/static/js/highcharts.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/highcharts.src.js" afterPath="$PROJECT_DIR$/views/static/js/highcharts.src.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/iosOverlay.js" afterPath="$PROJECT_DIR$/views/static/js/iosOverlay.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/jquery-1.3.2.js" afterPath="$PROJECT_DIR$/views/static/js/jquery-1.3.2.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/jquery-1.3.2.min.js" afterPath="$PROJECT_DIR$/views/static/js/jquery-1.3.2.min.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/jquery.dataTables.min.js" afterPath="$PROJECT_DIR$/views/static/js/jquery.dataTables.min.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/jquery.maskMoney.js" afterPath="$PROJECT_DIR$/views/static/js/jquery.maskMoney.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/jquery.maskedinput.min.js" afterPath="$PROJECT_DIR$/views/static/js/jquery.maskedinput.min.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/jquery.mousewheel.min.js" afterPath="$PROJECT_DIR$/views/static/js/jquery.mousewheel.min.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/jquery.treeTable.min.js" afterPath="$PROJECT_DIR$/views/static/js/jquery.treeTable.min.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/jquery.webcam.js" afterPath="$PROJECT_DIR$/views/static/js/jquery.webcam.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/jsPrint.js" afterPath="$PROJECT_DIR$/views/static/js/jsPrint.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/keys.js" afterPath="$PROJECT_DIR$/views/static/js/keys.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/report-app.js" afterPath="$PROJECT_DIR$/views/static/js/report-app.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/report.js" afterPath="$PROJECT_DIR$/views/static/js/report.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/sidebar_position.js" afterPath="$PROJECT_DIR$/views/static/js/sidebar_position.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/sign 2.js" afterPath="$PROJECT_DIR$/views/static/js/sign 2.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/sign.js" afterPath="$PROJECT_DIR$/views/static/js/sign.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/tooltip.js" afterPath="$PROJECT_DIR$/views/static/js/tooltip.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/ui/effects.core.js" afterPath="$PROJECT_DIR$/views/static/js/ui/effects.core.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/ui/effects.highlight.js" afterPath="$PROJECT_DIR$/views/static/js/ui/effects.highlight.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/ui/ui.accordion.js" afterPath="$PROJECT_DIR$/views/static/js/ui/ui.accordion.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/ui/ui.autocomplete.js" afterPath="$PROJECT_DIR$/views/static/js/ui/ui.autocomplete.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/ui/ui.core.js" afterPath="$PROJECT_DIR$/views/static/js/ui/ui.core.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/ui/ui.datepicker.js" afterPath="$PROJECT_DIR$/views/static/js/ui/ui.datepicker.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/ui/ui.dialog.js" afterPath="$PROJECT_DIR$/views/static/js/ui/ui.dialog.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/ui/ui.draggable.js" afterPath="$PROJECT_DIR$/views/static/js/ui/ui.draggable.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/ui/ui.droppable.js" afterPath="$PROJECT_DIR$/views/static/js/ui/ui.droppable.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/ui/ui.progressbar.js" afterPath="$PROJECT_DIR$/views/static/js/ui/ui.progressbar.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/ui/ui.resizable.js" afterPath="$PROJECT_DIR$/views/static/js/ui/ui.resizable.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/ui/ui.slider.js" afterPath="$PROJECT_DIR$/views/static/js/ui/ui.slider.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/ui/ui.sortable.js" afterPath="$PROJECT_DIR$/views/static/js/ui/ui.sortable.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/ui/ui.tabs.js" afterPath="$PROJECT_DIR$/views/static/js/ui/ui.tabs.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/upload.js" afterPath="$PROJECT_DIR$/common/model.py" />
+      <change beforePath="$PROJECT_DIR$/templates/static/js/validate.js" afterPath="$PROJECT_DIR$/views/static/js/validate.js" />
+      <change beforePath="$PROJECT_DIR$/templates/static/loading.gif" afterPath="$PROJECT_DIR$/views/static/loading.gif" />
+      <change beforePath="$PROJECT_DIR$/templates/static/login.svg" afterPath="$PROJECT_DIR$/views/static/login.svg" />
+      <change beforePath="$PROJECT_DIR$/templates/static/security.htm" afterPath="$PROJECT_DIR$/views/static/security.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/storage/goodlist.htm" afterPath="$PROJECT_DIR$/views/storage/goodlist.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/storage/manage.htm" afterPath="$PROJECT_DIR$/views/storage/manage.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/storage/storage.htm" afterPath="$PROJECT_DIR$/views/storage/storage.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/supplier/list.htm" afterPath="$PROJECT_DIR$/views/supplier/list.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/supplier/manage.htm" afterPath="$PROJECT_DIR$/views/supplier/manage.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/supplier/new.htm" afterPath="$PROJECT_DIR$/views/supplier/new.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/supplier/purchaselist.htm" afterPath="$PROJECT_DIR$/views/supplier/purchaselist.htm" />
+      <change beforePath="$PROJECT_DIR$/templates/supplier/supplier.htm" afterPath="$PROJECT_DIR$/views/supplier/supplier.htm" />
     </list>
     <ignored path="dal.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,82 +370,109 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/dal$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1481798446730" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/dal$Unnamed.coverage" NAME="Run Coverage Results" MODIFIED="1518898225846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
-  </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="dal" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.4187192" vertical-offset="544" max-vertical-offset="37264">
-              <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.htm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/container/main.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="35.307693" vertical-offset="918" max-vertical-offset="1904">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logo.svg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/static/Uploads/logo.svg">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>app</find>
+      <find>Order</find>
+      <find>dated</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/controllers/controllers.py" />
+        <option value="$PROJECT_DIR$/common/controller.py" />
+        <option value="$PROJECT_DIR$/controllers/static.py" />
+        <option value="$PROJECT_DIR$/controllers/authentication.py" />
+        <option value="$PROJECT_DIR$/controllers/testDev.py" />
+        <option value="$PROJECT_DIR$/controllers/sales.py" />
+        <option value="$PROJECT_DIR$/controllers/reportController.py" />
+        <option value="$PROJECT_DIR$/controllers/purchase.py" />
+        <option value="$PROJECT_DIR$/controllers/costs.py" />
+        <option value="$PROJECT_DIR$/controllers/dashboard.py" />
+        <option value="$PROJECT_DIR$/model/setup.py" />
+        <option value="$PROJECT_DIR$/models/__init__.py" />
+        <option value="$PROJECT_DIR$/models/product.py" />
+        <option value="$PROJECT_DIR$/models/storage.py" />
+        <option value="$PROJECT_DIR$/models/storageChange.py" />
+        <option value="$PROJECT_DIR$/models/supplier.py" />
+        <option value="$PROJECT_DIR$/controllers/basicInfo.py" />
+        <option value="$PROJECT_DIR$/models/cost.py" />
+        <option value="$PROJECT_DIR$/models/group.py" />
+        <option value="$PROJECT_DIR$/models/menu.py" />
+        <option value="$PROJECT_DIR$/models/order.py" />
+        <option value="$PROJECT_DIR$/models/role.py" />
+        <option value="$PROJECT_DIR$/models/rolePermission.py" />
+        <option value="$PROJECT_DIR$/models/sale.py" />
+        <option value="$PROJECT_DIR$/models/saleDetails.py" />
+        <option value="$PROJECT_DIR$/models/saleInstallment.py" />
+        <option value="$PROJECT_DIR$/models/session.py" />
+        <option value="$PROJECT_DIR$/models/sessionPermission.py" />
+        <option value="$PROJECT_DIR$/models/setup.py" />
+        <option value="$PROJECT_DIR$/models/user.py" />
+        <option value="$PROJECT_DIR$/models/userPermission.py" />
+        <option value="$PROJECT_DIR$/models/userrole.py" />
+        <option value="$PROJECT_DIR$/models/person.py" />
+        <option value="$PROJECT_DIR$/controllers/confirm.py" />
+        <option value="$PROJECT_DIR$/common/config.py" />
+        <option value="$PROJECT_DIR$/common/reportViewer.py" />
+        <option value="$PROJECT_DIR$/controllers/reports/cost.py" />
+        <option value="$PROJECT_DIR$/controllers/reports/installment.py" />
+        <option value="$PROJECT_DIR$/controllers/reports/order.py" />
+        <option value="$PROJECT_DIR$/controllers/reports/sale.py" />
+        <option value="$PROJECT_DIR$/controllers/reports/saleList.py" />
+        <option value="$PROJECT_DIR$/controllers/reports/storage.py" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/controllers/reports/__init__.py" />
+        <option value="$PROJECT_DIR$/controllers/__init__.py" />
+        <option value="$PROJECT_DIR$/common/report.py" />
+        <option value="$PROJECT_DIR$/models/models.py" />
+        <option value="$PROJECT_DIR$/controllers/order.py" />
+        <option value="$PROJECT_DIR$/views/container/login.htm" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="y" value="22" />
     <option name="width" value="1296" />
-    <option name="height" value="776" />
+    <option name="height" value="726" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -108,81 +485,141 @@
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="container" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="dal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonPOS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonPOS" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dal" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PythonPOS" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="container" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
-    <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
-  </component>
-  <component name="PyConsoleOptionsProvider">
-    <option name="myPythonConsoleState">
-      <console-settings />
-    </option>
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/model" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\GitLab\dal" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Unnamed">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Run" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv1/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="dal" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="dal" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="dal" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="dal" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -201,7 +638,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+    <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -212,7 +649,55 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="dal" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="dal" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="dal" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -263,133 +748,18 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dal" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Attests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dal" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dal" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dal" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dal" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <method />
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
     </configuration>
-    <configuration default="false" name="Unnamed" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Python34\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="dal" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Python.Unnamed" />
-    </list>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -398,35 +768,56 @@
       <changelist id="493aee98-b27c-411a-9dcf-442663b4ec3e" name="Default" comment="" />
       <created>1481795803532</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1481795803532</updated>
+      <workItem from="1518890258274" duration="202000" />
+      <workItem from="1518890489596" duration="119000" />
+      <workItem from="1518890634074" duration="195000" />
+      <workItem from="1518890876517" duration="7255000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="7771000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="776" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="22" width="1296" height="726" extended-state="0" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298351" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298351" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2647528" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298351" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -439,141 +830,530 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
-    </option>
-  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://C:/Python34/Lib/locale.py">
+    <entry file="file://$PROJECT_DIR$/controllers/container.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33174226" vertical-offset="9806" max-vertical-offset="26503">
-          <caret line="591" column="0" selection-start-line="591" selection-start-column="0" selection-end-line="591" selection-end-column="0" />
+        <state relative-caret-position="270">
+          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jdatetime/jalali.py">
+    <entry file="file://$PROJECT_DIR$/controllers/testDev.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2329">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="268">
+          <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/js/Horof.js">
+    <entry file="file://$PROJECT_DIR$/controllers/system.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-287">
+          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/head.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/loading.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/login.svg">
+    <entry file="file://$PROJECT_DIR$/controllers/static.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/Logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/Logo-medium.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/Logo-small.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/auth/user.manage.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1628499" vertical-offset="457" max-vertical-offset="850">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/auth/password.change.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="118">
+          <caret line="8" column="47" lean-forward="false" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="e#0#16#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/peewee.py">
+    <entry file="file://$PROJECT_DIR$/controllers/sales.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="44081">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="283">
+          <caret line="163" column="0" lean-forward="false" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/controllers/purchase.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="75">
+          <caret line="111" column="0" lean-forward="true" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+          <folding>
+            <element signature="e#193#3481#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/Uploads/logo.svg">
+    <entry file="file://$PROJECT_DIR$/models/product.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/menu.csv">
-      <provider editor-type-id="com.intellij.database.editor.CsvTableFileEditorProvider">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/models/person.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="609">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/container/main.htm">
+    <entry file="file://$PROJECT_DIR$/models/permission.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="35.307693" vertical-offset="918" max-vertical-offset="1904">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/group.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/cost.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/role.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/rolePermission.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/sale.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/saleDetails.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/saleInstallment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/session.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/sessionPermission.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/setup.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/storage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/storageChange.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/supplier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/userPermission.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/userrole.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="18" column="47" lean-forward="false" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv1/lib/python3.6/locale.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="597" column="0" lean-forward="false" selection-start-line="597" selection-start-column="0" selection-end-line="597" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/reportViewer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="6" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/controller.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="168" column="0" lean-forward="false" selection-start-line="168" selection-start-column="0" selection-end-line="168" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/reports/installment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#157#846#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/reports/cost.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="e#158#776#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/reports/sale.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/reports/saleList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/reports/storage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/reportController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.4187192" vertical-offset="544" max-vertical-offset="37264">
-          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+        <state relative-caret-position="19">
+          <caret line="127" column="29" lean-forward="false" selection-start-line="127" selection-start-column="29" selection-end-line="127" selection-end-column="29" />
+          <folding>
+            <element signature="e#526#1050#0" expanded="false" />
+            <element signature="e#673#1036#0" expanded="false" />
+            <element signature="e#694#895#0" expanded="false" />
+            <element signature="e#932#1036#0" expanded="false" />
+            <element signature="e#2370#2395#1" expanded="false" />
+            <element signature="e#2428#2532#0" expanded="false" />
+            <element signature="e#2618#2639#0" expanded="false" />
+            <element signature="e#3753#4042#0" expanded="false" />
+            <element signature="e#4089#4177#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/reports/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="39" column="46" lean-forward="false" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/report.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/reports/order.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="214" column="11" lean-forward="false" selection-start-line="214" selection-start-column="6" selection-end-line="214" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/basicInfo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#222#9778#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/authentication.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#145#872#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/confirm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="77" lean-forward="false" selection-start-line="2" selection-start-column="77" selection-end-line="2" selection-end-column="77" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#203#3724#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/dashboard.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="e#228#1620#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/container/login.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="33" column="29" lean-forward="true" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Python 2.7 (PythonPOS) interpreter library</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>dal</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
