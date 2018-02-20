@@ -1,8 +1,9 @@
 from common.config import _max_rows_, getDate, getTime, split
 from common.report import Report
+from common.reportName import ReportName
 from models.models import User
 
-
+@ReportName("sale-list")
 class SaleListReport(Report):
     Name = 'sale-list'
 

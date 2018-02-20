@@ -1,8 +1,10 @@
 from common.config import config
 from common.controller import Controller
+from common.route import Route
 from models.models import User
 
 
+@Route("auth")
 class Authentication(Controller):
     '''
     classdocs

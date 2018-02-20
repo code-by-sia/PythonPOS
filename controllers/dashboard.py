@@ -3,9 +3,10 @@ from datetime import timedelta
 
 from common.config import config
 from common.controller import Controller
+from common.route import Route
 from models.models import Order, Storage, Sale, SaleInstallment, User
 
-
+@Route("dashboard")
 class Dashboard(Controller):
 
     def Process(self, section):

@@ -1,6 +1,9 @@
 from common.config import config, getDate, getTime
 from common.controller import Controller
+from common.report import Report
+from common.reportViewer import Viewer
 from controllers.container import Container
+from controllers.reportController import ReportController
 from controllers.static import Static
 from controllers.system import System
 from models.models import Session
@@ -44,12 +47,6 @@ class MainRouter(Controller):
         self.authentication = AuthControler(self)
         pass
 
-    def RenderFile(self, filename):
-        file = open(config.server_path + "/templates/" + filename, 'r')
-        outp = file.read()
-        self.output += outp
-        pass
-
     def Route(self):
         path = self.request.path
         parsed_path = urlparse(path)
@@ -63,14 +60,18 @@ class MainRouter(Controller):
         section = spath[1]
         mdl = Container()
 
-
-
         if (section == ''):
             mdl = Container()
         elif (section == 'static'):
             mdl = Static()
         elif (section == 'system'):
             mdl = System()
+        elif(section=='report'):
+            mdl = Report()
+        elif(section=='viewer'):
+            mld=Viewer()
+        elif (section=='template'):
+            mdl = ReportController()
         elif (self.authentication.Authenticated):
             mdl = Controller.controllers[section]
 
@@ -124,11 +125,6 @@ def ProcessRequeset(req):
 
     req.wfile.write(fout)
 
-def loadControllers():
-    __import__('controllers')
-    pass
-
-
 
 if __name__ == '__main__':
 
@@ -138,8 +134,6 @@ if __name__ == '__main__':
     PORT = int(os.getenv('PORT', '8000'))
     HOST = os.getenv('HOST', 'localhost')
     httpd = HTTPServer((HOST, PORT), RequestHandler)
-
-    loadControllers()
 
 
     # config.makeTempLang(Menu.select())

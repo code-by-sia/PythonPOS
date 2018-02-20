@@ -1,8 +1,9 @@
 from common.config import config, getDate, getTime
 from common.controller import Controller
+from common.route import Route
 from models.models import Order, Product, Storage, Sale, Person,StorageChange
 
-
+@Route("confirm")
 class Confirm(Controller):
     def Process(self, section):
         if section == 'purchase':

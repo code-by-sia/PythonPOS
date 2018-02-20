@@ -1,8 +1,9 @@
 from common.config import config, getDate
 from common.controller import Controller
+from common.route import Route
 from models.models import Person, Supplier, Group, Storage, Cost, Sale, Product, Order, SaleInstallment
 
-
+@Route('info')
 class BasicInfo(Controller):
     '''
     classdocs

@@ -16,7 +16,7 @@ class config:
     server_path = os.path.dirname(os.path.realpath(__file__ + "/..") )
     lang_name = os.getenv('APP_LANG', 'fa')
     app_lang = [lang_name]
-    app_locale = os.getenv('APP_LOCALE', 'en_US')
+    app_locale = os.getenv('APP_LOCALE', 'en_US.utf8')
     app_db_user = 'root';
     app_db_pass = '';
 

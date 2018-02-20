@@ -1,8 +1,9 @@
 from common.config import config, getDate, getTime
 from common.controller import Controller
+from common.route import Route
 from models.models import Group, Order, Product, Storage, Supplier
 
-
+@Route("purchase")
 class Purchase(Controller):
     '''
     classdocs

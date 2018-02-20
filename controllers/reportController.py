@@ -1,7 +1,6 @@
 from common.config import config
 from common.controller import Controller
 
-
 class ReportController(Controller):
 
     def Process(self, section):

@@ -1,9 +1,10 @@
 from app import config
 from common.config import getDate, getTime
 from common.controller import Controller
+from common.route import Route
 from models.models import Product, Storage, StorageChange, Sale, SaleDetails, SaleInstallment, Person
 
-
+@Route("sale")
 class Sales(Controller):
     def Process(self, section):
         if section == 'new':

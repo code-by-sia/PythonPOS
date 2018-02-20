@@ -1,8 +1,9 @@
 from common.config import config
 from common.controller import Controller
+from common.route import Route
 from models.models import Cost
 
-
+@Route("cost")
 class Costs(Controller):
     def Process(self, section):
         if section == 'costs.manage':

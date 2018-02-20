@@ -1,8 +1,9 @@
 from common.config import _max_rows_, getDate, getTime, split
 from common.report import Report
+from common.reportName import ReportName
 from models.models import Cost
 
-
+@ReportName("cost")
 class CostReport(Report):
     Name = 'cost'
 

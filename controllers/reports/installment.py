@@ -1,8 +1,9 @@
 from common.config import getDate, getTime
 from common.report import Report
+from common.reportName import ReportName
 from models.models import SaleInstallment
 
-
+@ReportName("instullment")
 class InstallmentReport(Report):
     Name = 'installment'
 
