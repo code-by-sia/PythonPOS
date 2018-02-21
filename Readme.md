@@ -6,3 +6,7 @@ a simple python self-hosted web app with :
 * Pystache
 * getText
 
+use following information for login:
+
+**username :** `admin`  
+**password :** `1`
