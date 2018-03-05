@@ -66,14 +66,15 @@ class MainRouter(Controller):
             mdl = Static()
         elif (section == 'system'):
             mdl = System()
-        elif(section=='report'):
-            mdl = Report()
-        elif(section=='viewer'):
-            mld=Viewer()
-        elif (section=='template'):
-            mdl = ReportController()
         elif (self.authentication.Authenticated):
-            mdl = Controller.controllers[section]
+            if(section=='report'):
+                mdl = Report
+            elif(section=='viewer'):
+                mdl=Viewer
+            elif (section=='template'):
+                mdl = ReportController
+            else:
+                mdl = Controller.controllers[section]
 
             if mdl is None:
                 mdl = Static()
