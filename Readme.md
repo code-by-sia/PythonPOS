@@ -6,6 +6,10 @@ a simple python self-hosted web app with :
 * Pystache
 * getText
 
+## install
+`pip3 install -r requirements.txt`
+`python3 app.py`
+
 use following information for login:
 
 **username :** `admin`  
