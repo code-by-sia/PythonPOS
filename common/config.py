@@ -16,7 +16,7 @@ class config:
     server_path = os.path.dirname(os.path.realpath(__file__ + "/..") )
     lang_name = os.getenv('APP_LANG', 'fa')
     app_lang = [lang_name]
-    app_locale = os.getenv('APP_LOCALE', 'en_US.utf8')
+    app_locale = os.getenv('APP_LOCALE', 'en_US')
     app_db_user = 'root';
     app_db_pass = '';
 
@@ -24,7 +24,11 @@ class config:
     i18n = i18n_language.gettext
     _ = i18n
 
-    locale.setlocale(locale.LC_ALL,app_locale)
+
+    print(app_locale)
+
+
+    locale.setlocale(locale.LC_ALL, app_locale)
     l10n = locale
 
     CompanyName = _('CompanyName')
@@ -105,9 +109,10 @@ def ChangeLanguage(language):
     pass
 
 
-sqlitedb_test = SqliteDatabase(config.server_path + '/test.db')
+# sqlitedb_test = SqliteDatabase(config.server_path + '/test.db')
 sqlitedb = SqliteDatabase(config.server_path + '/database.db')
-mysqldb = MySQLDatabase('accdb', host='127.0.0.1', user=config.app_db_user, passwd=config.app_db_pass)
+# mysqldb = MySQLDatabase('accdb', host='127.0.0.1', user=config.app_db_user, passwd=config.app_db_pass)
+
 serverdb = sqlitedb
 
 

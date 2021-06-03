@@ -6,8 +6,11 @@ a simple python self-hosted web app with :
 * Pystache
 * getText
 
-## install
+## How to 
+### Install
 `pip3 install -r requirements.txt`
+
+### Run
 `python3 app.py`
 
 use following information for login:

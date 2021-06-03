@@ -129,8 +129,9 @@ def ProcessRequeset(req):
 
 if __name__ == '__main__':
 
-    # glrobal _
+    # global _
     _ = config.i18n
+    
 
     PORT = int(os.getenv('PORT', '8000'))
     HOST = os.getenv('HOST', 'localhost')

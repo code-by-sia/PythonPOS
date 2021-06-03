@@ -1,7 +1,9 @@
 import json
 import mimetypes
 import re
-from cgi import FieldStorage, parse_qs
+from cgi import FieldStorage
+from urllib.parse import parse_qs
+
 
 import pystache
 
