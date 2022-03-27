@@ -13,7 +13,8 @@ a simple python self-hosted web app with :
 ### Run
 `python3 app.py`
 
-use following information for login:
+Open the link http://localhost:8000 and use the following credentials:
 
 **username :** `admin`  
 **password :** `1`
+
