@@ -8,7 +8,7 @@ from controllers.static import Static
 from controllers.system import System
 from models.models import Session
 
-__author__ = 'SiamandMaroufi'
+__author__ = 'Siamand'
 
 import os
 from http.server import BaseHTTPRequestHandler, HTTPServer
