@@ -1,4 +1,4 @@
-## Python Point Of Sale <img src="https://travis-ci.org/SiamandMaroufi/PythonPOS.svg?branch=master" />
+## Python Point Of Sale
 
 a simple python self-hosted web app with :
 

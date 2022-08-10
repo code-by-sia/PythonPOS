@@ -11,7 +11,7 @@ from peewee import SqliteDatabase, MySQLDatabase
 
 
 class config:
-    __author__ = 'SiamandMaroufi'
+    __author__ = 'Siamand'
 
     server_path = os.path.dirname(os.path.realpath(__file__ + "/..") )
     lang_name = os.getenv('APP_LANG', 'fa')
